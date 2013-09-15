@@ -1,0 +1,36 @@
+%p
+ =notice
+%h1 Recent episodes
+%table
+ -@episodes.recent.unwatched.each do |episode|
+  %tr
+   %td
+    =episode.source
+   %td
+    =episode.railscasts_id
+   %td
+    =link_to episode.name, episode
+   %td
+    =button_to 'Mark as watched', watched_episode_path(episode), :method => :post
+
+%h1 Old episodes
+%table
+ -@episodes.unwatched.old.each do |episode|
+  %tr
+   %td
+    =episode.source
+   %td
+    =episode.railscasts_id
+   %td
+    =link_to episode.name, episode
+   %td
+    =button_to 'Mark as watched', watched_episode_path(episode), :method => :post
+
+%h1 Watched episodes
+%table
+ -@episodes.watched.each do |episode|
+  %tr
+   %td
+    =episode.railscasts_id
+   %td
+    =link_to episode.name, episode

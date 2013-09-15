@@ -1,0 +1,7 @@
+<h1><%=@episode.name%></h1>
+<p><%=@episode.description%></p>
+
+<p><%= link_to "ASCII Cast", @episode.slug+"?view=asciicast", :target => "_blank"%></p>
+<p><%= link_to "Watch episode", @episode.slug+"?autoplay=true", :target => "_blank" %></p>
+
+<%= link_to 'Back', episodes_path %>
