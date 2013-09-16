@@ -32,3 +32,5 @@ group :assets do
 end
 
 gem 'haml-rails'
+gem 'nokogiri'
+gem 'typhoeus'

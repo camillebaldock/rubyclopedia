@@ -1,4 +1,4 @@
-RailsCastsProgressTracker::Application.routes.draw do
+RubyCastsProgressTracker::Application.routes.draw do
   resources :episodes do
   	member do
   	  post 'watched'

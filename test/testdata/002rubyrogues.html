@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0081)http://rubyrogues.com/002-rr-virtual-machines-concurrency-and-the-future-of-ruby/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base href="http://rubyrogues.com/002-rr-virtual-machines-concurrency-and-the-future-of-ruby/">--><base href="."><script type="text/javascript" async="" src="./002rubyrogues_files/shareaholic-analytics.js"></script>
+
+<title>002 RR Virtual Machines, Concurrency, and the Future of Ruby</title>
+<meta name="robots" content="noodp, noydir">
+<meta name="description" content="Podcast: Play in new window | Download (Duration: 53:57 — 61.7MB) Panelists: Charles Max Wood (@cmaxw) David Brady (@dbrady) Evan Phoenix (@evanphx) James Edward Gray II (@JEG2) Peter Cooper (@peterc) Tools and topics mentioned in this episode: Rubinius JRuby Maglev […]">
+<meta name="keywords" content="ack, brain rules for baby, coffeescript cookbook, free-range kids, GIL, git-grep, janus, JIT compilers, jruby, JVM, macvim, maglev, mailchimp, mri, panic-free pregnancy, railscasts, rubinius, ruby 1.8, ruby 1.9, rvm, sickpedia, thread safety, trader tales, vim, yarv">
+<link rel="stylesheet" href="./002rubyrogues_files/style.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="./002rubyrogues_files/layout.css" type="text/css" media="screen, projection">
+<!--[if lte IE 8]><link rel="stylesheet" href="http://rubyrogues.com/wp-content/themes/thesis_18/lib/css/ie.css?050511-212841" type="text/css" media="screen, projection" /><![endif]-->
+<link rel="stylesheet" href="./002rubyrogues_files/custom.css" type="text/css" media="screen, projection">
+<link rel="shortcut icon" href="http://rubyrogues.com/wp-content/uploads/2011/05/ruby.png">
+<link rel="canonical" href="./002rubyrogues_files/002rubyrogues.html">
+<link rel="alternate" type="application/rss+xml" title="Ruby Rogues RSS Feed" href="http://rubyrogues.com/feed/">
+<link rel="pingback" href="http://rubyrogues.com/xmlrpc.php">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://rubyrogues.com/xmlrpc.php?rsd">
+<script type="application/javascript" async="" defer="" src="./002rubyrogues_files/track.js"></script><script id="shr-google-analytics" type="text/javascript" async="" src="./002rubyrogues_files/ga.js"></script><script id="shr-analytics" type="text/javascript" async="" src="./002rubyrogues_files/shareaholic-analytics.js"></script><script type="text/javascript" async="" src="./002rubyrogues_files/ga(1).js"></script><script type="text/javascript" async="" src="./002rubyrogues_files/gICGxJqGR1U92J47jh9x9Q.js"></script><script type="text/javascript">
+  var uvOptions = {};
+  (function() {
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/gICGxJqGR1U92J47jh9x9Q.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+</script>
+<link rel="alternate" type="application/rss+xml" title="Ruby Rogues » 002 RR Virtual Machines, Concurrency, and the Future of Ruby Comments Feed" href="http://rubyrogues.com/002-rr-virtual-machines-concurrency-and-the-future-of-ruby/feed/">
+<link rel="stylesheet" id="mediaelement-css" href="./002rubyrogues_files/mediaelementplayer.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="./002rubyrogues_files/wp-mediaelement.css" type="text/css" media="all">
+<link rel="stylesheet" id="myStyleSheets-css" href="./002rubyrogues_files/uv_styles.css" type="text/css" media="all">
+<script type="text/javascript">/* <![CDATA[ */ var SHRSB_Globals = {"src":"http:\/\/rubyrogues.com\/wp-content\/plugins\/sexybookmarks\/spritegen_default","perfoption":"1","twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40Shareaholic","locale":"0","shortener":"google","shortener_key":"","pubGaSocial":0,"pubGaKey":""}; /* ]]> */</script><script type="text/javascript" src="./002rubyrogues_files/player.js"></script>
+<script type="text/javascript" src="./002rubyrogues_files/jquery.js"></script>
+<script type="text/javascript" src="./002rubyrogues_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./002rubyrogues_files/powerpress-mejs.js"></script>
+<script type="text/javascript" src="./002rubyrogues_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./002rubyrogues_files/livefyre.js"></script>
+<script type="text/javascript" src="./002rubyrogues_files/jquery.shareaholic-publishers-sb.min.js"></script><script src="./002rubyrogues_files/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="./002rubyrogues_files/jquery.shareaholic-publishers-rd.min.js"></script><script type="text/javascript" async="" src="./002rubyrogues_files/shareaholic.js"></script>
+
+		<style type="text/css">
+			#wpadminbar .quicklinks li#wp-admin-bar-clickystats {
+				height: 28px
+			}
+
+			#wpadminbar .quicklinks li#wp-admin-bar-clickystats a {
+				height: 28px;
+				padding: 0
+			}
+
+			#wpadminbar .quicklinks li#wp-admin-bar-clickystats a img {
+				padding: 4px 5px;
+				height: 20px;
+				width: 99px;
+			}
+		</style>
+		<script type="text/javascript"><!--
+function powerpress_pinw(pinw){window.open('http://rubyrogues.com/?powerpress_pinw='+pinw, 'PowerPressPlayer','toolbar=0,status=0,resizable=1,width=460,height=320');	return false;}
+powerpress_url = 'http://rubyrogues.com/wp-content/plugins/powerpress/';
+//-->
+</script>
+
+<!-- Shareaholic Content Tags -->
+
+<meta name="shareaholic:site_name" content="Ruby Rogues">
+<meta name="shareaholic:image" content="http://www.assoc-amazon.com/e/ir?t=&amp;l=as2&amp;o=1&amp;a=0979777755&amp;camp=217145&amp;creative=399349">
+
+<!-- / Shareaholic Content Tags -->
+
+
+
+<!-- Shareaholic - Open Graph Tags -->
+
+<meta property="og:image" content="http://www.assoc-amazon.com/e/ir?t=&amp;l=as2&amp;o=1&amp;a=0979777755&amp;camp=217145&amp;creative=399349">
+
+<!-- / Shareaholic - Open Graph Tags -->
+
+<link rel="stylesheet" type="text/css" href="./002rubyrogues_files/livefyre_embed.css" media="all"><style type="text/css" media="screen">.uv-icon{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;-webkit-transition:all 300ms;-moz-transition:all 300ms;-o-transition:all 300ms;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;-webkit-transition:opacity 100ms;-moz-transition:opacity 100ms;-o-transition:opacity 100ms;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected,.uv-icon:hover{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}@media screen and (max-device-width: 480px){.uv-popover{position:fixed;bottom:10px;right:10px;left:10px;top:10px}}.uv-popover-content{-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;background:white;position:relative;width:325px;-webkit-transition:background 200ms;-moz-transition:background 200ms;-o-transition:background 200ms;transition:background 200ms}.uv-bottom .uv-popover-content{-webkit-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;-moz-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{-webkit-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;-moz-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{-webkit-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-moz-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{-webkit-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-moz-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}@media screen and (max-device-width: 480px){.uv-popover-content{-webkit-box-shadow:rgba(0,0,0,0.6) 0 10px 60px,rgba(0,0,0,0.2) 0 0 20px;-moz-box-shadow:rgba(0,0,0,0.6) 0 10px 60px,rgba(0,0,0,0.2) 0 0 20px;box-shadow:rgba(0,0,0,0.6) 0 10px 60px,rgba(0,0,0,0.2) 0 0 20px;height:100%;width:100%}}@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){.uv-popover-content{width:380px}}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:8px solid transparent;width:0;z-index:10;position:absolute;-webkit-transition:border-top-color 200ms;-moz-transition:border-top-color 200ms;-o-transition:border-top-color 200ms;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:12px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:12px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:12px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:12px solid white}@media screen and (max-device-width: 480px){.uv-popover-tail{display:none}}.uv-popover-loading{background:white;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:325px}@media screen and (max-device-width: 480px){.uv-popover-iframe-container{height:290px}}@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){.uv-popover-iframe-container{height:380px}}.uv-popover-iframe{-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{-moz-transition:none !important;-webkit-transition:none !important;-o-transition:color 0 ease-in !important;transition:none !important}.uv-fade{opacity:1;-webkit-transition:opacity 200ms ease-out;-moz-transition:opacity 200ms ease-out;-o-transition:opacity 200ms ease-out;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;-webkit-transition:all 80ms ease-out;-moz-transition:all 80ms ease-out;-o-transition:all 80ms ease-out;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateY(-15%);-moz-transform:scale(0.8) translateY(-15%);-ms-transform:scale(0.8) translateY(-15%);-o-transform:scale(0.8) translateY(-15%);transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateY(-15%) translateX(-10%);-moz-transform:scale(0.8) translateY(-15%) translateX(-10%);-ms-transform:scale(0.8) translateY(-15%) translateX(-10%);-o-transform:scale(0.8) translateY(-15%) translateX(-10%);transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateY(-15%) translateX(10%);-moz-transform:scale(0.8) translateY(-15%) translateX(10%);-ms-transform:scale(0.8) translateY(-15%) translateX(10%);-o-transform:scale(0.8) translateY(-15%) translateX(10%);transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateY(15%);-moz-transform:scale(0.8) translateY(15%);-ms-transform:scale(0.8) translateY(15%);-o-transform:scale(0.8) translateY(15%);transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateY(15%) translateX(-10%);-moz-transform:scale(0.8) translateY(15%) translateX(-10%);-ms-transform:scale(0.8) translateY(15%) translateX(-10%);-o-transform:scale(0.8) translateY(15%) translateX(-10%);transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateY(15%) translateX(10%);-moz-transform:scale(0.8) translateY(15%) translateX(10%);-ms-transform:scale(0.8) translateY(15%) translateX(10%);-o-transform:scale(0.8) translateY(15%) translateX(10%);transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateX(15%);-moz-transform:scale(0.8) translateX(15%);-ms-transform:scale(0.8) translateX(15%);-o-transform:scale(0.8) translateX(15%);transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateX(15%) translateY(-10%);-moz-transform:scale(0.8) translateX(15%) translateY(-10%);-ms-transform:scale(0.8) translateX(15%) translateY(-10%);-o-transform:scale(0.8) translateX(15%) translateY(-10%);transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateX(15%) translateY(10%);-moz-transform:scale(0.8) translateX(15%) translateY(10%);-ms-transform:scale(0.8) translateX(15%) translateY(10%);-o-transform:scale(0.8) translateX(15%) translateY(10%);transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateX(-15%);-moz-transform:scale(0.8) translateX(-15%);-ms-transform:scale(0.8) translateX(-15%);-o-transform:scale(0.8) translateX(-15%);transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateX(-15%) translateY(-10%);-moz-transform:scale(0.8) translateX(-15%) translateY(-10%);-ms-transform:scale(0.8) translateX(-15%) translateY(-10%);-o-transform:scale(0.8) translateX(-15%) translateY(-10%);transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;-webkit-transform:scale(0.8) translateX(-15%) translateY(10%);-moz-transform:scale(0.8) translateX(-15%) translateY(10%);-ms-transform:scale(0.8) translateX(-15%) translateY(10%);-o-transform:scale(0.8) translateX(-15%) translateY(10%);transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{-webkit-transform:translateY(-100%);-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);-o-transform:translateY(-100%);transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{-webkit-transform:translateY(100%);-moz-transform:translateY(100%);-ms-transform:translateY(100%);-o-transform:translateY(100%);transform:translateY(100%)}.uv-slide-left.uv-is-hidden{-webkit-transform:translateX(-100%);-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);-o-transform:translateX(-100%);transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{-webkit-transform:translateX(100%);-moz-transform:translateX(100%);-ms-transform:translateX(100%);-o-transform:translateX(100%);transform:translateX(100%)}
+</style><style type="text/css" media="print">#uvTab, .uv-tray, .uv-icon, .uv-popover, .uv-bubble {display:none !important;}</style><link rel="stylesheet" type="text/css" href="./002rubyrogues_files/livefyre_main.css" media="all"><script type="text/javascript" src="./002rubyrogues_files/livefyre_base.js" async="" defer=""></script><script type="text/javascript" async="" src="./002rubyrogues_files/js"></script><link rel="stylesheet" media="screen" id="shareaholic-publisher-css" href="http://rubyrogues.com/wp-content/plugins/sexybookmarks/spritegen_default/sprite.css"><style type="text/css">.shareaholic-arrow-down{ position: absolute !important; left:45% !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 6px solid #000000 !important; }.shareaholic-tip-text{font-size:12px !important; line-height:120% !important; background: #000000 !important; color: #ffffff !important; padding: 5px !important; border-radius: 5px !important; -webkit-border-radius:5px; !important; -moz-border-radius:5px; !important}</style><script type="text/javascript" src="./002rubyrogues_files/shareaholic_tools.js" async=""></script><script type="text/javascript" src="./002rubyrogues_files/livefyre_mod_main.js" async="" defer=""></script><link rel="stylesheet" type="text/css" href="./002rubyrogues_files/recommendations.css" id="recommendations_css"><script type="text/javascript" src="./002rubyrogues_files/livefyre_mod_editor_main.js" async="" defer=""></script><script type="text/javascript" async="" src="./002rubyrogues_files/in.php"></script></head>
+<body class="custom" style=""><div id="uvTab" style="background:red url(http://widget.uservoice.com/images/clients/widget2/tab-horizontal-dark.png) 0 50% no-repeat;border:1px solid #FFF;border-bottom:none;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0;-moz-box-shadow:inset rgba(255,255,255,.25) 1px 1px 1px, rgba(0,0,0,.5) 0 1px 2px;-webkit-box-shadow:inset rgba(255,255,255,.25) 1px 1px 1px, rgba(0,0,0,.5) 0 1px 2px;box-shadow:inset rgba(255,255,255,.25) 1px 1px 1px, rgba(0,0,0,.5) 0 1px 2px;font:normal normal bold 14px/1em Arial, sans-serif;position:fixed;right:10px;bottom:0;z-index:9999;background-color:#CC6D00;" class="uv-tab uv-slide-bottom "><a id="uvTabLabel" style="background-color: transparent; display:block;padding:6px 10px 2px 42px;text-decoration:none;" href="javascript:return false;"><img src="./002rubyrogues_files/feedback-tab.png" alt="feedback" style="border:0; background-color: transparent; padding:0; margin:0;"></a></div>
+<div id="container">
+<div id="page">
+	<div id="header">
+		<p id="logo"><a href="http://rubyrogues.com/">Ruby Rogues</a></p>
+	</div>
+<ul class="menu">
+<li class="tab tab-home"><a href="http://rubyrogues.com/">Home</a></li>
+<li class="tab tab-1"><a href="http://rubyrogues.com/picks/" title="Picks">Picks</a></li>
+<li class="tab tab-2"><a href="http://rubyrogues.com/episode-guide/" title="Episode Guide">Episode Guide</a></li>
+<li class="tab tab-3"><a href="http://rubyrogues.com/parley/" title="Parley">Ruby Rogues Parley</a></li>
+<li class="rss"><a href="http://rubyrogues.com/feed/" title="Ruby Rogues RSS Feed" rel="nofollow">Subscribe</a></li>
+<li><a href="javascript:UserVoice.showPopupWidget();">Request a Topic</a></li>
+</ul>
+	<div id="content_box">
+		<div id="content" class="hfeed">
+
+			<div class="post-19 post type-post status-publish format-standard hentry category-charles-max-wood category-david-brady category-evan-phoenix category-james-edward-gray-ii category-peter-cooper category-ruby-virtual-machines tag-ack tag-brain-rules-for-baby tag-coffeescript-cookbook tag-free-range-kids tag-gil tag-git-grep tag-janus tag-jit-compilers tag-jruby tag-jvm tag-macvim tag-maglev tag-mailchimp tag-mri tag-panic-free-pregnancy tag-railscasts tag-rubinius tag-ruby-1-8 tag-ruby-1-9 tag-rvm tag-sickpedia tag-thread-safety tag-trader-tales tag-vim tag-yarv post_box top" id="post-19">
+				<div class="headline_area">
+					<h1 class="entry-title">002 RR Virtual Machines, Concurrency, and the Future of Ruby</h1>
+					<p class="headline_meta">by <span class="author vcard fn">Charles Max Wood</span> on <abbr class="published" title="2011-05-12">May 12, 2011</abbr></p>
+				</div>
+				<div class="format_text entry-content">
+<!-- Start Shareaholic LikeButtonSetTop Automatic --><!-- End Shareaholic LikeButtonSetTop Automatic --><div class="powerpress_player" id="powerpress_player_914">
+<div id="mep_0" class="mejs-container svg powerpress-mejs-audio mejs-audio" style="width: 400px; height: 30px;"><div class="mejs-inner"><div class="mejs-mediaelement"><audio class="powerpress-mejs-audio" src="http://traffic.libsyn.com/rubyrogues/RubyRogues051211.mp3" preload="none">
+<a href="http://traffic.libsyn.com/rubyrogues/RubyRogues051211.mp3" title="Play" target="_blank"><img src="./002rubyrogues_files/play_audio.png" title="Play" alt="Play" style="border:0;"></a></audio></div><div class="mejs-layers"><div class="mejs-poster mejs-layer" style="display: none; width: 400px; height: 30px;"></div></div><div class="mejs-controls"><div class="mejs-button mejs-playpause-button mejs-play"><button type="button" aria-controls="mep_0" title="Play/Pause" aria-label="Play/Pause"></button></div><div class="mejs-time mejs-currenttime-container"><span class="mejs-currenttime">00:00</span></div><div class="mejs-time-rail" style="width: 218px;"><span class="mejs-time-total" style="width: 208px;"><span class="mejs-time-buffering" style="display: none;"></span><span class="mejs-time-loaded"></span><span class="mejs-time-current"></span><span class="mejs-time-handle"></span><span class="mejs-time-float"><span class="mejs-time-float-current">00:00</span><span class="mejs-time-float-corner"></span></span></span></div><div class="mejs-time mejs-duration-container"><span class="mejs-duration">00:00</span></div><div class="mejs-button mejs-volume-button mejs-mute"><button type="button" aria-controls="mep_0" title="Mute Toggle" aria-label="Mute Toggle"></button></div><div class="mejs-horizontal-volume-slider mejs-mute"><div class="mejs-horizontal-volume-total"></div><div class="mejs-horizontal-volume-current" style="width: 40px;"></div><div class="mejs-horizontal-volume-handle" style="left: 27px;"></div></div></div><div class="mejs-clear"></div></div></div>
+</div>
+<p class="powerpress_links powerpress_links_mp3">Podcast: <a href="http://traffic.libsyn.com/rubyrogues/RubyRogues051211.mp3" class="powerpress_link_pinw" target="_blank" title="Play in new window" onclick="return powerpress_pinw(&#39;19-podcast&#39;);" rel="nofollow">Play in new window</a>
+ | <a href="http://traffic.libsyn.com/rubyrogues/RubyRogues051211.mp3" class="powerpress_link_d" title="Download" rel="nofollow">Download</a> (Duration: 53:57 — 61.7MB)
+</p>
+<h3>Panelists:</h3>
+<ul>
+<li>Charles Max Wood (<a href="http://twitter.com/cmaxw">@cmaxw</a>)</li>
+<li>David Brady (<a href="http://twitter.com/dbrady">@dbrady</a>)</li>
+<li>Evan Phoenix (<a href="http://twitter.com/evanphx">@evanphx</a>)</li>
+<li>James Edward Gray II (<a href="http://twitter.com/JEG2">@JEG2</a>)</li>
+<li>Peter Cooper (<a href="http://twitter.com/peterc">@peterc</a>)</li>
+</ul>
+<h3>Tools and topics mentioned in this episode:</h3>
+<ul>
+<li><a href="http://rubini.us/">Rubinius</a></li>
+<li><a href="http://jruby.org/">JRuby</a></li>
+<li><a href="http://ruby.gemstone.com/">Maglev</a></li>
+<li><a href="http://ruby-lang.org/">MRI (Ruby 1.8.x)</a></li>
+<li><a href="http://ruby-lang.org/">Yarv (Ruby 1.9.x)</a></li>
+<li>JIT compilers</li>
+<li>Java Virtual Machine (JVM)</li>
+<li>Global Interpreter Lock (GIL)</li>
+<li>Thread Safety</li>
+</ul>
+<h3>Picks:</h3>
+<ul>
+<li><a href="http://www.amazon.com/gp/product/0979777755/ref=as_li_ss_tl?ie=UTF8&tag=chamaxwoo-20&linkCode=as2&camp=217145&creative=399349&creativeASIN=0979777755">Brain Rules for Baby</a><img src="./002rubyrogues_files/ir" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"> (James) Affiliate link</li>
+<li><a href="http://www.amazon.com/gp/product/0470574755/ref=as_li_ss_tl?ie=UTF8&tag=chamaxwoo-20&linkCode=as2&camp=217145&creative=399349&creativeASIN=0470574755">Free-Range Kids</a><img src="./002rubyrogues_files/ir(1)" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"> (James) Affiliate link</li>
+<li><a href="http://www.amazon.com/gp/product/0399529896/ref=as_li_ss_tl?ie=UTF8&tag=chamaxwoo-20&linkCode=as2&camp=217145&creative=399349&creativeASIN=0399529896">The Panic-Free Pregnancy</a><img src="./002rubyrogues_files/ir(2)" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"> (Evan) Affiliate link</li>
+<li><a href="http://coffeescriptcookbook.com/">CoffeeScriptCookbook.com</a> (Dave)</li>
+<li><a href="http://railscasts.com/">RailsCasts</a> (Peter)</li>
+<li><a href="http://eepurl.com/Psz1">MailChimp</a> (Peter) Referral link</li>
+<li><a href="http://sickpedia.org/">Sickpedia</a> (Peter) NOTE: Peter says this is NSFW.</li>
+<li><a href="http://code.google.com/p/macvim/">macvim</a> (Chuck)</li>
+<li><a href="https://github.com/carlhuda/janus">janus</a> (Chuck)</li>
+<li><a href="https://rvm.beginrescueend.com/">RVM</a> (Chuck)</li>
+<li><a href="http://solarclipper.com/">Trader Tales</a> (Chuck)</li>
+<li><a href="http://betterthangrep.com/">ack</a> (Evan)</li>
+<li><a href="http://www.kernel.org/pub/software/scm/git/docs/git-grep.html">git-grep</a> (Evan)</li>
+</ul>
+<p>The music is “Not Your Choice” by Wetnurse and available on <a href="http://www.metalsucks.net/2011/03/01/nyc-sucks-volume-2-free-metal-download-now/">Metal Sucks</a>.</p>
+<div class="shr-publisher-19 shareaholic-show-on-load" style="margin-left: 8.5px; overflow: hidden; height: 105px;"><div class="shr-bookmarks shr-bookmarks-bg-shr" style="margin-left: 10px; height: 100%; overflow: hidden; display: block; padding: 35px 0px 0px 10px; background-image: url(http://rubyrogues.com/wp-content/plugins/sexybookmarks/images/share-knowledge.png); background-color: transparent; background-position: initial initial; background-repeat: no-repeat no-repeat;"><ul class="shr-socials"><li class="shr-102 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=002+RR+Virtual+Machines%2C+Concurrency%2C+and+the+Future+of+Ruby&link=http%3A%2F%2Frubyrogues.com%2F002-rr-virtual-machines-concurrency-and-the-future-of-ruby%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=102&ctype=" rel="nofollow" target="_blank" class="external" orig_title="Add to DZone">Add to DZone</a></li><li class="shr-40 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=002+RR+Virtual+Machines%2C+Concurrency%2C+and+the+Future+of+Ruby&link=http%3A%2F%2Frubyrogues.com%2F002-rr-virtual-machines-concurrency-and-the-future-of-ruby%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=40&ctype=" rel="nofollow" target="_blank" class="external" orig_title="Add to Reddit">Add to Reddit</a></li><li class="shr-202 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=002+RR+Virtual+Machines%2C+Concurrency%2C+and+the+Future+of+Ruby&link=http%3A%2F%2Frubyrogues.com%2F002-rr-virtual-machines-concurrency-and-the-future-of-ruby%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=202&ctype=" rel="nofollow" target="_blank" class="external" orig_title="Post to YC Hacker News">Post to YC Hacker News</a></li><li class="shr-3 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=002+RR+Virtual+Machines%2C+Concurrency%2C+and+the+Future+of+Ruby&link=http%3A%2F%2Frubyrogues.com%2F002-rr-virtual-machines-concurrency-and-the-future-of-ruby%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=3&ctype=" rel="nofollow" target="_blank" class="external" orig_title="Post to Digg">Post to Digg</a></li><li class="shr-7 shareaholic" style="margin-left:0px !important;"><a rel="nofollow" target="_blank" class="external" orig_title="Post to Twitter">Post to Twitter</a><div class="shr-count"><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -10px;">16</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -10px;">16</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -10px;">16</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -11px;">16</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -11px;">16</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -12px;">16</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -12px;">16</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -12px;">16</div><div class="shr-count-center" aria-label="Number of times this webpage has been shared" style="left: 10px; top: -11px;">16</div></div></li><li class="shr-5 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=002+RR+Virtual+Machines%2C+Concurrency%2C+and+the+Future+of+Ruby&link=http%3A%2F%2Frubyrogues.com%2F002-rr-virtual-machines-concurrency-and-the-future-of-ruby%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=5&ctype=" rel="nofollow" target="_blank" class="external" orig_title="Post to Facebook">Post to Facebook</a><div class="shr-count"><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -10px;">2</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -10px;">2</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -10px;">2</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -11px;">2</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -11px;">2</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -12px;">2</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -12px;">2</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -12px;">2</div><div class="shr-count-center" aria-label="Number of times this webpage has been shared" style="left: 10px; top: -11px;">2</div></div></li><li class="shr-88 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=002+RR+Virtual+Machines%2C+Concurrency%2C+and+the+Future+of+Ruby&link=http%3A%2F%2Frubyrogues.com%2F002-rr-virtual-machines-concurrency-and-the-future-of-ruby%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=88&ctype=" rel="nofollow" target="_blank" class="external" orig_title="Add to LinkedIn">Add to LinkedIn</a><div class="shr-count"><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -10px;">4</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -10px;">4</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -10px;">4</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -11px;">4</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -11px;">4</div><div class="shr-count-outline" aria-hidden="true" style="left: 9px; top: -12px;">4</div><div class="shr-count-outline" aria-hidden="true" style="left: 10px; top: -12px;">4</div><div class="shr-count-outline" aria-hidden="true" style="left: 11px; top: -12px;">4</div><div class="shr-count-center" aria-label="Number of times this webpage has been shared" style="left: 10px; top: -11px;">4</div></div></li><li class="shr-201 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=002+RR+Virtual+Machines%2C+Concurrency%2C+and+the+Future+of+Ruby&link=http%3A%2F%2Frubyrogues.com%2F002-rr-virtual-machines-concurrency-and-the-future-of-ruby%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=201&ctype=" rel="nofollow" target="_blank" class="external" orig_title="Send via E-mail program">Send via E-mail program</a></li><li class="shr-2 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=002+RR+Virtual+Machines%2C+Concurrency%2C+and+the+Future+of+Ruby&link=http%3A%2F%2Frubyrogues.com%2F002-rr-virtual-machines-concurrency-and-the-future-of-ruby%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=2&ctype=" rel="nofollow" target="_blank" class="external" orig_title="Post to Delicious">Post to Delicious</a></li><li class="shr-38 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=002+RR+Virtual+Machines%2C+Concurrency%2C+and+the+Future+of+Ruby&link=http%3A%2F%2Frubyrogues.com%2F002-rr-virtual-machines-concurrency-and-the-future-of-ruby%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=38&ctype=" rel="nofollow" target="_blank" class="external" orig_title="Post to StumbleUpon">Post to StumbleUpon</a></li><li class="shr-45 shareaholic" style="margin-left:0px !important;"><a href="http://www.shareaholic.com/api/share/?title=002+RR+Virtual+Machines%2C+Concurrency%2C+and+the+Future+of+Ruby&link=http%3A%2F%2Frubyrogues.com%2F002-rr-virtual-machines-concurrency-and-the-future-of-ruby%2F&notes=&short_link=&shortener=google&shortener_key=&v=1&apitype=1&apikey=8afa39428933be41f8afdb8ea21a495c&source=Shareaholic-Publishers&template=&service=45&ctype=" rel="nofollow" target="_blank" class="external" orig_title="Add to Ping">Add to Ping</a></li></ul><div style="clear: both;"></div><div class="shr-getshr" style="visibility:hidden;font-size:10px !important"><a target="_blank" href="http://www.shareaholic.com/?src=pub">Get Shareaholic for Google Chrome</a></div><div style="clear: both;"></div><style type="text/css">ul.shr-socials li.shareaholic{background-image:url(http://rubyrogues.com/wp-content/plugins/sexybookmarks/spritegen_default/sprite.png) !important;}</style></div></div><!-- Start Shareaholic LikeButtonSetBottom Automatic --><!-- End Shareaholic LikeButtonSetBottom Automatic --><!-- Start Shareaholic Recommendations Automatic --><div class="shr_rd-19"><div class="shareaholic-recommendations-container shareaholic-ui" style="height: auto;"><div class="shareaholic-recommendations-header">You may also like:</div><div class="shareaholic-recommendations shareaholic-contains-6"><div class="shareaholic-recommendation recommendation-1"> <a href="http://rubyrogues.com/045-rr-bundler-with-andre-arko/" class="recommendation-article-link" rel="norewrite">   <div class="recommendation-article-image-container">   <img src="./002rubyrogues_files/default_thumb-137x137.png" class="recommendation-article-image" alt="045 RR Bundler with Andre Arko" nopin="nopin">   </div>   <div class="recommendation-article-title">045 RR Bundler with Andre Arko</div> </a></div><div class="shareaholic-recommendation recommendation-2"> <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/" class="recommendation-article-link" rel="norewrite">   <div class="recommendation-article-image-container">   <img src="./002rubyrogues_files/default_thumb-137x137.png" class="recommendation-article-image" alt="040 RR Text Editors and IDE’s" nopin="nopin">   </div>   <div class="recommendation-article-title">040 RR Text Editors and IDE’s</div> </a></div><div class="shareaholic-recommendation recommendation-3"> <a href="http://rubyrogues.com/parley/" class="recommendation-article-link" rel="norewrite">   <div class="recommendation-article-image-container">   <img src="./002rubyrogues_files/6ab3d9f707d3ff9f55d9f1a7673695031a28ffce.png" class="recommendation-article-image" alt="Ruby Rogues Parley" nopin="nopin">   </div>   <div class="recommendation-article-title">Ruby Rogues Parley</div> </a></div><div class="shareaholic-recommendation recommendation-4"> <a href="http://rubyrogues.com/109-rr-extreme-programming-with-will-read/" class="recommendation-article-link" rel="norewrite">   <div class="recommendation-article-image-container">   <img src="./002rubyrogues_files/default_thumb-137x137.png" class="recommendation-article-image" alt="109 RR Extreme Programming with Will Read" nopin="nopin">   </div>   <div class="recommendation-article-title">109 RR Extreme Programming with Will Read</div> </a></div><div class="shareaholic-recommendation recommendation-5"> <a href="http://rubyrogues.com/?powerpress_pinw=1396-podcast" class="recommendation-article-link" rel="norewrite">   <div class="recommendation-article-image-container">   <img src="./002rubyrogues_files/default_thumb-137x137.png" class="recommendation-article-image" alt="Blubrry PowerPress Player" nopin="nopin">   </div>   <div class="recommendation-article-title">Blubrry PowerPress Player</div> </a></div><div class="shareaholic-recommendation recommendation-6"> <a href="http://rubyrogues.com/054-rr-coding-exercises-quizzes-and-katas/" class="recommendation-article-link" rel="norewrite">   <div class="recommendation-article-image-container">   <img src="./002rubyrogues_files/default_thumb-137x137.png" class="recommendation-article-image" alt="054 RR Coding Exercises, Quizzes, and Katas" nopin="nopin">   </div>   <div class="recommendation-article-title">054 RR Coding Exercises, Quizzes, and Katas</div> </a></div></div><div class="shareaholic-recommendations-footer"><a class="shareaholic-recommendations-attribution foo" target="_blank" href="https://shareaholic.com/publishers/recommendations/?src=relatedapp&src_ref=rubyrogues.com" title="Powered by Shareaholic"><span class="shareaholic-recommendations-attribution-text">[ what's this ]</span><i class="shareaholic-recommendations-attribution-logo"></i></a></div></div></div><!-- End Shareaholic Recommendations Automatic -->					<p class="post_tags">Tagged as:
+						<a href="http://rubyrogues.com/tag/ack/" rel="tag nofollow">ack</a>, 
+						<a href="http://rubyrogues.com/tag/brain-rules-for-baby/" rel="tag nofollow">brain rules for baby</a>, 
+						<a href="http://rubyrogues.com/tag/coffeescript-cookbook/" rel="tag nofollow">coffeescript cookbook</a>, 
+						<a href="http://rubyrogues.com/tag/free-range-kids/" rel="tag nofollow">free-range kids</a>, 
+						<a href="http://rubyrogues.com/tag/gil/" rel="tag nofollow">GIL</a>, 
+						<a href="http://rubyrogues.com/tag/git-grep/" rel="tag nofollow">git-grep</a>, 
+						<a href="http://rubyrogues.com/tag/janus/" rel="tag nofollow">janus</a>, 
+						<a href="http://rubyrogues.com/tag/jit-compilers/" rel="tag nofollow">JIT compilers</a>, 
+						<a href="http://rubyrogues.com/tag/jruby/" rel="tag nofollow">jruby</a>, 
+						<a href="http://rubyrogues.com/tag/jvm/" rel="tag nofollow">JVM</a>, 
+						<a href="http://rubyrogues.com/tag/macvim/" rel="tag nofollow">macvim</a>, 
+						<a href="http://rubyrogues.com/tag/maglev/" rel="tag nofollow">maglev</a>, 
+						<a href="http://rubyrogues.com/tag/mailchimp/" rel="tag nofollow">mailchimp</a>, 
+						<a href="http://rubyrogues.com/tag/mri/" rel="tag nofollow">mri</a>, 
+						<a href="http://rubyrogues.com/tag/panic-free-pregnancy/" rel="tag nofollow">panic-free pregnancy</a>, 
+						<a href="http://rubyrogues.com/tag/railscasts/" rel="tag nofollow">railscasts</a>, 
+						<a href="http://rubyrogues.com/tag/rubinius/" rel="tag nofollow">rubinius</a>, 
+						<a href="http://rubyrogues.com/tag/ruby-1-8/" rel="tag nofollow">ruby 1.8</a>, 
+						<a href="http://rubyrogues.com/tag/ruby-1-9/" rel="tag nofollow">ruby 1.9</a>, 
+						<a href="http://rubyrogues.com/tag/rvm/" rel="tag nofollow">rvm</a>, 
+						<a href="http://rubyrogues.com/tag/sickpedia/" rel="tag nofollow">sickpedia</a>, 
+						<a href="http://rubyrogues.com/tag/thread-safety/" rel="tag nofollow">thread safety</a>, 
+						<a href="http://rubyrogues.com/tag/trader-tales/" rel="tag nofollow">trader tales</a>, 
+						<a href="http://rubyrogues.com/tag/vim/" rel="tag nofollow">vim</a>, 
+						<a href="http://rubyrogues.com/tag/yarv/" rel="tag nofollow">yarv</a>
+					</p>
+				</div>
+			</div>
+
+<div id="livefyre-comments"><script>
+  (function() {
+    
+   var a=this;var b,c,d,e,f;function g(){return a.navigator?a.navigator.userAgent:null}f=e=d=c=b=!1;var h;if(h=g()){var i=a.navigator;b=0==h.indexOf("Opera");c=!b&&-1!=h.indexOf("MSIE");e=(d=!b&&-1!=h.indexOf("WebKit"))&&-1!=h.indexOf("Mobile");f=!b&&!d&&"Gecko"==i.product}var j=c,k=f,l=d,m=e;var n;if(b&&a.opera){var o=a.opera.version;"function"==typeof o&&o()}else k?n=/rv\:([^\);]+)(\)|;)/:j?n=/MSIE\s+([^\);]+)(\)|;)/:l&&(n=/WebKit\/(\S+)/),n&&n.exec(g());var p=document,q=p.createElement("link");q.rel="stylesheet";q.type="text/css";q.href="http://zor.fyre.co/wjs/v3.0/css/livefyre_"+(m?"mobile":"embed")+".css";q.media="all";p.getElementsByTagName("head")[0].appendChild(q);var r="header hgroup footer article section aside nav figure figcaption embed audio video canvas details summary time mark".split(" "),s=p.createDocumentFragment(),t;for(t=0; t<r.length; t++){s.appendChild(p.createElement(r[t]))};
+   })();    
+</script>
+
+<div class="fyre fyre-width-medium"><div class="fyre-widget "><iframe src="./002rubyrogues_files/http---rubyrogues.html" frameborder="0" style="position: absolute; height: 1px; width: 1px; z-index: 99999; background-color: transparent;"></iframe><div class="fyre-permalink-stream"></div><div class="fyre-stream-stats"><div class="fyre-comment-count"><span>13 comments</span></div><div class="fyre-help"><div class="fyre-box-wrapper"><a href="http://livefyre.com/" target="_blank"><img class="fyre-logo-drop" src="./002rubyrogues_files/down_arrow.png"><img class="fyre-logo-help" src="./002rubyrogues_files/lf-logo.png" alt="Livefyre"></a><ul class="fyre-box-list"><li><a href="http://livefyre.com/" target="_blank" title="Get Livefyre">Get Livefyre</a></li><li><a href="http://support.livefyre.com/" target="_blank" title="FAQ">FAQ</a></li></ul></div></div></div><div class="fyre-auth"><div class="fyre-login-bar"><a rel="nofollow" class="fyre-user-loggedout">Sign in</a></div><div class="fyre-live-container"><div class="fyre-livecount"><em class="fyre-stream-livecount">5 people listening</em></div><div class="fyre-listener-avatars"><a href="http://www.livefyre.com/profile/6075137/" title="corporate" data-id="_up6075137@livefyre.com" class="fyre-follower fyre-follower-_up6075137-livefyre-com"><img src="./002rubyrogues_files/saved_resource" alt="corporate" onerror="javascript:this.src=&#39;http://avatars.fyre.co/a/anon/50.jpg&#39;;"></a><a href="http://www.livefyre.com/profile/7305433/" title="New York payday loan" data-id="_up7305433@livefyre.com" class="fyre-follower fyre-follower-_up7305433-livefyre-com"><img src="./002rubyrogues_files/saved_resource(1)" alt="New York payday loan" onerror="javascript:this.src=&#39;http://avatars.fyre.co/a/anon/50.jpg&#39;;"></a><a href="http://www.livefyre.com/profile/10217581/" title="Hookah" data-id="_up10217581@livefyre.com" class="fyre-follower fyre-follower-_up10217581-livefyre-com"><img src="./002rubyrogues_files/saved_resource(2)" alt="Hookah" onerror="javascript:this.src=&#39;http://avatars.fyre.co/a/anon/50.jpg&#39;;"></a><a href="http://www.livefyre.com/profile/10295583/" title="monetization" data-id="_up10295583@livefyre.com" class="fyre-follower fyre-follower-_up10295583-livefyre-com"><img src="./002rubyrogues_files/saved_resource(3)" alt="monetization" onerror="javascript:this.src=&#39;http://avatars.fyre.co/a/anon/50.jpg&#39;;"></a></div></div></div><div class="fyre-editor" style=""><div class="fyre-editor-container"><div class="fyre-editor-editable"><iframe frameborder="0" class="fyre-roundedpanel-content editable" id="fyre-editor-18" style="padding: 0px; background-color: white;"></iframe></div><div class="fyre-editor-toolbar"><div class="goog-toolbar goog-toolbar-horizontal" role="toolbar" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left fyre-format-button" role="button" id=":g" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left-inner-box" style="-webkit-user-select: none;"></div></div></div><div class="goog-inline-block fyre-button-left fyre-mention-button" role="button" id=":h" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left-inner-box" style="-webkit-user-select: none;"></div></div></div><div class="goog-inline-block fyre-button-left fyre-follow-button" role="button" id=":i" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-left-inner-box" style="-webkit-user-select: none;">+ Follow</div></div></div><div class="goog-inline-block fyre-button-right fyre-post-button fyre-post-button-enabled fyre-post-button-new" role="button" id=":j" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-right-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-right-inner-box" style="-webkit-user-select: none;">Post comment as...</div></div></div><div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-facebook" role="button" id=":k" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-right-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-right-inner-box" style="-webkit-user-select: none;"></div></div></div><div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-twitter" role="button" id=":l" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-right-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-right-inner-box" style="-webkit-user-select: none;"></div></div></div><div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-linkedin" role="button" id=":m" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-right-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block fyre-button-right-inner-box" style="-webkit-user-select: none;"></div></div></div><div class="goog-toolbar-separator goog-inline-block" role="separator" id=":n" style="-webkit-user-select: none;">&nbsp;</div></div><div class="fyre-format-toolbar" style="display: none;"><div class="goog-toolbar goog-toolbar-horizontal" role="toolbar" tabindex="-1" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button" title="Bold" aria-pressed="false" role="button" id="+bold" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-inner-box" style="-webkit-user-select: none;"><div class="tr-icon tr-bold" style="-webkit-user-select: none;"></div></div></div></div><div class="goog-inline-block goog-toolbar-button" title="Italic" aria-pressed="false" role="button" id="+italic" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-inner-box" style="-webkit-user-select: none;"><div class="tr-icon tr-italic" style="-webkit-user-select: none;"></div></div></div></div><div class="goog-inline-block goog-toolbar-button" title="Underline" aria-pressed="false" role="button" id="+underline" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-inner-box" style="-webkit-user-select: none;"><div class="tr-icon tr-underline" style="-webkit-user-select: none;"></div></div></div></div><div class="goog-inline-block goog-toolbar-button" title="Add or remove link" aria-pressed="false" role="button" id="+link" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-inner-box" style="-webkit-user-select: none;"><div class="tr-link" style="-webkit-user-select: none;">Link</div></div></div></div><div class="goog-inline-block goog-toolbar-button" title="Numbered list" aria-pressed="false" role="button" id="+insertOrderedList" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-inner-box" style="-webkit-user-select: none;"><div class="tr-icon tr-insertOrderedList" style="-webkit-user-select: none;"></div></div></div></div><div class="goog-inline-block goog-toolbar-button" title="Bullet list" aria-pressed="false" role="button" id="+insertUnorderedList" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-outer-box" style="-webkit-user-select: none;"><div class="goog-inline-block goog-toolbar-button-inner-box" style="-webkit-user-select: none;"><div class="tr-icon tr-insertUnorderedList" style="-webkit-user-select: none;"></div></div></div></div></div></div></div><div class="fyre-editor-preview"></div></div></div><div class="fyre-input-box-collapsed"></div><div class="fyre-stream-header"><div class="fyre-content-loading" style="display: none;">Loading</div><div class="fyre-stream-sort"><div class="fyre-stream-sort-options"><a class="fyre-stream-sort-newest fyre-stream-sort-selected">Newest</a><span class="fyre-stream-sort-bar"> | </span><a class="fyre-stream-sort-oldest">Oldest</a></div></div></div><div class="fyre-comment-stream"><div class="fyre-stream-content"></div><div class="fyre-stream-more" style="display: none;"><div class="fyre-stream-more-container"><div class="fyre-text">Show More Comments</div><div class="fyre-spinner"><div class="fyre-ball"><!--[if IE]><img src="http://zor.fyre.co/wjs/v3.0.1379119612/images/fyre-spinner-ball.gif" alt="" /><![endif]--><!--[if !IE]><!--><img src="./002rubyrogues_files/fyre-spinner-ball.png" alt=""><!--<![endif]--></div></div></div></div></div><div class="fyre-top-content-stream"></div><div class="fyre-thread-breakout-stream"></div><div class="fyre-stream-menu-container"></div></div></div></div>					<div class="prev_next post_nav">
+						<p class="previous">Previous post: <a href="http://rubyrogues.com/001-rr-testing-practices-and-tools/" rel="prev">001 RR Testing Practices and Tools</a></p>
+						<p>Next post: <a href="http://rubyrogues.com/003-rr-templating-languages-for-html-css-and-javascript/" rel="next">003 RR Templating Languages for HTML, CSS, and JavaScript</a></p>
+					</div>
+		</div>
+
+		<div id="sidebars">
+			<div id="sidebar_1" class="sidebar">
+				<ul class="sidebar_list">
+<li class="widget widget_text" id="text-3"><h3>Subscribe</h3>			<div class="textwidget"><a href="http://itunes.apple.com/us/podcast/ruby-rogues/id436260381"><img src="./002rubyrogues_files/itunes.png"></a>
+
+<a href="http://rubyrogues.com/feed/"><img src="./002rubyrogues_files/rss.png"></a></div>
+		</li><li class="widget widget_text" id="text-13">			<div class="textwidget"><a href="http://railsrampup.com/"><img src="./002rubyrogues_files/RailsRampUpBanner.png" alt="Rails Ramp Up"></a></div>
+		</li><li class="widget widget_text" id="text-9">			<div class="textwidget"><a href="https://www.speakpipe.com/RubyRogues">Send us a voice message</a></div>
+		</li><li class="widget widget_text" id="text-4"><h3>Visit our sponsors:</h3>			<div class="textwidget"><a target="_new" href="http://newrelic.com/ruby?utm_source=TMTC&utm_medium=advertising&utm_content=rpm&utm_campaign=RPM&utm_term=RubyDrop&mpc=BA-TMTC-RPM-EN-0-TeachMeToCode-RubyDrop"><img src="./002rubyrogues_files/NR-250x250-clue-ruby.gif"></a>
+<br>
+<a href="http://www.jetbrains.com/ruby/?utm_source=rubyrogues&utm_medium=banner&utm_campaign=rubymine"><img src="./002rubyrogues_files/RM250x250.png"></a>
+<br>
+<a href="http://try.codeclimate.com/rubyrogues/?utm_source=rubyrogues&utm_medium=banner&utm_content=d&utm_campaign=rr0813"><img src="./002rubyrogues_files/Code-Climate-4.png"></a><br>
+and
+</div>
+		</li><li class="widget widget_text" id="text-6"><h3>Hosting Provided by</h3>			<div class="textwidget"><a target="_new" href="http://bluebox.net/"><img src="./002rubyrogues_files/new_logo.png" width="250px"></a></div>
+		</li><li class="widget widget_text" id="text-8">			<div class="textwidget"><script type="text/javascript" src="./002rubyrogues_files/1435746406.js"></script><style type="text/css">#af-form-1435746406 .af-body .af-textWrap{width:98%;display:block;float:none;}#af-form-1435746406 .af-body .privacyPolicy{color:#000000;font-size:11px;font-family:Verdana, sans-serif;}#af-form-1435746406 .af-body a{color:#094C80;text-decoration:underline;font-style:normal;font-weight:normal;}#af-form-1435746406 .af-body input.text, #af-form-1435746406 .af-body textarea{background-color:#FFFFFF;border-color:#919191;border-width:1px;border-style:solid;color:#000000;text-decoration:none;font-style:normal;font-weight:normal;font-size:12px;font-family:Verdana, sans-serif;}#af-form-1435746406 .af-body input.text:focus, #af-form-1435746406 .af-body textarea:focus{background-color:#FFFAD6;border-color:#030303;border-width:1px;border-style:solid;}#af-form-1435746406 .af-body label.previewLabel{display:block;float:none;text-align:left;width:auto;color:#000000;text-decoration:none;font-style:normal;font-weight:normal;font-size:12px;font-family:Verdana, sans-serif;}#af-form-1435746406 .af-body{padding-bottom:15px;padding-top:15px;background-repeat:no-repeat;background-position:inherit;background-image:none;color:#000000;font-size:11px;font-family:Verdana, sans-serif;}#af-form-1435746406 .af-footer{padding-right:15px;padding-left:15px;background-color:#transparent;border-width:1px;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;color:#000000;font-size:12px;font-family:Verdana, sans-serif;}#af-form-1435746406 .af-header{padding-bottom:9px;padding-top:9px;padding-right:10px;padding-left:10px;background-image:url('http://forms.aweber.com/images/auto/body/ff3/300/991/f00');background-position:top left;background-repeat:repeat-x;background-color:#991f00;border-width:1px;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;color:#FFFFFF;font-size:16px;font-family:Verdana, sans-serif;}#af-form-1435746406 .af-quirksMode .bodyText{padding-top:2px;padding-bottom:2px;}#af-form-1435746406 .af-quirksMode{padding-right:15px;padding-left:15px;}#af-form-1435746406 .af-standards .af-element{padding-right:15px;padding-left:15px;}#af-form-1435746406 .bodyText p{margin:1em 0;}#af-form-1435746406 .buttonContainer input.submit{background-image:url("http://forms.aweber.com/images/auto/gradient/button/d20.png");background-position:top left;background-repeat:repeat-x;background-color:#bd0200;border:1px solid #bd0200;color:#FFFFFF;text-decoration:none;font-style:normal;font-weight:normal;font-size:14px;font-family:Verdana, sans-serif;}#af-form-1435746406 .buttonContainer input.submit{width:auto;}#af-form-1435746406 .buttonContainer{text-align:right;}#af-form-1435746406 body,#af-form-1435746406 dl,#af-form-1435746406 dt,#af-form-1435746406 dd,#af-form-1435746406 h1,#af-form-1435746406 h2,#af-form-1435746406 h3,#af-form-1435746406 h4,#af-form-1435746406 h5,#af-form-1435746406 h6,#af-form-1435746406 pre,#af-form-1435746406 code,#af-form-1435746406 fieldset,#af-form-1435746406 legend,#af-form-1435746406 blockquote,#af-form-1435746406 th,#af-form-1435746406 td{float:none;color:inherit;position:static;margin:0;padding:0;}#af-form-1435746406 button,#af-form-1435746406 input,#af-form-1435746406 submit,#af-form-1435746406 textarea,#af-form-1435746406 select,#af-form-1435746406 label,#af-form-1435746406 optgroup,#af-form-1435746406 option{float:none;position:static;margin:0;}#af-form-1435746406 div{margin:0;}#af-form-1435746406 fieldset{border:0;}#af-form-1435746406 form,#af-form-1435746406 textarea,.af-form-wrapper,.af-form-close-button,#af-form-1435746406 img{float:none;color:inherit;position:static;background-color:none;border:none;margin:0;padding:0;}#af-form-1435746406 input,#af-form-1435746406 button,#af-form-1435746406 textarea,#af-form-1435746406 select{font-size:100%;}#af-form-1435746406 p{color:inherit;}#af-form-1435746406 select,#af-form-1435746406 label,#af-form-1435746406 optgroup,#af-form-1435746406 option{padding:0;}#af-form-1435746406 table{border-collapse:collapse;border-spacing:0;}#af-form-1435746406 ul,#af-form-1435746406 ol{list-style-image:none;list-style-position:outside;list-style-type:disc;padding-left:40px;}#af-form-1435746406,#af-form-1435746406 .quirksMode{width:242px;}#af-form-1435746406.af-quirksMode{overflow-x:hidden;}#af-form-1435746406{background-color:#F0F0F0;border-color:#CFCFCF;border-width:1px;border-style:solid;}#af-form-1435746406{display:block;}#af-form-1435746406{overflow:hidden;}.af-body .af-textWrap{text-align:left;}.af-body input.image{border:none!important;}.af-body input.submit,.af-body input.image,.af-form .af-element input.button{float:none!important;}.af-body input.text{width:100%;float:none;padding:2px!important;}.af-body.af-standards input.submit{padding:4px 12px;}.af-clear{clear:both;}.af-element label{text-align:left;display:block;float:left;}.af-element{padding:5px 0;}.af-form-wrapper{text-indent:0;}.af-form{text-align:left;margin:auto;}.af-header,.af-footer{margin-bottom:0;margin-top:0;padding:10px;}.af-quirksMode .af-element{padding-left:0!important;padding-right:0!important;}.lbl-right .af-element label{text-align:right;}body {}</style><form method="post" class="af-form-wrapper" action="http://www.aweber.com/scripts/addlead.pl"><div style="display: none;"><input type="hidden" name="meta_web_form_id" value="1435746406"><input type="hidden" name="meta_split_id" value=""><input type="hidden" name="listname" value="rubyrogues"><input type="hidden" name="redirect" value="http://www.aweber.com/thankyou-coi.htm?m=text" id="redirect_5f4e7c511ba3c494b3e26758b81877da"><input type="hidden" name="meta_adtracking" value="Ruby_Rogues"><input type="hidden" name="meta_message" value="1"><input type="hidden" name="meta_required" value="name,email"><input type="hidden" name="meta_tooltip" value=""></div><div id="af-form-1435746406" class="af-form"><div id="af-header-1435746406" class="af-header"><div class="bodyText"><p>&nbsp;Get the Inside Scoop!</p></div></div><div id="af-body-1435746406" class="af-body af-standards"><div class="af-element"><label class="previewLabel" for="awf_field-42301905">Name: </label><div class="af-textWrap"><input id="awf_field-42301905" type="text" name="name" class="text" value="" tabindex="500"></div><div class="af-clear"></div></div><div class="af-element"><label class="previewLabel" for="awf_field-42301906">Email: </label><div class="af-textWrap"><input class="text" id="awf_field-42301906" type="text" name="email" value="" tabindex="501"></div><div class="af-clear"></div></div><div class="af-element buttonContainer"><input name="submit" class="submit" type="submit" value="Submit" tabindex="502"><div class="af-clear"></div></div><div class="af-element privacyPolicy" style="text-align: center"><p>We respect your <a title="Privacy Policy" href="http://www.aweber.com/permission.htm" target="_blank">email privacy</a></p><div class="af-clear"></div></div><div class="af-element poweredBy" style="text-align: center; font-size: 9px;"><p><a href="http://www.aweber.com/" title="Email Marketing">Email Marketing</a> by AWeber</p><div class="af-clear"></div></div></div><div id="af-footer-1435746406" class="af-footer"><div class="bodyText"><p style="text-align: center;"><span style="font: 12px/18px Verdana, sans-serif; text-align: center; color: #000000; text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; font-size-adjust: none; font-stretch: normal; background-color: #f0f0f0; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">Sign up to see what's coming up, who is coming on, and gain access to other exciting&nbsp;Rogue&nbsp;news<span class="Apple-converted-space">&nbsp;</span></span><strong style="margin: 0px; padding: 0px; text-align: center; color: #000000; text-transform: none; line-height: 18px; text-indent: 0px; letter-spacing: normal; font-family: Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color: #f0f0f0; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">as it breaks!</strong></p></div></div></div></form><script type="text/javascript">    <!--    (function() {        var IE = /*@cc_on!@*/false;        if (!IE) { return; }        if (document.compatMode && document.compatMode == 'BackCompat') {            if (document.getElementById("af-form-1435746406")) {                document.getElementById("af-form-1435746406").className = 'af-form af-quirksMode';            }            if (document.getElementById("af-body-1435746406")) {                document.getElementById("af-body-1435746406").className = "af-body inline af-quirksMode";            }            if (document.getElementById("af-header-1435746406")) {                document.getElementById("af-header-1435746406").className = "af-header af-quirksMode";            }            if (document.getElementById("af-footer-1435746406")) {                document.getElementById("af-footer-1435746406").className = "af-footer af-quirksMode";            }        }    })();    --></script></div>
+		</li><li class="widget widget_categories" id="categories-3"><h3>Categories</h3>		<ul>
+	<li class="cat-item cat-item-377"><a href="http://rubyrogues.com/category/announcements/" title="View all posts filed under Announcements">Announcements</a> (3)
+</li>
+	<li class="cat-item cat-item-336"><a href="http://rubyrogues.com/category/best-practices-2/" title="View all posts filed under Best Practices">Best Practices</a> (3)
+</li>
+	<li class="cat-item cat-item-327"><a href="http://rubyrogues.com/category/book-club/" title="View all posts filed under Book Club">Book Club</a> (13)
+</li>
+	<li class="cat-item cat-item-96"><a href="http://rubyrogues.com/category/databases/" title="View all posts filed under Databases">Databases</a> (1)
+</li>
+	<li class="cat-item cat-item-154"><a href="http://rubyrogues.com/category/debugging/" title="View all posts filed under Debugging">Debugging</a> (2)
+</li>
+	<li class="cat-item cat-item-331"><a href="http://rubyrogues.com/category/errorsexceptions/" title="View all posts filed under Errors/Exceptions">Errors/Exceptions</a> (1)
+</li>
+	<li class="cat-item cat-item-341"><a href="http://rubyrogues.com/category/learning/" title="View all posts filed under Learning">Learning</a> (2)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://rubyrogues.com/category/panelists/" title="View all posts filed under Panelists">Panelists</a> (121)
+<ul class="children">
+	<li class="cat-item cat-item-5"><a href="http://rubyrogues.com/category/panelists/aaron-patterson/" title="View all posts filed under Aaron Patterson">Aaron Patterson</a> (7)
+</li>
+	<li class="cat-item cat-item-375"><a href="http://rubyrogues.com/category/panelists/adam-keys/" title="View all posts filed under Adam Keys">Adam Keys</a> (2)
+</li>
+	<li class="cat-item cat-item-391"><a href="http://rubyrogues.com/category/panelists/alex-gaynor/" title="View all posts filed under Alex Gaynor">Alex Gaynor</a> (1)
+</li>
+	<li class="cat-item cat-item-350"><a href="http://rubyrogues.com/category/panelists/amy-hoy/" title="View all posts filed under Amy Hoy">Amy Hoy</a> (1)
+</li>
+	<li class="cat-item cat-item-344"><a href="http://rubyrogues.com/category/panelists/andre-arko/" title="View all posts filed under Andre Arko">Andre Arko</a> (1)
+</li>
+	<li class="cat-item cat-item-372"><a href="http://rubyrogues.com/category/panelists/angela-harms/" title="View all posts filed under Angela Harms">Angela Harms</a> (1)
+</li>
+	<li class="cat-item cat-item-389"><a href="http://rubyrogues.com/category/panelists/ara-t-howard/" title="View all posts filed under Ara T. Howard">Ara T. Howard</a> (1)
+</li>
+	<li class="cat-item cat-item-380"><a href="http://rubyrogues.com/category/panelists/arlen-walker/" title="View all posts filed under Arlen Walker">Arlen Walker</a> (1)
+</li>
+	<li class="cat-item cat-item-395"><a href="http://rubyrogues.com/category/panelists/ashe-dryden/" title="View all posts filed under Ashe Dryden">Ashe Dryden</a> (1)
+</li>
+	<li class="cat-item cat-item-218"><a href="http://rubyrogues.com/category/panelists/avdi-grimm/" title="View all posts filed under Avdi Grimm">Avdi Grimm</a> (92)
+</li>
+	<li class="cat-item cat-item-409"><a href="http://rubyrogues.com/category/panelists/brian-hogan/" title="View all posts filed under Brian Hogan">Brian Hogan</a> (1)
+</li>
+	<li class="cat-item cat-item-387"><a href="http://rubyrogues.com/category/panelists/brian-shirai/" title="View all posts filed under Brian Shirai">Brian Shirai</a> (2)
+</li>
+	<li class="cat-item cat-item-397"><a href="http://rubyrogues.com/category/panelists/bruce-williams/" title="View all posts filed under Bruce Williams">Bruce Williams</a> (1)
+</li>
+	<li class="cat-item cat-item-342"><a href="http://rubyrogues.com/category/panelists/bryan-helmkamp/" title="View all posts filed under Bryan Helmkamp">Bryan Helmkamp</a> (2)
+</li>
+	<li class="cat-item cat-item-369"><a href="http://rubyrogues.com/category/panelists/chad-fowler/" title="View all posts filed under Chad Fowler">Chad Fowler</a> (1)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://rubyrogues.com/category/panelists/charles-max-wood/" title="View all posts filed under Charles Max Wood">Charles Max Wood</a> (110)
+</li>
+	<li class="cat-item cat-item-343"><a href="http://rubyrogues.com/category/panelists/conrad-barski/" title="View all posts filed under Conrad Barski">Conrad Barski</a> (1)
+</li>
+	<li class="cat-item cat-item-345"><a href="http://rubyrogues.com/category/panelists/dan-kubb/" title="View all posts filed under Dan Kubb">Dan Kubb</a> (1)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://rubyrogues.com/category/panelists/david-brady/" title="View all posts filed under David Brady">David Brady</a> (73)
+</li>
+	<li class="cat-item cat-item-370"><a href="http://rubyrogues.com/category/panelists/david-heinemeier-hansson/" title="View all posts filed under David Heinemeier Hansson">David Heinemeier Hansson</a> (1)
+</li>
+	<li class="cat-item cat-item-366"><a href="http://rubyrogues.com/category/panelists/david-laribee/" title="View all posts filed under David Laribee">David Laribee</a> (1)
+</li>
+	<li class="cat-item cat-item-393"><a href="http://rubyrogues.com/category/panelists/davy-stevenson/" title="View all posts filed under Davy Stevenson">Davy Stevenson</a> (1)
+</li>
+	<li class="cat-item cat-item-333"><a href="http://rubyrogues.com/category/panelists/dr-nic-williams/" title="View all posts filed under Dr. Nic Williams">Dr. Nic Williams</a> (1)
+</li>
+	<li class="cat-item cat-item-404"><a href="http://rubyrogues.com/category/panelists/elisabeth-hendrickson/" title="View all posts filed under Elisabeth Hendrickson">Elisabeth Hendrickson</a> (1)
+</li>
+	<li class="cat-item cat-item-383"><a href="http://rubyrogues.com/category/panelists/elise-worthy/" title="View all posts filed under Elise Worthy">Elise Worthy</a> (1)
+</li>
+	<li class="cat-item cat-item-384"><a href="http://rubyrogues.com/category/panelists/erin-parker/" title="View all posts filed under Erin Parker">Erin Parker</a> (1)
+</li>
+	<li class="cat-item cat-item-403"><a href="http://rubyrogues.com/category/panelists/ernie-miller/" title="View all posts filed under Ernie Miller">Ernie Miller</a> (1)
+</li>
+	<li class="cat-item cat-item-30"><a href="http://rubyrogues.com/category/panelists/evan-phoenix/" title="View all posts filed under Evan Phoenix">Evan Phoenix</a> (2)
+</li>
+	<li class="cat-item cat-item-95"><a href="http://rubyrogues.com/category/panelists/fernand-galiana/" title="View all posts filed under Fernand Galiana">Fernand Galiana</a> (1)
+</li>
+	<li class="cat-item cat-item-362"><a href="http://rubyrogues.com/category/panelists/gary-bernhardt/" title="View all posts filed under Gary Bernhardt">Gary Bernhardt</a> (2)
+</li>
+	<li class="cat-item cat-item-386"><a href="http://rubyrogues.com/category/panelists/geoff-petrie/" title="View all posts filed under Geoff Petrie">Geoff Petrie</a> (1)
+</li>
+	<li class="cat-item cat-item-354"><a href="http://rubyrogues.com/category/panelists/glenn-vanderburg/" title="View all posts filed under Glenn Vanderburg">Glenn Vanderburg</a> (1)
+</li>
+	<li class="cat-item cat-item-135"><a href="http://rubyrogues.com/category/panelists/gregory-brown/" title="View all posts filed under Gregory Brown">Gregory Brown</a> (3)
+</li>
+	<li class="cat-item cat-item-348"><a href="http://rubyrogues.com/category/panelists/jack-danger-canty/" title="View all posts filed under Jack Danger Canty">Jack Danger Canty</a> (1)
+</li>
+	<li class="cat-item cat-item-8"><a href="http://rubyrogues.com/category/panelists/james-edward-gray-ii/" title="View all posts filed under James Edward Gray II">James Edward Gray II</a> (108)
+</li>
+	<li class="cat-item cat-item-400"><a href="http://rubyrogues.com/category/panelists/jeff-atwood/" title="View all posts filed under Jeff Atwood">Jeff Atwood</a> (1)
+</li>
+	<li class="cat-item cat-item-347"><a href="http://rubyrogues.com/category/panelists/jeff-casimir/" title="View all posts filed under Jeff Casimir">Jeff Casimir</a> (1)
+</li>
+	<li class="cat-item cat-item-368"><a href="http://rubyrogues.com/category/panelists/jesse-storimer/" title="View all posts filed under Jesse Storimer">Jesse Storimer</a> (1)
+</li>
+	<li class="cat-item cat-item-406"><a href="http://rubyrogues.com/category/panelists/jessica-kerr/" title="View all posts filed under Jessica Kerr">Jessica Kerr</a> (1)
+</li>
+	<li class="cat-item cat-item-332"><a href="http://rubyrogues.com/category/panelists/jim-weirich/" title="View all posts filed under Jim Weirich">Jim Weirich</a> (2)
+</li>
+	<li class="cat-item cat-item-390"><a href="http://rubyrogues.com/category/panelists/joe-obrien/" title="View all posts filed under Joe O&#39;Brien">Joe O'Brien</a> (1)
+</li>
+	<li class="cat-item cat-item-398"><a href="http://rubyrogues.com/category/panelists/john-athayde/" title="View all posts filed under John Athayde">John Athayde</a> (1)
+</li>
+	<li class="cat-item cat-item-346"><a href="http://rubyrogues.com/category/panelists/jose-valim/" title="View all posts filed under Jose Valim">Jose Valim</a> (2)
+</li>
+	<li class="cat-item cat-item-365"><a href="http://rubyrogues.com/category/panelists/joseph-ruscio/" title="View all posts filed under Joseph Ruscio">Joseph Ruscio</a> (1)
+</li>
+	<li class="cat-item cat-item-396"><a href="http://rubyrogues.com/category/panelists/joseph-wilk/" title="View all posts filed under Joseph Wilk">Joseph Wilk</a> (1)
+</li>
+	<li class="cat-item cat-item-219"><a href="http://rubyrogues.com/category/panelists/josh-susser/" title="View all posts filed under Josh Susser">Josh Susser</a> (95)
+</li>
+	<li class="cat-item cat-item-359"><a href="http://rubyrogues.com/category/panelists/katrina-owen/" title="View all posts filed under Katrina Owen">Katrina Owen</a> (30)
+</li>
+	<li class="cat-item cat-item-411"><a href="http://rubyrogues.com/category/panelists/kenneth-kalmer/" title="View all posts filed under Kenneth Kalmer">Kenneth Kalmer</a> (1)
+</li>
+	<li class="cat-item cat-item-335"><a href="http://rubyrogues.com/category/panelists/kent-beck/" title="View all posts filed under Kent Beck">Kent Beck</a> (1)
+</li>
+	<li class="cat-item cat-item-355"><a href="http://rubyrogues.com/category/panelists/kevin-rutherford/" title="View all posts filed under Kevin Rutherford">Kevin Rutherford</a> (1)
+</li>
+	<li class="cat-item cat-item-371"><a href="http://rubyrogues.com/category/panelists/laurent-sansonetti/" title="View all posts filed under Laurent Sansonetti">Laurent Sansonetti</a> (1)
+</li>
+	<li class="cat-item cat-item-394"><a href="http://rubyrogues.com/category/panelists/mandy-moore/" title="View all posts filed under Mandy Moore">Mandy Moore</a> (1)
+</li>
+	<li class="cat-item cat-item-392"><a href="http://rubyrogues.com/category/panelists/martin-fowler/" title="View all posts filed under Martin Fowler">Martin Fowler</a> (1)
+</li>
+	<li class="cat-item cat-item-137"><a href="http://rubyrogues.com/category/panelists/marty-haught/" title="View all posts filed under Marty Haught">Marty Haught</a> (2)
+</li>
+	<li class="cat-item cat-item-385"><a href="http://rubyrogues.com/category/panelists/matt-ruzicka/" title="View all posts filed under Matt Ruzicka">Matt Ruzicka</a> (1)
+</li>
+	<li class="cat-item cat-item-356"><a href="http://rubyrogues.com/category/panelists/matt-wynne/" title="View all posts filed under Matt Wynne">Matt Wynne</a> (1)
+</li>
+	<li class="cat-item cat-item-364"><a href="http://rubyrogues.com/category/panelists/michael-feathers/" title="View all posts filed under Michael Feathers">Michael Feathers</a> (1)
+</li>
+	<li class="cat-item cat-item-376"><a href="http://rubyrogues.com/category/panelists/michael-ries/" title="View all posts filed under Michael Ries">Michael Ries</a> (1)
+</li>
+	<li class="cat-item cat-item-338"><a href="http://rubyrogues.com/category/panelists/mike-clark/" title="View all posts filed under Mike Clark">Mike Clark</a> (1)
+</li>
+	<li class="cat-item cat-item-138"><a href="http://rubyrogues.com/category/panelists/mike-moore/" title="View all posts filed under Mike Moore">Mike Moore</a> (2)
+</li>
+	<li class="cat-item cat-item-361"><a href="http://rubyrogues.com/category/panelists/nat-pryce/" title="View all posts filed under Nat Pryce">Nat Pryce</a> (1)
+</li>
+	<li class="cat-item cat-item-405"><a href="http://rubyrogues.com/category/panelists/nathen-harvey/" title="View all posts filed under Nathen Harvey">Nathen Harvey</a> (1)
+</li>
+	<li class="cat-item cat-item-399"><a href="http://rubyrogues.com/category/panelists/nell-shamrell/" title="View all posts filed under Nell Shamrell">Nell Shamrell</a> (1)
+</li>
+	<li class="cat-item cat-item-340"><a href="http://rubyrogues.com/category/panelists/nick-quaranto/" title="View all posts filed under Nick Quaranto">Nick Quaranto</a> (2)
+</li>
+	<li class="cat-item cat-item-374"><a href="http://rubyrogues.com/category/panelists/noel-rappin/" title="View all posts filed under Noel Rappin">Noel Rappin</a> (1)
+</li>
+	<li class="cat-item cat-item-388"><a href="http://rubyrogues.com/category/panelists/patrick-mckenzie/" title="View all posts filed under Patrick McKenzie">Patrick McKenzie</a> (1)
+</li>
+	<li class="cat-item cat-item-353"><a href="http://rubyrogues.com/category/panelists/paul-dix/" title="View all posts filed under Paul Dix">Paul Dix</a> (1)
+</li>
+	<li class="cat-item cat-item-358"><a href="http://rubyrogues.com/category/panelists/pedro-belo/" title="View all posts filed under Pedro Belo">Pedro Belo</a> (1)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://rubyrogues.com/category/panelists/peter-cooper/" title="View all posts filed under Peter Cooper">Peter Cooper</a> (11)
+</li>
+	<li class="cat-item cat-item-367"><a href="http://rubyrogues.com/category/panelists/rein-henrichs/" title="View all posts filed under Rein Henrichs">Rein Henrichs</a> (1)
+</li>
+	<li class="cat-item cat-item-408"><a href="http://rubyrogues.com/category/panelists/robin-ward/" title="View all posts filed under Robin Ward">Robin Ward</a> (1)
+</li>
+	<li class="cat-item cat-item-373"><a href="http://rubyrogues.com/category/panelists/russ-olsen/" title="View all posts filed under Russ Olsen">Russ Olsen</a> (1)
+</li>
+	<li class="cat-item cat-item-329"><a href="http://rubyrogues.com/category/panelists/ryan-bates/" title="View all posts filed under Ryan Bates">Ryan Bates</a> (1)
+</li>
+	<li class="cat-item cat-item-407"><a href="http://rubyrogues.com/category/panelists/sam-saffron/" title="View all posts filed under Sam Saffron">Sam Saffron</a> (1)
+</li>
+	<li class="cat-item cat-item-381"><a href="http://rubyrogues.com/category/panelists/sandi-metz/" title="View all posts filed under Sandi Metz">Sandi Metz</a> (1)
+</li>
+	<li class="cat-item cat-item-363"><a href="http://rubyrogues.com/category/panelists/sarah-mei/" title="View all posts filed under Sarah Mei">Sarah Mei</a> (1)
+</li>
+	<li class="cat-item cat-item-360"><a href="http://rubyrogues.com/category/panelists/steve-freeman/" title="View all posts filed under Steve Freeman">Steve Freeman</a> (1)
+</li>
+	<li class="cat-item cat-item-334"><a href="http://rubyrogues.com/category/panelists/steve-klabnik/" title="View all posts filed under Steve Klabnik">Steve Klabnik</a> (1)
+</li>
+	<li class="cat-item cat-item-357"><a href="http://rubyrogues.com/category/panelists/steven-harms/" title="View all posts filed under Steven Harms">Steven Harms</a> (1)
+</li>
+	<li class="cat-item cat-item-330"><a href="http://rubyrogues.com/category/panelists/steven-ragnarok/" title="View all posts filed under Steven Ragnarok">Steven Ragnarok</a> (1)
+</li>
+	<li class="cat-item cat-item-401"><a href="http://rubyrogues.com/category/panelists/tim-chevalier/" title="View all posts filed under Tim Chevalier">Tim Chevalier</a> (1)
+</li>
+	<li class="cat-item cat-item-337"><a href="http://rubyrogues.com/category/panelists/tim-pease/" title="View all posts filed under Tim Pease">Tim Pease</a> (1)
+</li>
+	<li class="cat-item cat-item-410"><a href="http://rubyrogues.com/category/panelists/tom-stuart/" title="View all posts filed under Tom Stuart">Tom Stuart</a> (1)
+</li>
+	<li class="cat-item cat-item-382"><a href="http://rubyrogues.com/category/panelists/tony-arcieri/" title="View all posts filed under Tony Arcieri">Tony Arcieri</a> (1)
+</li>
+	<li class="cat-item cat-item-379"><a href="http://rubyrogues.com/category/panelists/wesley-beary/" title="View all posts filed under Wesley Beary">Wesley Beary</a> (1)
+</li>
+	<li class="cat-item cat-item-402"><a href="http://rubyrogues.com/category/panelists/will-read/" title="View all posts filed under Will Read">Will Read</a> (1)
+</li>
+	<li class="cat-item cat-item-56"><a href="http://rubyrogues.com/category/panelists/wynn-netherland/" title="View all posts filed under Wynn Netherland">Wynn Netherland</a> (1)
+</li>
+	<li class="cat-item cat-item-252"><a href="http://rubyrogues.com/category/panelists/yehuda-katz/" title="View all posts filed under Yehuda Katz">Yehuda Katz</a> (1)
+</li>
+	<li class="cat-item cat-item-349"><a href="http://rubyrogues.com/category/panelists/zach-brock/" title="View all posts filed under Zach Brock">Zach Brock</a> (1)
+</li>
+	<li class="cat-item cat-item-378"><a href="http://rubyrogues.com/category/panelists/zach-holman/" title="View all posts filed under Zach Holman">Zach Holman</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-339"><a href="http://rubyrogues.com/category/processes/" title="View all posts filed under Processes">Processes</a> (2)
+</li>
+	<li class="cat-item cat-item-57"><a href="http://rubyrogues.com/category/related-technologies/" title="View all posts filed under Related Technologies">Related Technologies</a> (1)
+</li>
+	<li class="cat-item cat-item-139"><a href="http://rubyrogues.com/category/ruby-community/" title="View all posts filed under Ruby Community">Ruby Community</a> (1)
+</li>
+	<li class="cat-item cat-item-184"><a href="http://rubyrogues.com/category/ruby-on-rails-2/" title="View all posts filed under Ruby on Rails">Ruby on Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-31"><a href="http://rubyrogues.com/category/ruby-virtual-machines/" title="View all posts filed under Ruby Virtual Machines">Ruby Virtual Machines</a> (1)
+</li>
+	<li class="cat-item cat-item-3"><a href="http://rubyrogues.com/category/testing/" title="View all posts filed under Testing">Testing</a> (2)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://rubyrogues.com/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a> (4)
+</li>
+		</ul>
+</li><li class="widget widget_tag_cloud" id="tag_cloud-3"><h3>Tags</h3><div class="tagcloud"><a href="http://rubyrogues.com/tag/aaron-patterson/" class="tag-link-5" title="2 topics" style="font-size: 12.581818181818pt;">Aaron Patterson</a>
+<a href="http://rubyrogues.com/tag/books/" class="tag-link-178" title="3 topics" style="font-size: 15.636363636364pt;">books</a>
+<a href="http://rubyrogues.com/tag/call-recorder/" class="tag-link-20" title="1 topic" style="font-size: 8pt;">call recorder</a>
+<a href="http://rubyrogues.com/tag/cassandra/" class="tag-link-118" title="3 topics" style="font-size: 15.636363636364pt;">cassandra</a>
+<a href="http://rubyrogues.com/tag/coffeescript/" class="tag-link-60" title="2 topics" style="font-size: 12.581818181818pt;">coffeescript</a>
+<a href="http://rubyrogues.com/tag/conferences/" class="tag-link-141" title="2 topics" style="font-size: 12.581818181818pt;">conferences</a>
+<a href="http://rubyrogues.com/tag/crack-attack/" class="tag-link-22" title="1 topic" style="font-size: 8pt;">crack attack</a>
+<a href="http://rubyrogues.com/tag/cucumber/" class="tag-link-17" title="1 topic" style="font-size: 8pt;">cucumber</a>
+<a href="http://rubyrogues.com/tag/east-facing-tests/" class="tag-link-18" title="1 topic" style="font-size: 8pt;">east-facing tests</a>
+<a href="http://rubyrogues.com/tag/eloquent-ruby/" class="tag-link-27" title="2 topics" style="font-size: 12.581818181818pt;">eloquent ruby</a>
+<a href="http://rubyrogues.com/tag/expertise/" class="tag-link-253" title="2 topics" style="font-size: 12.581818181818pt;">expertise</a>
+<a href="http://rubyrogues.com/tag/heroku/" class="tag-link-65" title="2 topics" style="font-size: 12.581818181818pt;">heroku</a>
+<a href="http://rubyrogues.com/tag/jruby/" class="tag-link-33" title="2 topics" style="font-size: 12.581818181818pt;">jruby</a>
+<a href="http://rubyrogues.com/tag/learned-optimism/" class="tag-link-24" title="1 topic" style="font-size: 8pt;">learned optimism</a>
+<a href="http://rubyrogues.com/tag/linux/" class="tag-link-28" title="1 topic" style="font-size: 8pt;">linux</a>
+<a href="http://rubyrogues.com/tag/linux-programming-interface/" class="tag-link-29" title="1 topic" style="font-size: 8pt;">linux programming interface</a>
+<a href="http://rubyrogues.com/tag/maglev/" class="tag-link-34" title="1 topic" style="font-size: 8pt;">maglev</a>
+<a href="http://rubyrogues.com/tag/minecraft/" class="tag-link-21" title="1 topic" style="font-size: 8pt;">minecraft</a>
+<a href="http://rubyrogues.com/tag/minitest/" class="tag-link-14" title="1 topic" style="font-size: 8pt;">minitest</a>
+<a href="http://rubyrogues.com/tag/minitest-spec/" class="tag-link-15" title="1 topic" style="font-size: 8pt;">minitest-spec</a>
+<a href="http://rubyrogues.com/tag/mri/" class="tag-link-35" title="2 topics" style="font-size: 12.581818181818pt;">mri</a>
+<a href="http://rubyrogues.com/tag/pairing/" class="tag-link-172" title="2 topics" style="font-size: 12.581818181818pt;">pairing</a>
+<a href="http://rubyrogues.com/tag/portal-2/" class="tag-link-23" title="1 topic" style="font-size: 8pt;">portal 2</a>
+<a href="http://rubyrogues.com/tag/postgres/" class="tag-link-89" title="2 topics" style="font-size: 12.581818181818pt;">postgres</a>
+<a href="http://rubyrogues.com/tag/rails/" class="tag-link-185" title="3 topics" style="font-size: 15.636363636364pt;">rails</a>
+<a href="http://rubyrogues.com/tag/railscasts/" class="tag-link-25" title="2 topics" style="font-size: 12.581818181818pt;">railscasts</a>
+<a href="http://rubyrogues.com/tag/readability/" class="tag-link-188" title="2 topics" style="font-size: 12.581818181818pt;">readability</a>
+<a href="http://rubyrogues.com/tag/refactoring/" class="tag-link-216" title="2 topics" style="font-size: 12.581818181818pt;">refactoring</a>
+<a href="http://rubyrogues.com/tag/rest/" class="tag-link-186" title="2 topics" style="font-size: 12.581818181818pt;">REST</a>
+<a href="http://rubyrogues.com/tag/riot/" class="tag-link-16" title="1 topic" style="font-size: 8pt;">riot</a>
+<a href="http://rubyrogues.com/tag/rspec/" class="tag-link-12" title="2 topics" style="font-size: 12.581818181818pt;">rspec</a>
+<a href="http://rubyrogues.com/tag/rubinius/" class="tag-link-32" title="2 topics" style="font-size: 12.581818181818pt;">rubinius</a>
+<a href="http://rubyrogues.com/tag/ruby/" class="tag-link-170" title="6 topics" style="font-size: 22pt;">ruby</a>
+<a href="http://rubyrogues.com/tag/ruby-1-8/" class="tag-link-37" title="1 topic" style="font-size: 8pt;">ruby 1.8</a>
+<a href="http://rubyrogues.com/tag/ruby-1-9/" class="tag-link-38" title="1 topic" style="font-size: 8pt;">ruby 1.9</a>
+<a href="http://rubyrogues.com/tag/ruby-on-rails/" class="tag-link-150" title="2 topics" style="font-size: 12.581818181818pt;">ruby on rails</a>
+<a href="http://rubyrogues.com/tag/rvm/" class="tag-link-52" title="2 topics" style="font-size: 12.581818181818pt;">rvm</a>
+<a href="http://rubyrogues.com/tag/sass/" class="tag-link-59" title="2 topics" style="font-size: 12.581818181818pt;">sass</a>
+<a href="http://rubyrogues.com/tag/spotify/" class="tag-link-26" title="1 topic" style="font-size: 8pt;">spotify</a>
+<a href="http://rubyrogues.com/tag/testing-2/" class="tag-link-11" title="4 topics" style="font-size: 18.181818181818pt;">testing</a>
+<a href="http://rubyrogues.com/tag/tests/" class="tag-link-10" title="3 topics" style="font-size: 15.636363636364pt;">tests</a>
+<a href="http://rubyrogues.com/tag/test-unit/" class="tag-link-13" title="1 topic" style="font-size: 8pt;">test unit</a>
+<a href="http://rubyrogues.com/tag/tmux/" class="tag-link-19" title="1 topic" style="font-size: 8pt;">tmux</a>
+<a href="http://rubyrogues.com/tag/tradeoffs/" class="tag-link-234" title="2 topics" style="font-size: 12.581818181818pt;">tradeoffs</a>
+<a href="http://rubyrogues.com/tag/yarv/" class="tag-link-36" title="2 topics" style="font-size: 12.581818181818pt;">yarv</a></div>
+</li>				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>Get smart with the <a href="http://diythemes.com/thesis/">Thesis WordPress Theme</a> from DIYthemes.</p>
+		<p><a href="http://rubyrogues.com/wp-admin/">WordPress Admin</a></p>
+<script type="text/javascript">var lf_config = [{"collectionMeta":"eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IjAwMiBSUiBWaXJ0dWFsIE1hY2hpbmVzLCBDb25jdXJyZW5jeSwgYW5kIHRoZSBGdXR1cmUgb2YgUnVieSIsInVybCI6Imh0dHA6XC9cL3J1Ynlyb2d1ZXMuY29tXC8wMDItcnItdmlydHVhbC1tYWNoaW5lcy1jb25jdXJyZW5jeS1hbmQtdGhlLWZ1dHVyZS1vZi1ydWJ5XC8iLCJ0YWdzIjpbImFjayIsImJyYWluIHJ1bGVzIGZvciBiYWJ5IiwiY29mZmVlc2NyaXB0IGNvb2tib29rIiwiZnJlZS1yYW5nZSBraWRzIiwiR0lMIiwiZ2l0LWdyZXAiLCJqYW51cyIsIkpJVCBjb21waWxlcnMiLCJqcnVieSIsIkpWTSIsIm1hY3ZpbSIsIm1hZ2xldiIsIm1haWxjaGltcCIsIm1yaSIsInBhbmljLWZyZWUgcHJlZ25hbmN5IiwicmFpbHNjYXN0cyIsInJ1YmluaXVzIiwicnVieSAxLjgiLCJydWJ5IDEuOSIsInJ2bSIsInNpY2twZWRpYSIsInRocmVhZCBzYWZldHkiLCJ0cmFkZXIgdGFsZXMiLCJ2aW0iLCJ5YXJ2Il0sImNoZWNrc3VtIjoiNDAwYWE0Zjc2ZTZmMDU4NTY3MzA2MTU2NjBmNzZlMWMiLCJhcnRpY2xlSWQiOjE5fQ.3VzVAJ32ZcEl2gaY0Kmh4bT2pecqzyvYzoSx1dHbnqg","checksum":"400aa4f76e6f05856730615660f76e1c","siteId":"307057","articleId":19,"strings":"","el":"livefyre-comments"}];var conv = fyre.conv.load({}, lf_config);</script>
+            <!-- LF DEBUG
+            site-id: 307057
+            article-id: 19
+            post-type: post
+            comments-open: true
+            is-single: true
+            display-posts: true
+            display-pages: true
+            -->
+        <script type="text/javascript">var SHRSB_Settings = {"shr-publisher-19":{"link":"http:\/\/rubyrogues.com\/002-rr-virtual-machines-concurrency-and-the-future-of-ruby\/","shortener":"google","title":"002 RR Virtual Machines, Concurrency, and the Future of Ruby","notes":"Panelists%3A%0D%0A%0D%0A%09Charles%20Max%20Wood%20%28%40cmaxw%29%0D%0A%09David%20Brady%20%28%40dbrady%29%0D%0A%09Evan%20Phoenix%20%28%40evanphx%29%0D%0A%09James%20Edward%20Gray%20II%20%28%40JEG2%29%0D%0A%09Peter%20Cooper%20%28%40peterc%29%0D%0A%0D%0A%0D%0ATools%20and%20topics%20mentioned%20in%20this%20episode%3A%0D%0A%0D%0A%09Rubinius%0D%0A%09JRuby%0D%0A%09Maglev%0D%0A%09MRI%20%28Ruby%201.8.x%29%0D%0A%09Yarv%20%28Ruby%201.9.x%29%0D%0A%09JIT%20compilers%0D%0A%09Java%20Virtual%20Mach","service":"102,40,202,3,7,5,88,201,2,38,45","apikey":"8afa39428933be41f8afdb8ea21a495c","expand":true,"src":"http:\/\/rubyrogues.com\/wp-content\/plugins\/sexybookmarks\/spritegen_default","localize":true,"share_src":"http:\/\/www.shareaholic.com","rel":"nofollow","target":"_blank","bgimg":"http:\/\/rubyrogues.com\/wp-content\/plugins\/sexybookmarks\/images\/share-knowledge.png","bgimg_padding":"35px 0 0 10px","center":true,"twitter_template":"%24%7Btitle%7D+-+%24%7Bshort_link%7D+via+%40Shareaholic","mode":"inject","designer_toolTips":"1","tip_bg_color":"#000000","tip_text_color":"#ffffff","shrlink":"1"}};</script><script type="text/javascript">var SHRRD_Settings = {"shr_rd-19":{"link":"http:\/\/rubyrogues.com\/002-rr-virtual-machines-concurrency-and-the-future-of-ruby\/","apikey":"8afa39428933be41f8afdb8ea21a495c","style":"image"}};</script><script type="text/javascript">
+/* <![CDATA[ */
+var mejsL10n = {"language":"en-US","strings":{"Close":"Close","Fullscreen":"Fullscreen","Download File":"Download File","Download Video":"Download Video","Play\/Pause":"Play\/Pause","Mute Toggle":"Mute Toggle","None":"None","Turn off Fullscreen":"Turn off Fullscreen","Go Fullscreen":"Go Fullscreen","Unmute":"Unmute","Mute":"Mute","Captions\/Subtitles":"Captions\/Subtitles"}};
+var mejsL10n = {"language":"en-US","strings":{"Close":"Close","Fullscreen":"Fullscreen","Download File":"Download File","Download Video":"Download Video","Play\/Pause":"Play\/Pause","Mute Toggle":"Mute Toggle","None":"None","Turn off Fullscreen":"Turn off Fullscreen","Go Fullscreen":"Go Fullscreen","Unmute":"Unmute","Mute":"Mute","Captions\/Subtitles":"Captions\/Subtitles"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./002rubyrogues_files/mediaelement-and-player.min.js"></script>
+<!-- Clicky Web Analytics - http://getclicky.com, WordPress Plugin by Yoast - http://yoast.com/wordpress/clicky/ -->
+	<script type="text/javascript">
+		function clicky_gc(name) {
+			var ca = document.cookie.split(';');
+			for (var i in ca) {
+				if (ca[i].indexOf(name + '=') != -1)
+					return decodeURIComponent(ca[i].split('=')[1]);
+			}
+			return '';
+		}
+		var username_check = clicky_gc('comment_author_d2a1beedf36fc8da38c93f479866b016');
+		if( username_check ) var clicky_custom_session = { username: username_check };
+	</script>
+	<script type="text/javascript">
+	var clicky = { log:function () {
+		return;
+	}, goal:function () {
+		return;
+	}};
+	var clicky_site_id = 66421430;
+	(function () {
+		var s = document.createElement('script');
+		s.type = 'text/javascript';
+		s.async = true;
+		s.src = '//static.getclicky.com/js';
+		( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild(s);
+	})();
+</script>
+<noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1"
+				  src="http://in.getclicky.com/66421430ns.gif"/&gt;&lt;/p&gt;</noscript>
+<!-- End Clicky Tracking -->
+	</div>
+</div>
+</div>
+<!--[if lte IE 8]>
+<div id="ie_clear"></div>
+<![endif]--><div style="position: absolute; display: none;"><div class="tooltip">monetization</div><div class="arrow-down"></div></div><div style="position: absolute; display: none;"><div class="tooltip">Hookah</div><div class="arrow-down"></div></div><div style="position: absolute; display: none;"><div class="tooltip">New York payday loan</div><div class="arrow-down"></div></div><div style="position: absolute; display: none;"><div class="tooltip">corporate</div><div class="arrow-down"></div></div>
+
+<iframe id="shr_oven" src="./002rubyrogues_files/saved_resource.html" style="display: none;"></iframe><script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>
