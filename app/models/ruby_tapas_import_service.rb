@@ -40,7 +40,7 @@ class RubyTapasImportService
 	    e = EpisodeRubytapas.new(
               :name => title.gsub(/\W+/, '-').gsub(/^-|-$/, ''),
               :published_at => item.at_xpath('./pubDate').text,
-			  :description => item.at_xpath('./description').text,
+			  :description => Nokogiri::HTML(item.at_xpath('./description').text).css('.blog-content p').text,
 			  :video_link=>item.at_xpath('./enclosure').attr('url'),
 			  :free => (free_ids.include? episode_id),
 			  :supplier_id=>episode_id
