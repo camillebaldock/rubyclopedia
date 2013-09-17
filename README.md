@@ -5,7 +5,7 @@ Website to track progress on viewing Ruby training content, and getting the late
 
 - RailsCasts
 - RubyTapas
-- RailsRogues
+- RubyRogues
 - Personal links from Kippt
 
 This website has a log-in/sign-up system for users (with password reset functionality...)
@@ -30,7 +30,7 @@ This also provides an "offline" version that can be deployed at home, that handl
 Current status
 ------------------------
 
-Importers for RailsCasts, RubyTapas, RailsRogues and Kippt have been implemented.
+Importers for RailsCasts, RubyTapas, RubyRogues and Kippt have been implemented.
 
 Development plan
 ------------------------
@@ -42,9 +42,6 @@ Stories to be completed
 ------------------------
 
 ### Must (minimum deployable subset)
-
-##### Cron jobs to import all RailsCasts/RubyTapas/RailsRogues episodes
-  * once per day, at 1am, 2am and 3am respectively
 
 ##### Home page
   * legal blurb to decline any claim of ownership for the content, or any responsibility for erroneous content etc...
@@ -114,7 +111,7 @@ Stories to be completed
 * Published x days ago
 * Name, description
 * For RubyTapas and RailsCasts: display if subscription needed or not
-* For RailsRogues and RailsCasts: go to episode page button
+* For RubyRogues and RailsCasts: go to episode page button
 * For RubyTapas:
      - if free episode, QQ
      - if paid episode, display text: "If you have a paid subscription, you can log in to QQ and download the episode from {insert link here}"
@@ -135,7 +132,7 @@ railscastslink |
 
 >| Free RubyTapas episode | Free RubyTapas description | RubyTapas | 11/09/2013 | true | rubytapasfreelink |
 
->| RailsRogues episode | RailsRogues description | RailsRogues | 16/08/2013 | true | railsrogueslink |
+>| RubyRogues episode | RubyRogues description | RubyRogues | 16/08/2013 | true | rubyrogueslink |
 
 Scenario: RailsCasts episode page
 >When I follow "RailsCasts episode"
@@ -159,16 +156,16 @@ Scenario: RubyTapas episode page
 
 >And I should see "If you have a paid subscription QQ"
 
-Scenario: RailsRogues episode page
->When I follow "RailsRogues episode"
+Scenario: RubyRogues episode page
+>When I follow "RubyRogues episode"
 
->Then I should see "RailsRogues episode", "RailsRogues description" and "1 month ago"
+>Then I should see "RubyRogues episode", "RubyRogues description" and "1 month ago"
 
 >And I should not see "Free episode"
 
 >And I should not see "Subscription needed"
 
->And I should see "Go to episode page" button that links to "railsrogueslink"
+>And I should see "Go to episode page" button that links to "rubyrogueslink"
 
 
 ##### Google Analytics
@@ -179,6 +176,7 @@ Scenario: RailsRogues episode page
   * do a full Rubber deployment on AWS, deploy successfully, and document
   * do something cool with containers (Docker?), deploy and document
   * publish a gist with the result and concrete tutorial for the four approaches above
+  * whenever --set environment=production
 
 ### Should
 
@@ -186,9 +184,7 @@ Scenario: RailsRogues episode page
 * If I am not logged in, I only have access to:
      - the API without any Kippt data
      - the list of episodes (cannot mark as watched...)
-
 ##### Kippt episodes belong to users
-
 ##### Mark as watched (for logged in users)
 ##### Mark as favourite (for logged in users)
 
