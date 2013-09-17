@@ -46,8 +46,6 @@ Stories to be completed
 ##### Cron jobs to import all RailsCasts/RubyTapas/RailsRogues episodes
   * once per day, at 1am, 2am and 3am respectively
 
-##### Remove "mark as watched" functionality (for this sprint)
-
 ##### Home page
   * legal blurb to decline any claim of ownership for the content, or any responsibility for erroneous content etc...
   * link to Github..

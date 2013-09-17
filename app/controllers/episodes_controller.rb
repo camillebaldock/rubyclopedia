@@ -30,8 +30,6 @@ class EpisodesController < ApplicationController
   end
 
   def watched
-  	episode = Episode.find(params[:id])
-  	episode.update_attribute(:watched, true)
-  	redirect_to :back, :notice => "Episode #{ episode.name } was successfully marked as watched"
+    raise 'Not in use for minimal usable subset: sprint 1; planned for future releases'
   end
 end
