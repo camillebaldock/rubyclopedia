@@ -13,8 +13,8 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 class EpisodeRailscasts < Episode
-  validates_uniqueness_of :railscasts_id
-  attr_accessible :duration_seconds, :railscasts_id, :position, :slug
+  validates_uniqueness_of :supplier_id
+  attr_accessible :duration_seconds, :supplier_id, :position, :free
 
   def self.model_name
     Episode.model_name

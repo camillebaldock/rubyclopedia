@@ -21,13 +21,15 @@ class RailsCastsImportService
     parsed_json.each do |episode|
       duration_regex_matches = /(\d{1,2}):(\d{2})/.match(episode["duration"])
       duration_in_seconds = duration_regex_matches[1].to_i*60 + duration_regex_matches[2].to_i
-      e = EpisodeRailscasts.new(:railscasts_id => episode["id"],
+      e = EpisodeRailscasts.new(
+                      :supplier_id => episode["id"],
+                      :free => !episode["pro"],
                       :name => episode["name"],
                       :position => episode["position"],
                       :description => episode["description"],
                       :published_at => episode["published_at"],
                       :duration_seconds => duration_in_seconds,
-                      :slug => episode["url"].chomp('.json'))
+                      :video_link => episode["url"].chomp('.json'))
       e.save
     end
   end

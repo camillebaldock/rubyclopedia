@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.rubytapas.com/episodes -->
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="Short Screencasts of Gourmet Ruby Code." http-equiv="Description" name="Description">
+<meta content="ruby, tapas, ruby tapas, screencasts, code, avdi, avdi grimm" http-equiv="Keywords" name="Keywords">
+<title>Ruby Tapas | Short Screencasts of Gourmet Ruby</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script type="text/javascript" async="" src="./rubyTapasPage_files/ga.js"></script><script async="" src="./rubyTapasPage_files/cloudflare.min.js"></script><script type="text/javascript">
+//<![CDATA[
+window.__CF=window.__CF||{};window.__CF.AJS={"clky":{"sid":"100585311","uid":"0"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/abv=23543493/"},atok:"79c7c92439f4fbda170a667aa9981dd6",zone:"rubytapas.com",rocket:"0",apps:{"clky":{"sid":"100585311","uid":"0"}}}];var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0;a.src="//ajax.cloudflare.com/cdn-cgi/nexp/abv=1415253878/cloudflare.min.js";b.parentNode.insertBefore(a,b);}}catch(e){};
+//]]>
+</script>
+<link href="http://www.rubytapas.com/images/favicon.png" id="favicon" rel="icon" type="image/x-icon">
+<link href="./rubyTapasPage_files/reset.css" media="screen, projection" rel="stylesheet" type="text/css">
+<link href="./rubyTapasPage_files/styles2.css" media="screen, projection" rel="stylesheet" type="text/css">
+<link href="./rubyTapasPage_files/css" media="screen, projection" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+      <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+    <![endif]-->
+<script src="./rubyTapasPage_files/jquery-1.9.0.min.js" type="text/javascript"></script>
+<script src="./rubyTapasPage_files/application.js" type="text/javascript"></script>
+<style type="text/css">.cf-hidden { display: none; } .cf-invisible { visibility: hidden; }</style><script type="text/javascript" async="" src="./rubyTapasPage_files/in.php"></script><script type="text/javascript" async="" src="./rubyTapasPage_files/in(1).php"></script><script type="text/javascript" async="" src="./rubyTapasPage_files/in(2).php"></script><script type="text/javascript" async="" src="./rubyTapasPage_files/in(3).php"></script><script type="text/javascript" async="" src="./rubyTapasPage_files/in(4).php"></script></head>
+<body id="episodes" style="zoom: 1;">
+<header>
+<a alt="Ruby Tapas" href="http://www.rubytapas.com/" id="logo">
+<img src="./rubyTapasPage_files/logo.png">
+<img class="retina" src="./rubyTapasPage_files/logo2x.png">
+<div id="subtitle">
+<span>Short Screencasts</span>
+<em>of</em>
+<span>Gourmet Ruby</span>
+</div>
+</a>
+<nav>
+<a class="" href="http://www.rubytapas.com/">Home</a>
+<a class="active" href="./rubyTapasPage_files/rubyTapasPage.html">Episodes</a>
+<a class="" href="http://www.rubytapas.com/faq">FAQ</a>
+<a href="https://rubytapas.dpdcart.com/">Log In</a>
+<a href="https://rubytapas.dpdcart.com/subscriber/add?plan_id=10&plan_term_id=17">Subscribe</a>
+</nav>
+</header>
+<div id="signup">
+<a class="button" href="https://rubytapas.dpdcart.com/subscriber/add?plan_id=10&plan_term_id=17">Subscribe now for just $9/month!</a>
+<p>2 screencasts a week. Access to all previous episodes.</p>
+</div>
+<div id="episode-list">
+<ul>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/1-Binary-Literals">
+<img src="./rubyTapasPage_files/001.jpg">
+<h4>1. Binary Literals</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>In this inaugural episode, a look at a handy syntax for writing out binary numbers.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>2. Large Integer Literals</h4>
+<p>How to format big numbers so that they are readable.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>3. Character Literals</h4>
+<p>Character literal syntax in Ruby.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/004.jpg">
+<div class="paid-only">[Paid Only]</div>
+<h4>4. Barewords</h4>
+<p>In this longer-than-usual episode, some thoughts on how to enable method logic to remain stable and unchanged while evolving and changing the source and scope of the values used by the logic.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>5. Array Literals</h4>
+<p>Composing command lines with fancy array literals.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>6. Forwardable</h4>
+<p>A short introduction to using Ruby's Forwardable library for object composition.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/7-Constructors">
+<img src="./rubyTapasPage_files/007.jpg">
+<h4>7. Constructors</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>A look into how Ruby's object construction works, and how we can customize constructors for special scenarios.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>8. #fetch as an Assertion</h4>
+<p>Hash#fetch is one of my favorite methods. In this episode, I take a look at using it to assert the existence of hash keys.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>9. Symbol Literals</h4>
+<p>Some alternative ways to write symbols in Ruby code.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/10-Finding-HOME">
+<img src="./rubyTapasPage_files/010.jpg">
+<h4>10. Finding $HOME</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>How to reliably discover a user's home directory.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>11. : Method and Message</h4>
+<p>A look at the difference between methods and messages, and why passing methods around isn't as common in Ruby as it is in e.g. JavaScript.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>12. : #fetch for Defaults</h4>
+<p>How to use Hash#fetch to provide defaults for missing keys, and why you might prefer that to other techniques for defaulting values.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/13-Singleton-Objects">
+<img src="./rubyTapasPage_files/013.jpg">
+<h4>13. Singleton Objects</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>Sometimes one instance is all you need.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>14. super</h4>
+<p>A dive into some of the dark corners of the `super` keyword.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>15. Advanced #fetch</h4>
+<p>In this final installment on the #fetch method we look at #fetch beyond Hash; #fetch with nested hashes; re-using default blocks; and more.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>16. super in Modules</h4>
+<p>How to find out if there is a super method to be called, and other tricks for using super within a module.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/17-Pay-it-Forward">
+<img src="./rubyTapasPage_files/017.jpg">
+<h4>17. Pay it Forward</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>In this episode, &nbsp;we explore command/query separation by looking at what happens to unit tests when the separation breaks down.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>18. Subclassing Array</h4>
+<p>Sooner or later you'll want to subclass Array. This episode looks at why that's a bad idea, and presents an alternative.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>19. Pluggable Selector</h4>
+<p>In today's episode, we revisit episode 11 (Method and Message), and take a look at a way to make the coupling between objects even looser, by making the name of the message one object sends to another variable.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>20. Struct</h4>
+<p>In previous episodes we've used the Struct class in passing to quickly construct classes. This time, we put Struct in the spotlight, and put it through its paces. You'll want to watch this one through even if you're familiar with Struct; you may find it has more tricks up its sleeve than you realized.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/21-Domain-Model-Events">
+<img src="./rubyTapasPage_files/021.jpg">
+<h4>21. Domain Model Events</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>In this episode we take a look at a common problem in Rails development: slimming down a controller whose functionality can't easily be pushed down into models. We address the problem using the Observer pattern and a tell-don't-ask design.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/22-Inline-Rescue">
+<img src="./rubyTapasPage_files/022.jpg">
+<h4>22. Inline Rescue</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>Putting a rescue at the end of a line can get you into unexpected trouble. In this episode we'll look at why, as well as at the one case where an inline rescue makes sense.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>23. Tempfile</h4>
+<p>In this episode we look at the Tempfile standard library, and how it can facilitate communicating with subprocesses.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>24. Incidental Change</h4>
+<p>Have you ever looked at a diff that was cluttered by meaningless "noise" - changes that existed just to satisfy the parser, and were a distraction from the semantic changes to the code? In this episode we look at some idioms and habits to help avoid these kinds of incidental changes.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>25. OpenStruct</h4>
+<p>This episode focuses on OpenStruct, which makes it easy to create ad-hoc value objects from hashes.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>26. FFI</h4>
+<p>With the FFI Gem, building wrappers for C libraries is easier than ever. This episode gives a brief overview of building the beginnings of a Ruby interface to the Linux libpulse library.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/27-Macros-and-Modules">
+<img src="./rubyTapasPage_files/027.jpg">
+<h4>27. Macros and Modules</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>In this episode, we look at how to use dynamically generated modules to make metaprogrammed methods open for future extension.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>28. Macros and Modules Part 2</h4>
+<p>In episode 27, we switched from adding generated methods directly to a class, to using anonymous modules. In this episode, we consolidate our metaprogramming modules, and make them more self-documenting.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/29-Redirecting-Output">
+<img src="./rubyTapasPage_files/029.jpg">
+<h4>29. Redirecting Output</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>This episode takes a look at two different methods for redirecting standard out and standard error - one simple and quick, one more comprehensive.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>30. Backticks</h4>
+<p>Celebrate Friday with a stupid Ruby trick! In this epsiode we discover one of Ruby's most overlooked operators, and overload it just because we can.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>31. Observer Variations</h4>
+<p>Today we revisit episode 21, and try out several different takes on registering observer callbacks inline.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>32. Hash Default Blocks</h4>
+<p>Following on to the episodes about #fetch, today's episode answers the question: what do we do when we want the same defaulting behavior everwhere a Hash is used?</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/33-Classes-and-Constants">
+<img src="./rubyTapasPage_files/033.jpg">
+<h4>33. Classes and Constants</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>On the menu today is an exploration of what, exactly, happens when we define a class in Ruby.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>34. Struct from Hash</h4>
+<p>For such similar and broadly useful data structures, Struct and Hash are surprisingly incompatible. In this episode we look at some ways to smooth over their differences, and answer a viewer question in the process.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>35. Callable</h4>
+<p>Many different kinds of Ruby objects respond to #call. Today's dish is a demonstration of how this fact can be harnessed to easily swap out different implementations of a collaborator object.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/36-Blocks-Procs-and-Lambdas">
+<img src="./rubyTapasPage_files/036.jpg">
+<h4>36. Blocks, Procs, and Lambdas</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>How is a Proc different from a Lambda? When do you use one over the other? And how to blocks fit into all this? Today's episode attemptes to answer these burning questions.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>37. Proc and Threequal</h4>
+<p>Today's dish combines the great flavor of Ruby's 'case' statement with a little Proc seasoning and a threequals demiglace!</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/38-Caller-Specified-Fallback">
+<img src="./rubyTapasPage_files/038.jpg">
+<h4>38. Caller-Specified Fallback</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>Sometimes it's hard to decide how to handle a failure in a method call. Raise an exception? Return a nil? Log an error? The best choice may differ depending on where the method is being called. In this episode, we look at a technique for defering the decision about how to deal with a failure to the point when a method is called.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>39. Gem-Love Part 1</h4>
+<p>In this, the first of another ongoing occasional series, I revisit an open-source application I started three years ago and begin to rewrite it. Part 1 focuses on building a proof-of-concept RubyGems plugin.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>40. Gradual Stiffening</h4>
+<p>In today's episode we'll try to come to come to grips with a slippery quality---a quality which is of importance to differentiating code that is easy to evolve, from code that isn't. Along the way, we'll write some Ruby code that looks disturbingly like Perl!</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>41. String#scan</h4>
+<p>Today's episode looks at a convenient tool for weeding through text and pulling out parts that match a given pattern.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/42-Streaming">
+<img src="./rubyTapasPage_files/042.jpg">
+<h4>42. Streaming</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>Does code optimized for RAM usage need to be ugly? Find out, in today's episode!</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>43. Exclusive Or</h4>
+<p>This episode looks at Ruby's logical XOR operator, and how it can be useful in checking that a method was called with the correct optional arguments.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>44. #one?</h4>
+<p>Somtetimes you need to know if exactly one element in a collection has a given property. For that situation, we have the #one? predicate method.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/45-Hash-Default-Value">
+<img src="./rubyTapasPage_files/045.jpg">
+<h4>45. Hash Default Value</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>This cautionary episode demonstrates and explains a Hash gotcha that often comes as a surprise.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/46-Gem-Love-Part-2">
+<img src="./rubyTapasPage_files/046.jpg">
+<h4>46. Gem-Love Part 2</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>In Part 2 of this series chronicling the creation of an app, I establish a test-driven rhythm, starting with a high-level acceptance test.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>47. FFI Part 2</h4>
+<p>In part 2 of this series, we buy ourselves some peace of mind with a simple smoke test.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>48. Memoize</h4>
+<p>This episode covers how to write a "macro"-a method that generates or modifies other methods-using the classic example of memoizing method results.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/049.jpg">
+<div class="paid-only">[Paid Only]</div>
+<h4>49. Utility Function</h4>
+<p>Some functions are useful in many different contexts. In this episode we'll explore some ways to make them available both to library code and to client code of a library.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>50. Include Namespace</h4>
+<p>Sometimes a utility module is overkill. In this episode, we make a namespace module do double-duty.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>51. PulseFFI Part 3</h4>
+<p>In this "live-style" episode, I begin to transition the PulseFFI proof-of-concept script into a Ruby library, using my smoke test to ensure everything continues to work.</p>
+</li>
+<li class="free">
+<a href="http://www.rubytapas.com/episodes/52-The-End-of-Mocking">
+<img src="./rubyTapasPage_files/052.jpg">
+<h4>52. The End of Mocking</h4>
+<img class="play" src="./rubyTapasPage_files/play.png">
+</a>
+<p>At the borders of our systems, mockist testing hits a point of diminishing returns. In this episode we take a look at when to stop mocking and start integration testing.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>53. Selectively Run Tests</h4>
+<p>Selectively running tests can be a lifesaver in a large codebase. This episode covers how to run just the tests you care about in both MiniTest and RSpec - including how to slectively run tests under Rake.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>54. PulseFFI Part 4</h4>
+<p>In this edition of a miniseries on building a wrapper library using FFI, I begin to sketch out a higher-level API for starting up a PulseAudio mainloop.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>55. Runnable Library</h4>
+<p>It's a library! No, it's an executable! Relax, your Ruby files can be both require-able libraries and&nbsp;executables!</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>56. xmpfilter</h4>
+<p>In this, the most requested RubyTapas episode ever, we'll take a look at xmpfilter, the program I use to evaluate Ruby expressions from within my editor.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>57. PulseFFI Part 5</h4>
+<p>In this episode I continue to felsh out the high-level API for my PulseFFI library, using TDD and mock objects to define how the object model interacts with the C bindings layer. I also compare the MiniTest and RSpec mocking/stubbing libraries.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>58. ARGF</h4>
+<p>This episode explores ARGF, a powerful object for working with input files in command-line programs.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>59. Enumerator</h4>
+<p>In previous episodes we've touched on Enumerator in passing. This time it'll take center stage, as we explore just what an Enumerator is and what it's good for.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>60. Ascend</h4>
+<p>Now that we've been formally introduced to the Enumerator class, it's time to apply that knowledge in a concrete way. In this episode we use Pathname and Enumerator to locate a project-wide econfiguration file.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>61. PulseFFI Part 6</h4>
+<p>Continuing in my extraction of a high-level API for the PulseFFI library, in this episode I test-drive the Mainloop.run, a composed method that brings together the work I've done so far.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>62. Fiber</h4>
+<p>In this episode we'll explore Ruby's lightweight concurrency primitive by using it to emulate the Enumerator class.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>63. Gem-Love Part 3</h4>
+<p>Returning to my Gem-Love project in this episode, I use TDD to drive out a client-side implementation for the first feature. In the process, I talk about message-first design.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>64. Yield or Enumerate</h4>
+<p>A number of Ruby standard library methods return an Enumerator if no block is passed to them. In this episode, we'll learn how to emulate this behavior in our own methods.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>65. PulseFFI Part 7</h4>
+<p>This is the culmination of the last few PulseFFI episodes. I'll add some insurance to the high-level PulseFFI.mainloop method, and then make use of it in the proof-of-concept script. Finally, I'll discuss some of my philosophy for building library APIs.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>66. Caching an API</h4>
+<p>Web services are slow to request and often have rate caps. A cache can cut down on requests to remote APIs. But how best to design the interface between the code that uses an API, and the caching layer? In this episode we'll explore that question.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>67. Moneta</h4>
+<p>In the last episode we gave a class the ability to cache HTTP responses in a Hash or something that behaves like a Hash. Now we'll introduce the Moneta gem, a library that abstracts many different key-value stores behind a uniform, Hash-like interface.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>68. Display Builder</h4>
+<p>In some applications there is a many-to-many relationship between types of objects that may be displayed to users, and formats in which they may be rendered. There may even be multiple display styles within a given format: for instance, a "summary" style and a "detailed" style. In this episode well look at one possible option for decoupling what&nbsp;is being displayed from how&nbsp;it is displayed.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>69. Gem-Love Part 4</h4>
+<p>The last Gem-Love episode had me creating a command-line client. This time around, I use Rack and Sinatra to build a simple server.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>70. break</h4>
+<p>In this, the first of two episodes on the 'break' keyword, we look at how it can be applied beyond breaking out of loops.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>71. break with a Value</h4>
+<p>In the second of two episodes about the 'break' keyword, we discover how to override method return values to suit our own needs.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>72. Tail Part 1: Random Access</h4>
+<p>This episode kicks off a short miniseries on re-implementing a small subset of the UNIX "tail" command in Ruby. We'll start by learning how to jump around to arbitrary positions in a file.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>73. Tail Part 2: Do-While</h4>
+<p>As we continue to rewrite a subset of the UNIX tail(1) command, we learn how to write a do...while loop in Ruby.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>75. Tail Part 4: copy_stream</h4>
+<p>Marching right along in our reimplementation of UNIX tail(1), today we tackle the problem of dumping the tail of the file to STDOUT once we've found the starting point.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>74. Tail Part 3: #rindex</h4>
+<p>We've figured out how to read chunks of text backwards from a file, now it's time to tackle searching that text for the beginnings of lines.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>76. Tail Part 5: Idiom</h4>
+<p>So far, our reimplementation of tail(1) bears a striking resemblance to the style of code we might find in the C implementation of the same utility. In this episode we'll make the code a little more Rubyish by extracting loops into block methods.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>77. Tail Part 6: Process as Object</h4>
+<p>Continuing to refactor our minimal tail(1) implementation, today we clean up a loop by encapsulating its state in a new object.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>78. Tail Part 7: Cooperating Objects</h4>
+<p>In a final refactoring to our pseudo-tail(1), we use an enumerator to encapsulate the process of searching text chunks for newlines.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>78b. Java Dregs</h4>
+<p>We all know Java is the best programming lanagueg out there, but maybe you've seen the literal syntax some lesser languages have for initializing data structures like arrays and maps. In this episode we'll look at a technique for concisely initializing Java data structures with values.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>79. Concat</h4>
+<p>There is more than one way to concatenate arrays, but not all ways are created equal. In this episode we'll compare three approaches in terms of both semantics and efficiency.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>80. Splat Basics</h4>
+<p>Ruby supports a limited form of destructuring assignment, in the form of the "splat" operator. In today's episode we go over splat basics, in order to lay a foundation for more advanced splatting techniques to come.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>81. Implicit Splat</h4>
+<p>Delving further into Ruby's destructuring assignment, or "splat", mechanism, today we look at some cases where Ruby performs splatting without an explicit '*' operator.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>82. Inline Assignment</h4>
+<p>It's a small thing, but judicious use of inline assignment can make code more DRY and concise. In this episode we look at how to do it, and when.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>83. Custom Splat</h4>
+<p>In today's episode we discover how to make an arbitrary object implicitly "splat"-able.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>84. Splat Group</h4>
+<p>Today we take a look at a related feature to Ruby's "splat" operator: the ability to recursively destructure arrays using grouped assignment.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>85. Ignore Arguments</h4>
+<p>Sometimes a block or method may receive arguments that you just don't care about. This episode introduces the idiomatic Ruby way to indicate that certain arguments should be ignored.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>86. Naked Splat</h4>
+<p>In this episode we tackle how to override base class methods while cleanly passing through multiple base-class arguments.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>87. Naming: Head Count</h4>
+<p>Naming things is hard, and it's difficult to come up with hard-and-fast rules for it. But it can be helpful to learn from examples of real-world naming decisions that led to beneficial design changes. In this episode, we'll look at a method name change that clarified object responsibilities in a program dealing with live events.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>88. Gem-Love Part 5</h4>
+<p>In this continuation of the Gem-Love project, I complete the end-to-end acceptance test, verifying that the client can talk to the server.</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>89. Coincidental Duplication</h4>
+<p>The DRY principle teaches us to get rid of duplication wherever we find it. But not all duplication is created equal...</p>
+</li>
+<li class="paid">
+<img src="./rubyTapasPage_files/default.png">
+<div class="paid-only">[Paid Only]</div>
+<h4>90. class &lt;&lt; self</h4>
+      <p>Ruby gives as a number of options when it comes to defining class methods. This episode starts by demonstrating three of them, and then gets a bit opinionated.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>91. Ruby 2.0: Rebinding Methods</h4>
+      <p>In this, the first (but far from the last!) RubyTapas episode to focus on a Ruby 2.0 feature, we look at the implications of Ruby's newly relaxed rules for binding method objects to objects.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>92. Coincidental Duplication Redux</h4>
+      <p>Katrina Owen contributed an example of coincidental duplication I liked so much I decided to make a second episode about it. Enjoy!</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>93. Boolean</h4>
+      <p>A common question on Ruby forums and mailing lists is: "why is there no Boolean data type?". This episode attempts to answer that question.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>94. Bang Bang</h4>
+      <p>Have you ever found yourself looking for a '#to_bool' method in Ruby? This episode explores why boolean conversion isn't needed as often as you might think; as well as how to accomplish it when it IS called for.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>95. Gem-Love Part 6</h4>
+      <p>Diving back into my Gem-Love project, today I begin the process of adding users to the system. Because this is a larger feature, it will be split across multiple episodes. However, since they are all parts of the same programming session, I'll be running them back-to-back to preserve continuity.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>96. Gem-Love 7</h4>
+      <p>In this continuation of episode 95, I finish writing new acceptance test helpers, and get to my first proper test failure.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>97. Gem-Love 8</h4>
+      <p>As I continue to add the concepts of users to Gem-Love, I tackle the problem of making the client side auth-token aware.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>98. Gem-Love Part 9</h4>
+      <p>In today's concluding slice of this live-coding session, I wrap up my work on adding users to Gem-Love by TDDing the server side support for API keys.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>99. String Subscript Regex</h4>
+      <p>Today the focus is on a convenient way to extract substrings using regular expressions. We glossed over this technique briefly in an earlier episode, but now it's front and center.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>100. Screen-Scraping Gateway</h4>
+      <p>Today's episode tackles the problem of talking to a web app which has no published API, using the Mechanize screen-scraping gem. In the process, we'll explore the Gateway pattern for encapsulating external resources.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>101. Intention Revealing Message</h4>
+      <p>Not all refactoring is about eliminating duplication. In today's episode we'll refactor some code for the purpose of revealing intent to future readers.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>102. Gem-Love Part 10</h4>
+      <p>Note:&nbsp;This week RubyTapas moves to its new release schedule of two episodes a week. I've already sent out an update detailing the reason for the change, but for those who have disabled email updates, I've also added a note to the FAQ here:&nbsp;http://www.rubytapas.com/faq#frequency-change</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>103. Gem-Love Part 11</h4>
+      <p>Finishing up my list of TODO items, today I address some structural coupling that my test stubs have revealed.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>104. Parsing Time</h4>
+      <p>It would be great if time were always represented in readable, un-ambiguous ISO8601 formats. But &nbsp;when importing legacy data we don't often have that luxury. In this episode, we look at some tools for parsing various time and date representations.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>105. Checking for a Terminal</h4>
+      <p>In this episode we'll mimic the behavior of command-line tools like Git that automatically page their output if they detect that they are being run from a terminal.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>106. Class Accessors</h4>
+      <p>Today, some thoughts on writing class-level attribute accessors.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>107. String Subscript Assignment</h4>
+      <p>In today's episode: super-powered string-munging with regexes and the square-bracket operator.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>108. The Trouble with nil</h4>
+      <p>This episode explores some of the many ways we can come across a nil value, and why that's a problem.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>109. SAX</h4>
+      <p>This episode takes a look at how to use the Nokogiri gem to extract data from large HTML documents without reading the whole document into memory.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>110. Catch and Throw</h4>
+      <p>A refactoring episode, showing how to replace exceptions-as-flow-control with the "catch" and "throw" methods.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>111. Symbol Placeholder</h4>
+      <p>Nobody wants to debug an "undefined method for NilClass" error. Today's episode shows a little trick for making these errors more meaningful.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>112. Special Case</h4>
+      <p>In this episode we take a look at the Special Case pattern, and see how it can be used to drastically simplify some typical logic around logged-in and anonymous users.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>113. p</h4>
+      <p>We all use 'puts' for debugging at some point. This episode shows why 'p' is a better choice.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>114. Null Object</h4>
+      <p>In today's episode, we encounter a starship in trouble, and a software pattern that helps cleanly disable whole categories of behavior.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>115. pp</h4>
+      <p>In this quick live episode I demonstrate a standard library that improves on Kernel#p</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>116. Extract Command Object</h4>
+      <p>In today's live-recorded episode I show one of the most fundamental refactorings for breaking up a large class into smaller classes.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>117. Client Session Object</h4>
+      <p>In another peek into my ongoing behind-the-scenes work on RubyTapas, today I extract the responsibility for representing a logged-in screen-scraping user-agent session into its own class.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>118. Even and Odd</h4>
+      <p>A small dish today, about some numeric methods I often forget exist.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>119. Intention Revealing Argument</h4>
+      <p>In this episode, we examine the pros and cons of a few of techniques for making boolean flags passed to methods read more meaningully.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>120. Outside-In</h4>
+      <p>In today's episode I tackle the question of how many tests are enough. I'll show how for me, it's all about how long it's been since I last got new information from a test.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>121. Testing Blocks</h4>
+      <p>Today's episode answers the question: how do you test that a block passed to a method is executed as intended?</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>122. Testing Blocks with RSpec</h4>
+      <p>Last episode we looked at a simple way to test if a method executes a block as intended that will work in any test framework. But if your tool of choice is RSpec, there are some matchers that make these kinds of tests shorter and more declarative.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>123. Removing Debug Output</h4>
+      <p>Have you ever had a project that spat out so much deubg output when it ran that you couldn't tell when it had a legitimate error or warning to report? In today's episode I'll show you how to quickly and easily track down the source of unwanted output.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>124. Elixir</h4>
+      <p>Today we take a brief sojourn out of Ruby and into the Elixir programming language. I'll show you one of my first programs in Elixir and point out how the language's pattern-matching abilities can contribute to some very elegant solutions.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>125. And/Or</h4>
+      <p>Ruby has both symbolic and English forms of the logical "and" and "or" operators. Which one to choose may seem like a matter of taste, but that assumption can get you into trouble.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>126. Queue</h4>
+      <p>Today's episode introduces the Queue standard library, and shows how it can be used to coordinate threads.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>127. Parallel Fib</h4>
+      <p>Last time around we introduced the Queue class. In this episode, we'll put it to work!</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>128. Enumerable Queue</h4>
+      <p>Queue, somewhat surprisingly, is not enumerable. Which is all the excuse we need to have some more fun with the Enumerator class, in today's episode.</p>
+    </li>
+    <li class="paid">
+      <img src="./rubyTapasPage_files/default.png">
+      <div class="paid-only">[Paid Only]</div>
+      <h4>129. Rake</h4>
+      <p>Today we begin a series on the Rake build tool. We'll be getting into some powerful, lesser-known features as we continue on; but we'll start out with a quick review of Rake basics.</p>
+    </li>
+  </ul>
+</div>
+    <div id="footer">
+      Follow us on Twitter for updates:
+      <a class="twitter" href="https://twitter.com/rubytapas">@rubytapas</a>
+    </div>
+    <script>
+      //<![CDATA[
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'GOOGLE ANALYTICS ID HERE']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      //]]>
+    </script>
+  
+
+</body></html>

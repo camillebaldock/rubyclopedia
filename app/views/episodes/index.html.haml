@@ -7,9 +7,7 @@
    %td
     =episode.source
    %td
-    =episode.railscasts_id
-   %td
-    =link_to episode.name, episode
+    =link_to episode.supplier_id.to_s + " " + episode.name , episode
    %td
     =button_to 'Mark as watched', watched_episode_path(episode), :method => :post
 
@@ -20,9 +18,7 @@
    %td
     =episode.source
    %td
-    =episode.railscasts_id
-   %td
-    =link_to episode.name, episode
+    =link_to episode.supplier_id.to_s + " " + episode.name , episode
    %td
     =button_to 'Mark as watched', watched_episode_path(episode), :method => :post
 
@@ -31,6 +27,6 @@
  -@episodes.watched.each do |episode|
   %tr
    %td
-    =episode.railscasts_id
+    =episode.supplier_id
    %td
     =link_to episode.name, episode

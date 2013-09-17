@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RailsCastsImportServiceTest < ActionView::TestCase
+class RubyroguesImportServiceTest < ActionView::TestCase
 
   def setup
     Episode.delete_all
