@@ -1,0 +1,2514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>RubyTapas</title>
+    <link>https://rubytapas.dpdcart.com/subscriber/content</link>
+    <description/>
+    <pubDate>Mon, 16 Sep 2013 09:00:00 -0400</pubDate>
+    <managingEditor>contact@shiprise.net (Avdi Grimm)</managingEditor>
+    <language>en</language>
+    <copyright>Copyright 2013 RubyTapas</copyright>
+    <generator>getdpd.com</generator>
+    <itunes:summary>RubyTapas: Small plates of gourmet code.</itunes:summary>
+    <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    <image>
+      <url>https://getdpd.com/uploads/ruby-tapas.png</url>
+      <title>Ruby Tapas</title>
+      <link>https://rubytapas.dpdcart.com/subscriber/content</link>
+      <width>849</width>
+      <height>849</height>
+    </image>
+    <item>
+      <title><![CDATA[134 Rake Clean]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=291</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>My children know they are supposed to clean their place at the table after dinner. Sometimes software builds need to be cleaned up too, and today we'll learn about an optional Rake library which streamlines this process.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1619">134-rake-clean.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1620">134-rake-clean.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1621">Rakefile</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-1ac5d64a7ea686b228752e2db339fe2921855f89</guid>
+      <pubDate>Mon, 16 Sep 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1620/134-rake-clean.mp4" length="34009130" type="video/mp4"/>
+      <itunes:subtitle>Cleaning up after ourselves</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[133 Rake File Operations]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=290</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Rake has a lot of tricks up its sleeve. In this episode we'll look at some of the helpers it provides for performing various common operations on files.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1616">133-rake-file-operations.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1617">133-rake-file-operations.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1618">Rakefile</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-a9ef808ea0d8f783b2bc0f80d6fcdf8d58197b2f</guid>
+      <pubDate>Thu, 12 Sep 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1617/133-rake-file-operations.mp4" length="28239432" type="video/mp4"/>
+      <itunes:subtitle>Making, moving, and removing files</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[132 Rake Pathmap]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=289</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today's dish is a real delicacy... we're going to dig into one of Rake's most powerful but little-known capabilities and see how we can easily transform collections of path names with the #pathmap method.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1613">132-rake-pathmap.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1614">132-rake-pathmap.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1615">132-rake-pathmap.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-8d6ff9aba4c189bf15c0883ffeadef6d99171448</guid>
+      <pubDate>Mon, 09 Sep 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1614/132-rake-pathmap.mp4" length="34346323" type="video/mp4"/>
+      <itunes:subtitle>Munging path names</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[RubyTapas News: Free course, new hardware, and more]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=312</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><h1>RubyTapas News</h1>
+<p>Hi there! It's been a while since I did a news post. Here's what's new in the land of RubyTapas...</p>
+<h2>Downtime</h2>
+<p>First off, some of you may have had trouble getting your videos on Monday or Tuesday. This was because the service I use to distribute RubyTapas, DPD, was hit by a major distributed denial-of-service attack. They worked day and night with their datacenter to mitigate the attack and then to put measures in place to ensure that a DDoS can't bring the site down again in the future. You can <a href="http://us1.campaign-archive2.com/?u=5ed058f71d51b345f44b4fc6c&amp;id=2e63308f94">read their account of the even here</a>. Everything should be back to normal now.</p>
+<h2>Extra Info in Receipts</h2>
+<p>Several of you have asked if we could include more information on your RubyTapas receipts, such as tax IDs or your company's address. There is now an "Extra Info" field on your <a href="https://rubytapas.dpdcart.com/subscriber/profile">profile page</a>. You can use this field to add any extra info you want to be shown on your RubyTapas receipts.</p>
+<p>An important note: this info will <em>not&nbsp;</em>be shown on the billing notifications you receive by email. However, those notifications will now contain a link to the full, printable receipt. If you follow this link you will find a receipt that contains the full details of the transaction.</p>
+<h2>Free Code School course!</h2>
+<p>All RubyTapas subscribers are invited to enroll for free in Code School's "Ruby Bits" course! If you love RubyTapas but feel link you're missing some foundational Ruby knowledge, this course is a fun way to fill in the blanks. Use this link to get in for free:&nbsp;<a href="http://mktg.codeschool.com/avdio875765/">http://mktg.codeschool.com/avdio875765/</a></p>
+<h2>Downloading RubyTapas</h2>
+<p>A number of industrious RubyTapas subscribers have written scripts to automate the process of batch-downloading the episode backlog. Here are scripts from:</p>
+<ul>
+<li><a href="https://github.com/mislav/tapas-bar">Mislav&nbsp;Marohnić</a></li>
+<li><a href="https://github.com/ebarendt/tapas">Eric Barendt</a></li>
+<li><a href="https://gist.github.com/xpepper/5872399">Pietro Di Bello</a></li>
+<li><a href="http://www.benjaminfleischer.com/2013/04/03/mechanized-download/">Benjamin Fleischer</a></li>
+</ul>
+<div>Check 'em out!</div>
+<h2>On the Road</h2>
+<p>It's the home stretch of the 2013 conference season, and I for one am looking forward to spending a few months without packing a suitcase. However, those of you in Europe still have a few chances to come out and see me in the coming months. I'll be in Barcelona for <a href="http://www.baruco.org/">BaRuCo</a> next week, and then in Belgium for <a href="http://arrrrcamp.be/">Arrrrcamp</a> at the beginning of October. I look forward to meeting some of you there!</p>
+<h2>New Mic</h2>
+<p><img src="https://lh6.googleusercontent.com/-FSjJe50L9pk/UiY-wyAmFMI/AAAAAAAB3tA/_EaluuKHN1c/w638-h479-no/20130903_152432.jpg" border="0" alt="Photo of my new microphone" width="400" height="300" /></p>
+<p>This item's for the gearheads: this week I upgraded from my trusty <a href="http://bluemic.com/snowball/">Blue Snowball</a> microphone to a <a href="http://www.rodemic.com/mics/podcaster">Rode Podcaster</a> dynamic USB mic. I'm pretty thrilled about it; not only does it sound even better than the old mic, but a built-in monitor jack means I'm able to hear myself as the mic hears me in real-time. I also picked up a pair of <a href="http://thewirecutter.com/reviews/the-best-150-over-ear-headphones/">Sony MDR-7506 studio monitor headphones</a>, which are enabling me to be a lot more aware of the audio quality (or lack thereof) in my recordings. I'll be using these to tweak the sound quality as I make future episodes.</p>
+<p>Listen for the new mic starting with episode 139.&nbsp;</p>
+<h2>Confident Ruby is done!</h2>
+<p>My much-delayed book <a href="http://confidentruby.com">Confident Ruby is now finished</a>. If you haven't picked up a copy already, allow me to entice you with this 20% discount code, good for the next two weeks: CRTAPAS (Sorry, but I don't have a way to apply it to previous purchases)</p>
+<h2>New TekPub Video</h2>
+<p>Finally, if you just can't get enough video from me, TekPub has released a new hour and twenty minute screencast following a weekend web development project from beginning to initial release: <a href="http://tekpub.com/products/cowsays">The Making of Cowsays.com</a></p>
+<p>That's all for now. Happy hacking!</p>
+<p>&nbsp;</p>
+<p>--</p>
+<p>Avdi</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          </ul></div>]]></description>
+      <guid isPermaLink="false">dpd-0eeb7b163deef9f8a94c2cfe4ba1cb1c920db6a8</guid>
+      <pubDate>Thu, 05 Sep 2013 10:52:00 -0400</pubDate>
+      <itunes:subtitle>The latest news from the kitchen</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[131 Rake Rules]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=288</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode we learn how to write advanced Rake rules which programatically determine the appropriate prerequisites for a given target file.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1609">131-rake-rules.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1610">131-rake-rules.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1611">131-rake-rules.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1612">Rakefile</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-c81106d0809290345842d512bef38df3bbf30307</guid>
+      <pubDate>Thu, 05 Sep 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1610/131-rake-rules.mp4" length="47403174" type="video/mp4"/>
+      <itunes:subtitle>Using advanced Rake rules</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[130 Rake File Lists]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=287</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>As we continue our series on Rake, today we look at the Rake::FileList and how it can help us find the files we need and ignore the ones we don't.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1602">130-rake-file-lists.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1603">130-rake-file-lists.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1604">130-rake-file-lists.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1605">Rakefile</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-52119538a9dfa09f14cf08be57c49c7dbb83ff66</guid>
+      <pubDate>Mon, 02 Sep 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1603/130-rake-file-lists.mp4" length="22921458" type="video/mp4"/>
+      <itunes:subtitle>Building lists of files in Rake</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[129 Rake]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=286</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today we begin a series on the Rake build tool. We'll be getting into some powerful, lesser-known features as we continue on; but we'll start out with a quick review of Rake basics.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1574">129-rake.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1575">129-rake.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1576">build.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1577">Rakefile</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1578">Rakefile2</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1579">Rakefile3</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1580">Rakefile4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-f074d908690511c21a699a038946548ba2040411</guid>
+      <pubDate>Thu, 29 Aug 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1575/129-rake.mp4" length="25085949" type="video/mp4"/>
+      <itunes:subtitle>Automating builds with Rake</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[128 Enumerable Queue]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=283</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Queue, somewhat surprisingly, is not enumerable. Which is all the excuse we need to have some more fun with the Enumerator class, in today's episode.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1485">128-enumerable-queue.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1486">128-enumerable-queue.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1487">128-enumerable-queue.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-a162c36f26499c58d955ea0e5181379b2fafe96f</guid>
+      <pubDate>Mon, 26 Aug 2013 14:14:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1486/128-enumerable-queue.mp4" length="12068133" type="video/mp4"/>
+      <itunes:subtitle>More fun with Enumerators</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[127 Parallel Fib]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=279</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Last time around we introduced the Queue class. In this episode, we'll put it to work!</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1402">127-parallel-fib.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1403">127-parallel-fib.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1404">fib.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-fb3d46a18c7dbcbc56732ea447a44d40b38a60b5</guid>
+      <pubDate>Thu, 22 Aug 2013 13:48:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1402/127-parallel-fib.mp4" length="59976683" type="video/mp4"/>
+      <itunes:subtitle>Putting Queue to work</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[126 Queue]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=274</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today's episode introduces the Queue standard library, and shows how it can be used to coordinate threads.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1345">126-queue.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1346">126-queue.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1347">126-queue.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-5da61d3a82ecb44c42ee79ee92b2573d3b4bf0f4</guid>
+      <pubDate>Mon, 19 Aug 2013 12:17:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1346/126-queue.mp4" length="18430312" type="video/mp4"/>
+      <itunes:subtitle>Introducing the Queue stdlib</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[125 And/Or]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=270</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Ruby has both symbolic and English forms of the logical "and" and "or" operators. Which one to choose may seem like a matter of taste, but that assumption can get you into trouble.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1262">125-and-or.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1263">125-and-or.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1264">125-and-or.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-b196a0f7db86e64b806c330773725e6286bbcbc0</guid>
+      <pubDate>Thu, 15 Aug 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1263/125-and-or.mp4" length="28839923" type="video/mp4"/>
+      <itunes:subtitle>Understanding Ruby's logical operators.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[124 Elixir]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=269</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today we take a brief sojourn out of Ruby and into the Elixir programming language. I'll show you one of my first programs in Elixir and point out how the language's pattern-matching abilities can contribute to some very elegant solutions.</p>
+<p>If this episode piques your interest in Elixir, here are some resources you can explore to find out more:</p>
+<p>&nbsp;</p>
+<ul>
+<li>The Elixir home page:&nbsp;<a href="http://elixir-lang.org/">http://elixir-lang.org/</a></li>
+<li>Meet Elixir, an excellent screencast from Peepcode:&nbsp;<a href="https://peepcode.com/products/elixir">https://peepcode.com/products/elixir</a></li>
+<li>Programming Elixir, a book in beta by Dave Thomas:&nbsp;<a href="http://pragprog.com/book/elixir/programming-elixir">http://pragprog.com/book/elixir/programming-elixir</a></li>
+</ul>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1212">124-elixir.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1213">124-elixir.html</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-b3722db3bee261d21615fa30ab86582ab0cbec9d</guid>
+      <pubDate>Mon, 12 Aug 2013 10:33:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1212/124-elixir.mp4" length="30565031" type="video/mp4"/>
+      <itunes:subtitle>A little diversion into the Elixir language</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[123 Removing Debug Output]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=267</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Have you ever had a project that spat out so much deubg output when it ran that you couldn't tell when it had a legitimate error or warning to report? In today's episode I'll show you how to quickly and easily track down the source of unwanted output.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1139">123-removing-debug-output.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1140">123-removing-debug-output.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1141">123-removing-debug-output.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-b0940cf027731b48f1d87ffce81d7e8305a3edf2</guid>
+      <pubDate>Thu, 08 Aug 2013 12:42:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1140/123-removing-debug-output.mp4" length="26490951" type="video/mp4"/>
+      <itunes:subtitle>Cleaning up chatty code</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[122 Testing Blocks with RSpec]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=266</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Last episode we looked at a simple way to test if a method executes a block as intended that will work in any test framework. But if your tool of choice is RSpec, there are some matchers that make these kinds of tests shorter and more declarative.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1096">122-testing-blocks-with-rspec.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1097">122-testing-blocks-with-rspec.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1098">122-testing-blocks-with-rspec.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-8095a859c01f2ffb64c65c2afbb4db5c79da384c</guid>
+      <pubDate>Mon, 05 Aug 2013 19:03:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1097/122-testing-blocks-with-rspec.mp4" length="36179609" type="video/mp4"/>
+      <itunes:subtitle>Test that a method calls a block with RSpec matchers</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[121 Testing Blocks]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=263</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today's episode answers the question: how do you test that a block passed to a method is executed as intended?</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1050">121-testing-blocks.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1051">121-testing-blocks.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=1052">121-testing-blocks.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-023a62e1e05486c411319d31a65584982ef2fbf7</guid>
+      <pubDate>Thu, 01 Aug 2013 16:28:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/1051/121-testing-blocks.mp4" length="27249355" type="video/mp4"/>
+      <itunes:subtitle>Testing that a block is called</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[120 Outside-In]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=258</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In today's episode I tackle the question of how many tests are enough. I'll show how for me, it's all about how long it's been since I last got new information from a test.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=946">120-outside-in.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=947">hostconfig</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=948">hostconfig_spec.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-2388a51e93b0d526bf95d182aeac114ab948a66e</guid>
+      <pubDate>Mon, 29 Jul 2013 11:05:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/946/120-outside-in.mp4" length="66297868" type="video/mp4"/>
+      <itunes:subtitle>How many tests are enough?</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[119 Intention Revealing Argument]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=257</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode, we examine the pros and cons of a few of techniques for making boolean flags passed to methods read more meaningully.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=729">119-intent-revealing-argument.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=730">119-intent-revealing-argument.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=731">119-intent-revealing-argument.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-a1d3de228a3a52700640f46f7b0fb3dffcf26e51</guid>
+      <pubDate>Thu, 25 Jul 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/730/119-intent-revealing-argument.mp4" length="12565963" type="video/mp4"/>
+      <itunes:subtitle>Making boolean flags more readable</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[118 Even and Odd]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=256</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>A small dish today, about some numeric methods I often forget exist.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=725">118-even-and-odd.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=726">118-even-and-odd.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=727">118-even-and-odd.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-b25afd6d5232a963a1c9d170a5b5054cde28fc08</guid>
+      <pubDate>Mon, 22 Jul 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/726/118-even-and-odd.mp4" length="6737776" type="video/mp4"/>
+      <itunes:subtitle>Making full use of Ruby's numeric interfaces</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[117 Client Session Object]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=255</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In another peek into my ongoing behind-the-scenes work on RubyTapas, today I extract the responsibility for representing a logged-in screen-scraping user-agent session into its own class.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=722">117-client-session-object.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=723">117-client-session-object.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=724">117-client-session-object.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-bd0d9a5836f76506297539220dbcede9441fdc68</guid>
+      <pubDate>Thu, 18 Jul 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/723/117-client-session-object.mp4" length="61699634" type="video/mp4"/>
+      <itunes:subtitle>Extracting the responsibility for managing a client session</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[116 Extract Command Object]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=252</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In today's live-recorded episode I show one of the most fundamental refactorings for breaking up a large class into smaller classes.</p>
+<p>Since this is a live episode there is no transcript today. The Naught codebase can be found at <a href="http://github.com/avdi/naught">http://github.com/avdi/naught</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=652">116-extract-command-object.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-cd8c9fa90354a3fb8a820c8817af7b3fedd62be4</guid>
+      <pubDate>Mon, 15 Jul 2013 10:09:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/652/116-extract-command-object.mp4" length="151068348" type="video/mp4"/>
+      <itunes:subtitle>Introducing a fundamental refactoring</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[115 pp]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=249</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this quick live episode I demonstrate a standard library that improves on Kernel#p</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=570">115-pp.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-ed1f8444e7324ddd7f5fcb1b82670314fc4c228e</guid>
+      <pubDate>Thu, 11 Jul 2013 17:28:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/570/115-pp.mp4" length="29055935" type="video/mp4"/>
+      <itunes:subtitle>An improvement on p</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[114 Null Object]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=248</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In today's episode, we encounter a starship in trouble, and a software pattern that helps cleanly disable whole categories of behavior.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=556">114-null-object.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=557">114-null-object.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=558">114-null-object.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-517ebdcd900aef1fb627b510e268b5b0766312ba</guid>
+      <pubDate>Mon, 08 Jul 2013 09:12:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/557/114-null-object.mp4" length="21934985" type="video/mp4"/>
+      <itunes:subtitle>Something for nothing</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[113 p]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=247</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>We all use 'puts' for debugging at some point. This episode shows why 'p' is a better choice.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=551">113-p.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=554">113-p.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=555">113-p.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-393a580ee3eb22b9d293d03f6063c40ddc6a78b3</guid>
+      <pubDate>Thu, 04 Jul 2013 10:58:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/551/113-p.mp4" length="15485469" type="video/mp4"/>
+      <itunes:subtitle>Better debugging with p</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[112 Special Case]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=246</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode we take a look at the Special Case pattern, and see how it can be used to drastically simplify some typical logic around logged-in and anonymous users.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=536">112-special-case.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=537">112-special-case.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=538">112-special-case.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-73e7ec16a6fd36fa485025da0689ddd53853a372</guid>
+      <pubDate>Mon, 01 Jul 2013 10:50:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/537/112-special-case.mp4" length="30727322" type="video/mp4"/>
+      <itunes:subtitle>A pattern to help you avoid null checks</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[111 Symbol Placeholder]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=245</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Nobody wants to debug an "undefined method for NilClass" error. Today's episode shows a little trick for making these errors more meaningful.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=533">111-symbol-placeholder.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=534">111-symbol-placeholder.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=535">111-symbol-placeholder.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-c7017f8a590d23c446057fba4982c2de327df590</guid>
+      <pubDate>Thu, 27 Jun 2013 09:53:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/534/111-symbol-placeholder.mp4" length="23390496" type="video/mp4"/>
+      <itunes:subtitle>A cheap way to improve on nil</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[110 Catch and Throw]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=243</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>A refactoring episode, showing how to replace exceptions-as-flow-control with the "catch" and "throw" methods.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=530">110-catch-and-throw.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=531">110-catch-and-throw.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=532">110-catch-and-throw.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-896112d014236d1a7fea685c5ef56b257ae01a01</guid>
+      <pubDate>Mon, 24 Jun 2013 10:53:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/531/110-catch-and-throw.mp4" length="39367234" type="video/mp4"/>
+      <itunes:subtitle>Cleanly signaling early termination.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[109 SAX]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=242</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>This episode takes a look at how to use the Nokogiri gem to extract data from large HTML documents without reading the whole document into memory.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=527">109-sax.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=528">109-sax.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=529">109-sax.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-9f861cc2f61b720cdf347ad66980f9f3a46d5b90</guid>
+      <pubDate>Thu, 20 Jun 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/528/109-sax.mp4" length="47337365" type="video/mp4"/>
+      <itunes:subtitle>Efficient XML/HTML processing in Ruby</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[108 The Trouble with nil]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=241</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>This episode explores some of the many ways we can come across a nil value, and why that's a problem.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=520">108-the-trouble-with-nil.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=521">108-the-trouble-with-nil.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=522">108-the-trouble-with-nil.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-14d94c350aef7d4289733c8e465946aadbacdad4</guid>
+      <pubDate>Mon, 17 Jun 2013 09:10:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/521/108-the-trouble-with-nil.mp4" length="23247082" type="video/mp4"/>
+      <itunes:subtitle>nil is nobody's friend</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[107 String Subscript Assignment]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=240</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In today's episode: super-powered string-munging with regexes and the square-bracket operator.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=517">107-string-subscript-assignment.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=518">107-string-subscript-assignment.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=519">107-string-subscript-assignment.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-682990fcd3ae769be185826bf839d0a949013a91</guid>
+      <pubDate>Thu, 13 Jun 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/518/107-string-subscript-assignment.mp4" length="8956560" type="video/mp4"/>
+      <itunes:subtitle>Flipping the "more awesome" switch on strings.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[106 Class Accessors]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=239</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today, some thoughts on writing class-level attribute accessors.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=509">106-class-accessors.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=510">106-class-accessors.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=511">106-class-accessors.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-395add83752da27b9b57117498ca86776bd59788</guid>
+      <pubDate>Mon, 10 Jun 2013 12:01:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/510/106-class-accessors.mp4" length="9357703" type="video/mp4"/>
+      <itunes:subtitle>Some thoughts on writing class-level attribute accessors</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[105 Checking for a Terminal]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=238</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode we'll mimic the behavior of command-line tools like Git that automatically page their output if they detect that they are being run from a terminal.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=503">105-tty.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=504">105-tty.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=505">105-tty.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-f611f249d4e6be60ac8cd798d2142f6fc8588345</guid>
+      <pubDate>Thu, 06 Jun 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/504/105-tty.mp4" length="18498644" type="video/mp4"/>
+      <itunes:subtitle>How to tell if a program is being executed at the console</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[104 Parsing Time]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=237</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>It would be great if time were always represented in readable, un-ambiguous ISO8601 formats. But &nbsp;when importing legacy data we don't often have that luxury. In this episode, we look at some tools for parsing various time and date representations.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=499">104-parsing-time.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=501">104-parsing-time.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=502">104-parsing-time.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-a4ae297ee9ef49a95a894641904a35a9d03ad886</guid>
+      <pubDate>Mon, 03 Jun 2013 10:13:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/502/104-parsing-time.mp4" length="25318593" type="video/mp4"/>
+      <itunes:subtitle>Parsing time formats, simple and not-so-simple</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[103 Gem-Love Part 11]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=234</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Finishing up my list of TODO items, today I address some structural coupling that my test stubs have revealed.</p>
+<p>This is a live episode, so no script today.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=497">103-gem-love-11.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-50012ca14dc68dfdf487252cb75b8fc2e6303d0a</guid>
+      <pubDate>Thu, 30 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/497/103-gem-love-11.mp4" length="59107091" type="video/mp4"/>
+      <itunes:subtitle>Addressing structural coupling in the Endorsement class</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[102 Gem-Love Part 10]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=233</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p><em><strong>Note:</strong>&nbsp;This week RubyTapas moves to its new release schedule of two episodes a week. I've already sent out an update detailing the reason for the change, but for those who have disabled email updates, I've also added a note to the FAQ here:&nbsp;<a href="http://www.rubytapas.com/faq#frequency-change">http://www.rubytapas.com/faq#frequency-change</a></em></p>
+<p>Working through my TODO list from the recent feature additions, in today's episode I seek to resolve the semantic conflict between User and GemUser through refactoring.</p>
+<p>This is a live episode, so no script today.</p>
+<p>Code here:&nbsp;<a href="https://github.com/avdi/gem-love/tree/rubytapas-episode-102">https://github.com/avdi/gem-love/tree/rubytapas-episode-102</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=496">102-gem-love-10.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-8584e25f46fe0b72784fd41f145a9708dea4c972</guid>
+      <pubDate>Mon, 27 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/496/102-gem-love-10.mp4" length="33289731" type="video/mp4"/>
+      <itunes:subtitle>Refactoring the GemUser class</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[101 Intention Revealing Message]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=211</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Not all refactoring is about eliminating duplication. In today's episode we'll refactor some code for the purpose of revealing intent to future readers.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=483">101-intention-revealing-message.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=484">101-intention-revealing-message.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=485">101-intention-revealing-message.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-3dcf247d389eef3f58afbfc0dc451f0f9129885f</guid>
+      <pubDate>Fri, 24 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/484/101-intention-revealing-message.mp4" length="32482300" type="video/mp4"/>
+      <itunes:subtitle>Refactoring for readability</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[100 Screen-Scraping Gateway]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=210</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today's episode tackles the problem of talking to a web app which has no published API, using the Mechanize screen-scraping gem. In the process, we'll explore the Gateway pattern for encapsulating external resources.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=478">100-screen-scraping-gateway.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=479">100-screen-scraping-gateway.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=480">100-screen-scraping-gateway.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=481">content_post_gateway_spec.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=482">content_post_gateway.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-d46bdd017dbe03ce0d94dda4ed0a99722c37f50a</guid>
+      <pubDate>Wed, 22 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/479/100-screen-scraping-gateway.mp4" length="78059142" type="video/mp4"/>
+      <itunes:subtitle>Encapsulating external resources</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[099 String Subscript Regex]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=208</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today the focus is on a convenient way to extract substrings using regular expressions. We glossed over this technique briefly in an earlier episode, but now it's front and center.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=474">099-string-subscript-regex.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=475">099-string-subscript-regex.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=476">099-string-subscript-regex.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-f08ee5119333a8be5294e58156b7b14964b0435a</guid>
+      <pubDate>Mon, 20 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/475/099-string-subscript-regex.mp4" length="4661081" type="video/mp4"/>
+      <itunes:subtitle>Extracting substrings with regular expressions</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[098 Gem-Love Part 9]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=205</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In today's concluding slice of this live-coding session, I wrap up my work on adding users to Gem-Love by TDDing the server side support for API keys.</p>
+<p>This is a live episode, so no script today.</p>
+<p>Source:&nbsp;<a href="https://github.com/avdi/gem-love/tree/rubytapas-095">https://github.com/avdi/gem-love/tree/rubytapas-095</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=472">098-gem-love-9.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-68c25db3852e31f2b7e40869a46e939900b5cf91</guid>
+      <pubDate>Fri, 17 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/472/098-gem-love-9.mp4" length="75231696" type="video/mp4"/>
+      <itunes:subtitle>Server-side auth token support</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[097 Gem-Love 8]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=204</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>As I continue to add the concepts of users to Gem-Love, I tackle the problem of making the client side auth-token aware.</p>
+<p>This is a live episode, so there is no script today.</p>
+<p>Source:&nbsp;<a href="https://github.com/avdi/gem-love/tree/rubytapas-095">https://github.com/avdi/gem-love/tree/rubytapas-095</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=471">097-gem-love-8.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-a88b288195ec73b9aa84997023ec2f64bcc13588</guid>
+      <pubDate>Wed, 15 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/471/097-gem-love-8.mp4" length="57372224" type="video/mp4"/>
+      <itunes:subtitle>Building client-side support for auth tokens</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[096 Gem-Love 7]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=203</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this continuation of episode 95, I finish writing new acceptance test helpers, and get to my first proper test failure.</p>
+<p>This is a live episode, so no script today.</p>
+<p>Source here:&nbsp;<a href="https://github.com/avdi/gem-love/tree/rubytapas-095">https://github.com/avdi/gem-love/tree/rubytapas-095</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=470">096-gem-love-7.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-3c6b48a8155a94d70564e33e8de165048eb6f4e0</guid>
+      <pubDate>Mon, 13 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/470/096-gem-love-7.mp4" length="42353960" type="video/mp4"/>
+      <itunes:subtitle>More acceptance test helpers</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[095 Gem-Love Part 6]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=198</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Diving back into my Gem-Love project, today I begin the process of adding users to the system. Because this is a larger feature, it will be split across multiple episodes. However, since they are all parts of the same programming session, I'll be running them back-to-back to preserve continuity.</p>
+<p>This episode was cut from a live recording, so there is no script available.</p>
+<p>The code can be found here:&nbsp;<a href="https://github.com/avdi/gem-love/tree/rubytapas-095">https://github.com/avdi/gem-love/tree/rubytapas-095</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=506">095-gem-love-6.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-fe4eb328f1e517162477045804b70aaa79c35d95</guid>
+      <pubDate>Fri, 10 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/506/095-gem-love-6.mp4" length="56705910" type="video/mp4"/>
+      <itunes:subtitle>Adding users to a client/server app</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[094 Bang Bang]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=197</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Have you ever found yourself looking for a '#to_bool' method in Ruby? This episode explores why boolean conversion isn't needed as often as you might think; as well as how to accomplish it when it IS called for.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=463">094-bang-bang.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=464">094-bang-bang.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=465">094-bang-bang.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-73d319c58040c5b0120ea48183dd1a22d453e5c9</guid>
+      <pubDate>Wed, 08 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/464/094-bang-bang.mp4" length="32704689" type="video/mp4"/>
+      <itunes:subtitle>Converting arbitrary values to booleans</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[093 Boolean]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=196</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>A common question on Ruby forums and mailing lists is: "why is there no Boolean data type?". This episode attempts to answer that question.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=460">093-boolean.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=461">093-boolean.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=462">093-boolean.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-a724bd6408235ac38fe0dbfcc29b83994d63443c</guid>
+      <pubDate>Mon, 06 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/461/093-boolean.mp4" length="23346900" type="video/mp4"/>
+      <itunes:subtitle>Why Ruby has no Boolean type</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[092 Coincidental Duplication Redux]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=185</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Katrina Owen contributed an example of coincidental duplication I liked so much I decided to make a second episode about it. Enjoy!</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=445">092-coincidental-duplication-redux.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=446">092-coincidental-duplication-redux.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=447">092-coincidental-duplication-redux.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-5b84a418456992f342a46fe896aa2835b09bd7f4</guid>
+      <pubDate>Fri, 03 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/446/092-coincidental-duplication-redux.mp4" length="21645987" type="video/mp4"/>
+      <itunes:subtitle>Another example of over-DRYing code</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[091 Ruby 2.0: Rebinding Methods]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=184</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this, the first (but far from the last!) RubyTapas episode to focus on a Ruby 2.0 feature, we look at the implications of Ruby's newly relaxed rules for binding method objects to objects.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=442">091-ruby-2-rebinding-methods.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=443">091-ruby-2-rebinding-methods.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=444">091-ruby-2-rebinding-methods.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-6d3a819ae521e9330e2e3513929ae39fe2e7bce2</guid>
+      <pubDate>Wed, 01 May 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/443/091-ruby-2-rebinding-methods.mp4" length="53863812" type="video/mp4"/>
+      <itunes:subtitle>Temporarily adding methods to objects</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[090 class &lt;&lt; self]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=182</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Ruby gives as a number of options when it comes to defining class methods. This episode starts by demonstrating three of them, and then gets a bit opinionated.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=430">090-class-self.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=431">090-class-self.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=432">090-class-self.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-634a821f59b6de6261682efb3aa9d197e945e7fa</guid>
+      <pubDate>Sun, 28 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/431/090-class-self.mp4" length="17523570" type="video/mp4"/>
+      <itunes:subtitle>What's the best way to define class methods?</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[089 Coincidental Duplication]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=181</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>The DRY principle teaches us to get rid of duplication wherever we find it. But not all duplication is created equal...</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=433">089-coincidental-duplication.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=434">089-coincidental-duplication.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=435">089-coincidental-duplication.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-c0f31018d214f1e7af311f2b21a239820d658add</guid>
+      <pubDate>Fri, 26 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/434/089-coincidental-duplication.mp4" length="29824778" type="video/mp4"/>
+      <itunes:subtitle>Can code be too DRY?</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[088 Gem-Love Part 5]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=180</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this continuation of the Gem-Love project, I complete the end-to-end acceptance test, verifying that the client can talk to the server.</p>
+<p>Source code here:&nbsp;<a href="https://github.com/avdi/gem-love/tree/rubytapas-088">https://github.com/avdi/gem-love/tree/rubytapas-088</a></p>
+<p>Just a reminder, I'm collecting feedback so I can make RubyTapas even better! If you want your voice to be heard, fill out the survey:&nbsp;<a href="http://shiprise.wufoo.com/forms/r7x2q5/">http://shiprise.wufoo.com/forms/r7x2q5/</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=425">088-gem-love-5.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=426">088-gem-love-5.html</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-f67ca2ecd81c65e6d38400c624b7e0dee6eade92</guid>
+      <pubDate>Wed, 24 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/425/088-gem-love-5.mp4" length="21256933" type="video/mp4"/>
+      <itunes:subtitle>Integration client against server</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[087 Naming: Head Count]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=179</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Naming things is hard, and it's difficult to come up with hard-and-fast rules for it. But it can be helpful to learn from examples of real-world naming decisions that led to beneficial design changes. In this episode, we'll look at a method name change that clarified object responsibilities in a program dealing with live events.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=422">087-naming-things-headcount.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=423">087-naming-things-headcount.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=424">087-naming-things-headcount.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-2e89317b104a5c5d70140fdbd67065526dca00b2</guid>
+      <pubDate>Mon, 22 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/423/087-naming-things-headcount.mp4" length="30829290" type="video/mp4"/>
+      <itunes:subtitle>Renaming a method, for great justice</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[086 Naked Splat]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=178</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode we tackle how to override base class methods while cleanly passing through multiple base-class arguments.</p>
+<p>Notes:</p>
+<ul>
+<li>Paul Battley on <a href="http://po-ru.com/diary/destructuring-assignment-in-ruby/">Destructuring Assignment in Ruby</a></li>
+</ul>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=419">086-naked-splat.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=420">086-naked-splat.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=421">086-naked-splat.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-9109930112eb1ba7eadc0f2019eb7d6f42adc9bb</guid>
+      <pubDate>Fri, 19 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/421/086-naked-splat.mp4" length="14480986" type="video/mp4"/>
+      <itunes:subtitle>Ignoring many arguments</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[085 Ignore Arguments]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=177</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Sometimes a block or method may receive arguments that you just don't care about. This episode introduces the idiomatic Ruby way to indicate that certain arguments should be ignored.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=416">085-ignore-arguments.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=417">085-ignore-arguments.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=418">085-ignore-arguments.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-9ee8bd40538092def429602944acf4e196044389</guid>
+      <pubDate>Wed, 17 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/418/085-ignore-arguments.mp4" length="16470631" type="video/mp4"/>
+      <itunes:subtitle>Some arguments are more interesting than others</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[084 Splat Group]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=176</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today we take a look at a related feature to Ruby's "splat" operator: the ability to recursively destructure arrays using grouped assignment.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=413">084-splat-group.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=414">084-splat-group.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=415">084-splat-group.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-7806cd5b0701651c5881286d5ef3ac4c54c41a58</guid>
+      <pubDate>Mon, 15 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/415/084-splat-group.mp4" length="18229710" type="video/mp4"/>
+      <itunes:subtitle>Pulling values out of nested arrays</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[083 Custom Splat]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=172</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In today's episode we discover how to make an arbitrary object implicitly "splat"-able.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=409">083-custom-splat.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=410">083-custom-splat.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=411">083-custom-splat.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-701acce5f846152bcdd9a623ae7330f26375fc36</guid>
+      <pubDate>Fri, 12 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/409/083-custom-splat.mp4" length="21647614" type="video/mp4"/>
+      <itunes:subtitle>Making arbitrary objects splattable</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[082 Inline Assignment]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=171</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>It's a small thing, but judicious use of inline assignment can make code more DRY and concise. In this episode we look at how to do it, and when.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=406">082-inline-assignment.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=407">082-inline-assignment.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=408">082-inline-assignment.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-44c663f403d44b29e9c93287e68ef3c9aaa98e08</guid>
+      <pubDate>Wed, 10 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/407/082-inline-assignment.mp4" length="16268528" type="video/mp4"/>
+      <itunes:subtitle>To assign inline is sometimes divine</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[081 Implicit Splat]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=169</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Delving further into Ruby's destructuring assignment, or "splat", mechanism, today we look at some cases where Ruby performs splatting without an explicit '*' operator.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=401">081-implicit-splat.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=402">081-implicit-splat.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=403">081-implicit-splat.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-e3cee3be5a344a86c6339dd6ffce43ea1e81bc88</guid>
+      <pubDate>Mon, 08 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/402/081-implicit-splat.mp4" length="23209364" type="video/mp4"/>
+      <itunes:subtitle>Splatting without the splat</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[080 Splat Basics]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=168</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Ruby supports a limited form of destructuring assignment, in the form of the "splat" operator. In today's episode we go over splat basics, in order to lay a foundation for more advanced splatting techniques to come.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=398">080-splat-basics.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=399">080-splat-basics.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=400">080-splat-basics.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-208821d167fae5fc59cff742c7393668c9dc8603</guid>
+      <pubDate>Fri, 05 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/399/080-splat-basics.mp4" length="33262279" type="video/mp4"/>
+      <itunes:subtitle>Splatting out collections, and slurping them back up</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[079 Concat]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=167</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>There is more than one way to concatenate arrays, but not all ways are created equal. In this episode we'll compare three approaches in terms of both semantics and efficiency.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=395">079-concat.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=396">079-concat.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=397">079-concat.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-4cd280308ca7e64a9f7c03faf4ebc524d0e3214d</guid>
+      <pubDate>Wed, 03 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/396/079-concat.mp4" length="21803485" type="video/mp4"/>
+      <itunes:subtitle>Appending arrays to other arrays</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[Java Dregs: Double Brace Initialization]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=183</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>We all know Java is the best programming lanagueg out there, but maybe you've seen the literal syntax some lesser languages have for initializing data structures like arrays and maps. In this episode we'll look at a technique for concisely initializing Java data structures with values.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=438">078b-java-dregs.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=439">078-java-dregs.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=440">Cafe1.java</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=441">Cafe2.java</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-b3f0f611592fb3d7fea31d8c78f16b8452d9e09b</guid>
+      <pubDate>Mon, 01 Apr 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/438/078b-java-dregs.mp4" length="17004891" type="video/mp4"/>
+      <itunes:subtitle>Concisely initializing data structures in Java</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[078 Tail Part 7: Cooperating Objects]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=166</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In a final refactoring to our pseudo-tail(1), we use an enumerator to encapsulate the process of searching text chunks for newlines.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=392">078-tail-7-cooperating-objects.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=393">078-tail-7-cooperating-objects.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=394">078-tail-7-cooperating-objects.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-add8dcd3bbdb9b1f5b1e7ed467b8d949ef7d23d2</guid>
+      <pubDate>Fri, 29 Mar 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/393/078-tail-7-cooperating-objects.mp4" length="33816961" type="video/mp4"/>
+      <itunes:subtitle>The return of Enumerator</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[077 Tail Part 6: Process as Object]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=159</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Continuing to refactor our minimal tail(1) implementation, today we clean up a loop by encapsulating its state in a new object.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=381">077-tail-6-process-as-object.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=382">077-tail-6-process-as-object.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=383">077-tail-6-process-as-object.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-26781adbe5c9d2894edf6e7bbc5e2dbb8e06b5aa</guid>
+      <pubDate>Wed, 27 Mar 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/383/077-tail-6-process-as-object.mp4" length="19579630" type="video/mp4"/>
+      <itunes:subtitle>Representing a process as an object</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[076 Tail Part 5: Idiom]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=158</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>So far, our reimplementation of tail(1) bears a striking resemblance to the style of code we might find in the C implementation of the same utility. In this episode we'll make the code a little more Rubyish by extracting loops into block methods.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=378">076-tail-5-idiom.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=380">076-tail-5-idiom.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=437">076-tail-5-idiom-high.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-01a0e2b96221ca7918e55ae7dc87d65ca8df65e2</guid>
+      <pubDate>Mon, 25 Mar 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/437/076-tail-5-idiom-high.mp4" length="51261922" type="video/mp4"/>
+      <itunes:subtitle>From C to Ruby, one block at a time.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[074 Tail Part 3: #rindex]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=155</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>We've figured out how to read chunks of text backwards from a file, now it's time to tackle searching that text for the beginnings of lines.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=344">074-tail-3-rindex.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=345">074-tail-3-rindex.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=346">074-tail-3-rindex.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-90ba8fad69a3a48e0c799e7976cbe481d8ca81d0</guid>
+      <pubDate>Wed, 20 Mar 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/346/074-tail-3-rindex.mp4" length="43201107" type="video/mp4"/>
+      <itunes:subtitle>Searching backwards in strings</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[075 Tail Part 4: copy_stream]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=157</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Marching right along in our reimplementation of UNIX tail(1), today we tackle the problem of dumping the tail of the file to STDOUT once we've found the starting point.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=376">075-tail-4-copy_stream.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=377">075-tail-4-copy_stream-768kbs.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=436">075-tail-4-copy_stream.html</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-607d4614ad85141c2c3f4186248e18158f8da9bb</guid>
+      <pubDate>Wed, 20 Mar 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/377/075-tail-4-copy_stream-768kbs.mp4" length="21799331" type="video/mp4"/>
+      <itunes:subtitle>Efficiently channeling data between filehandles</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[073 Tail Part 2: Do-While]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=151</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>As we continue to rewrite a subset of the UNIX tail(1) command, we learn how to write a do...while loop in Ruby.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=341">073-tail-2-do-while.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=342">073-tail-2-do-while.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=343">073-tail-2-do-while.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-7393ef6c5a710e2899305f3f6830daff2fc62ba1</guid>
+      <pubDate>Mon, 18 Mar 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/342/073-tail-2-do-while.mp4" length="31798002" type="video/mp4"/>
+      <itunes:subtitle>Ruby doesn't have a do-while loop... or does it?</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[072 Tail Part 1: Random Access]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=149</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>This episode kicks off a short miniseries on re-implementing a small subset of the UNIX "tail" command in Ruby. We'll start by learning how to jump around to arbitrary positions in a file.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=336">072-tail-1-random-access.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=338">072-tail-1-random-access.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=339">072-tail-1-random-access.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-a2fbb06ba2347709b576c2c49f3fac010dd5b0e2</guid>
+      <pubDate>Fri, 15 Mar 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/338/072-tail-1-random-access.mp4" length="14156338" type="video/mp4"/>
+      <itunes:subtitle>Reading files from points other than the beginning</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[071 break with a Value]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=147</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In the second of two episodes about the 'break' keyword, we discover how to override method return values to suit our own needs.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=332">071-break-with-value.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=333">071-break-with-value.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=334">071-break-with-value.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-07b75fa2401b9e11fb58540ed6dfbe81c5773ecb</guid>
+      <pubDate>Wed, 13 Mar 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/333/071-break-with-value.mp4" length="23555131" type="video/mp4"/>
+      <itunes:subtitle>Overriding method return values with break</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[070 break]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=146</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this, the first of two episodes on the 'break' keyword, we look at how it can be applied beyond breaking out of loops.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=328">070-break.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=330">070-break.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=331">070-break.html</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-9d4929804b882799685e82fe563cac3ad7fc237b</guid>
+      <pubDate>Mon, 11 Mar 2013 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/328/070-break.mp4" length="19873492" type="video/mp4"/>
+      <itunes:subtitle>The break keyword is for more than just loops</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[069 Gem-Love Part 4]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=145</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>The last Gem-Love episode had me creating a command-line client. This time around, I use Rack and Sinatra to build a simple server.</p>
+<p>Source code can be found here:&nbsp;<a href="https://github.com/avdi/gem-love/tree/rubytapas-069">https://github.com/avdi/gem-love/tree/rubytapas-069</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=326">069-gem-love-4.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=327">069-gem-love-4.html</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-9fba79d538478986e44ec786f4bac99ca7cd53b4</guid>
+      <pubDate>Fri, 08 Mar 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/326/069-gem-love-4.mp4" length="22400202" type="video/mp4"/>
+      <itunes:subtitle>Creating a Sinatra-based server</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[068 Display Builder]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=140</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In some applications there is a many-to-many relationship between types of objects that may be displayed to users, and formats in which they may be rendered. There may even be multiple display styles within a given format: for instance, a "summary" style and a "detailed" style. In this episode well look at one possible option for decoupling <em>what</em>&nbsp;is being displayed from <em>how</em>&nbsp;it is displayed.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=318">068-display-builder.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=319">068-display-builder.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=320">068-display-builder.zip</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-0bf68eec152306a59ce0f3db2d968257f37d689e</guid>
+      <pubDate>Wed, 06 Mar 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/318/068-display-builder.mp4" length="54750169" type="video/mp4"/>
+      <itunes:subtitle>Decoupling what is displayed from how</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[067 Moneta]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=144</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In the last episode we gave a class the ability to cache HTTP responses in a Hash or something that behaves like a Hash. Now we'll introduce the Moneta gem, a library that abstracts many different key-value stores behind a uniform, Hash-like interface.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=322">067-moneta.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=323">067-moneta.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=324">067-moneta.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-80a24b3b8107df28c3c2a06a11e539c411b232b0</guid>
+      <pubDate>Mon, 04 Mar 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/323/067-moneta.mp4" length="12948648" type="video/mp4"/>
+      <itunes:subtitle>Pluggable cache backends</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[066 Caching an API]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=139</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Web services are slow to request and often have rate caps. A cache can cut down on requests to remote APIs. But how best to design the interface between the code that uses an API, and the caching layer? In this episode we'll explore that question.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=315">066-caching-an-api.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=316">066-caching-an-api.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=317">066-caching-an-api.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-b6e32891120fefa23356d574ef0dd778d21479d5</guid>
+      <pubDate>Fri, 01 Mar 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/316/066-caching-an-api.mp4" length="90341870" type="video/mp4"/>
+      <itunes:subtitle>Caching the results of web service requests</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[065 PulseFFI Part 7]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=138</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>This is the culmination of the last few PulseFFI episodes. I'll add some insurance to the high-level PulseFFI.mainloop method, and then make use of it in the proof-of-concept script. Finally, I'll discuss some of my philosophy for building library APIs.</p>
+<p>Browse the source code here:&nbsp;<a href="https://github.com/avdi/pulse-ffi/tree/rubytapas-065">https://github.com/avdi/pulse-ffi/tree/rubytapas-065</a></p>
+<p>Sorry, no transcript for this live-recorded episode.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=314">065-ffi-7.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-158461b263d469ef6c0835bf22ac3f9a1df2801f</guid>
+      <pubDate>Wed, 27 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/314/065-ffi-7.mp4" length="106936838" type="video/mp4"/>
+      <itunes:subtitle>Wrapping up the PulseFFI.mainloop method</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[064 Yield or Enumerate]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=137</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>A number of Ruby standard library methods return an Enumerator if no block is passed to them. In this episode, we'll learn how to emulate this behavior in our own methods.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=311">064-yield-or-enumerate.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=312">064-yield-or-enumerate.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=313">064-yield-or-enumerate.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-a4fc7c30d5362f2c35988031eee0548e0d7fe41c</guid>
+      <pubDate>Mon, 25 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/312/064-yield-or-enumerate.mp4" length="10296287" type="video/mp4"/>
+      <itunes:subtitle>Making iterative methods more flexible</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[063 Gem-Love Part 3]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=136</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Returning to my Gem-Love project in this episode, I use TDD to drive out a client-side implementation for the first feature. In the process, I talk about message-first design.</p>
+<p>Check out the source here:&nbsp;<a href="https://github.com/avdi/gem-love/tree/rubytapas-063">https://github.com/avdi/gem-love/tree/rubytapas-063</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=309">063-gem-love-3.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=310">063-gem-love-3.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-ac8346ea71f6889985ef19c1eb79e5af52f0afd3</guid>
+      <pubDate>Fri, 22 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/310/063-gem-love-3.mp4" length="53544281" type="video/mp4"/>
+      <itunes:subtitle>Implementing the first feature</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[062 Fiber]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=135</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode we'll explore Ruby's lightweight concurrency primitive by using it to emulate the Enumerator class.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=306">062-fiber.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=307">062-fiber.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=308">062-fiber.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-168c76fd7441959ad2e0a3e797a4a8ca47505efe</guid>
+      <pubDate>Wed, 20 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/307/062-fiber.mp4" length="51955030" type="video/mp4"/>
+      <itunes:subtitle>Rebuilding Enumerator with Ruby's Fibers</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[061 PulseFFI Part 6]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=134</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Continuing in my extraction of a high-level API for the PulseFFI library, in this episode I test-drive the Mainloop.run, a composed method that brings together the work I've done so far.</p>
+<p>Browse the source code here:&nbsp;<a href="https://github.com/avdi/pulse-ffi/tree/rubytapas-061">https://github.com/avdi/pulse-ffi/tree/rubytapas-061</a></p>
+<p>Sorry, no transcript for this live-recorded episode.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=305">061-ffi-6.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-0009ddedd5ab01bb56900a780df61249e65e1d9e</guid>
+      <pubDate>Mon, 18 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/305/061-ffi-6.mp4" length="88534465" type="video/mp4"/>
+      <itunes:subtitle>Tying together the PulseFFI::Mainloop class</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[060 Ascend]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=133</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Now that we've been formally introduced to the Enumerator class, it's time to apply that knowledge in a concrete way. In this episode we use Pathname and Enumerator to locate a project-wide econfiguration file.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=302">060-ascend.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=303">060-ascend.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=304">060-ascend.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-9ecbcfa32c265d69e62779e1f332fa8f567a7d42</guid>
+      <pubDate>Fri, 15 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/303/060-ascend.mp4" length="13853116" type="video/mp4"/>
+      <itunes:subtitle>Searching directory ancestors with Pathname and Enumerator</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[059 Enumerator]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=132</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In previous episodes we've touched on Enumerator in passing. This time it'll take center stage, as we explore just what an Enumerator is and what it's good for.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=299">059-enumerator.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=300">059-enumerator.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=301">059-enumerator.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-20d31f438b46a88cdb8fbb077c29fb9065d11b96</guid>
+      <pubDate>Wed, 13 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/300/059-enumerator.mp4" length="40092914" type="video/mp4"/>
+      <itunes:subtitle>An intro to the Enumerator class</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[058 ARGF]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=131</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>This episode explores ARGF, a powerful object for working with input files in command-line programs.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=296">058-argf.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=297">058-argf.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=298">058-argf.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-de334c2d9fcbe0d4e523ee688f745893810163bf</guid>
+      <pubDate>Mon, 11 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/297/058-argf.mp4" length="21796177" type="video/mp4"/>
+      <itunes:subtitle>Easily work with command-line input files</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[057 PulseFFI Part 5]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=130</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode I continue to felsh out the high-level API for my PulseFFI library, using TDD and mock objects to define how the object model interacts with the C bindings layer. I also compare the MiniTest and RSpec mocking/stubbing libraries.</p>
+<p>Browse the source for this episode at:&nbsp;https://github.com/avdi/pulse-ffi/tree/rubytapas-057</p>
+<p>Sorry, no transcript for this live-recorded episode.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=295">057-ffi-5.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-e7462bafbdfaf370e4e679fb895ab51b94ac91ec</guid>
+      <pubDate>Fri, 08 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/295/057-ffi-5.mp4" length="94530395" type="video/mp4"/>
+      <itunes:subtitle>TDDing the PulseFFI API</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[056 xmpfilter]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=129</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this, the most requested RubyTapas episode ever, we'll take a look at xmpfilter, the program I use to evaluate Ruby expressions from within my editor.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=292">056-xmpfilter.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=293">056-xmpfilter.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=294">056-xmpfilter.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-5c274a7c86342ed6c1b5bcb997350c4d8fbd9ddb</guid>
+      <pubDate>Wed, 06 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/293/056-xmpfilter.mp4" length="35061110" type="video/mp4"/>
+      <itunes:subtitle>Evaluating Ruby code from the comfort of your editor</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[055 Runnable Library]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=128</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>It's a library! No, it's an executable! Relax, your Ruby files can be both require-able libraries <em>and</em>&nbsp;executables!</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=289">055-runnable-library.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=290">055-runnable-library.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=291">055-runnable-library.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-401ec9576c108e2540c2663ac714888036e0abff</guid>
+      <pubDate>Mon, 04 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/289/055-runnable-library.mp4" length="41831204" type="video/mp4"/>
+      <itunes:subtitle>Making libraries double as executables</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[054 PulseFFI Part 4]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=127</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this edition of a miniseries on building a wrapper library using FFI, I begin to sketch out a higher-level API for starting up a PulseAudio mainloop.</p>
+<p>Source code here:&nbsp;<a href="https://github.com/avdi/pulse-ffi/tree/rubytapas-054">https://github.com/avdi/pulse-ffi/tree/rubytapas-054</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=325">054-ffi-4.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-beb8343869177ba4b797e57568cb15ea5c7bff76</guid>
+      <pubDate>Fri, 01 Feb 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/325/054-ffi-4.mp4" length="65000795" type="video/mp4"/>
+      <itunes:subtitle>Sketching out a higher level API</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[053 Selectively Run Tests]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=126</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Selectively running tests can be a lifesaver in a large codebase. This episode covers how to run just the tests you care about in both MiniTest and RSpec - including how to slectively run tests under Rake.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=284">053-selectively-run-tests.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=285">053-selectively-run-tests.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=286">arithmetic_spec.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=287">arithmetic_test.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-509ccdfeab8e6c49bf86a6e35914e297ca6a754f</guid>
+      <pubDate>Wed, 30 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/285/053-selectively-run-tests.mp4" length="57473152" type="video/mp4"/>
+      <itunes:subtitle>Running just the tests you care about</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[052 The End of Mocking]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=125</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>At the borders of our systems, mockist testing hits a point of diminishing returns. In this episode we take a look at when to stop mocking and start integration testing.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=281">052-the-end-of-mocking.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=282">052-the-end-of-mocking.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=283">052-the-end-of-mocking.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-e4bd3090f74ad373eaf12ec5eba21bb3cb37c4eb</guid>
+      <pubDate>Mon, 28 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/282/052-the-end-of-mocking.mp4" length="97700871" type="video/mp4"/>
+      <itunes:subtitle>Mock objects and the point of diminishing returns</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[051 PulseFFI Part 3]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=124</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this "live-style" episode, I begin to transition the PulseFFI proof-of-concept script into a Ruby library, using my smoke test to ensure everything continues to work.</p>
+<p>Browse the source code here:&nbsp;https://github.com/avdi/pulse-ffi/tree/rubytapas-051</p>
+<p>Sorry, no transcript for this live recording.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=280">051-ffi-3.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-1716f6062421e79fb3ee9afbd7509e261c9d0903</guid>
+      <pubDate>Fri, 25 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/280/051-ffi-3.mp4" length="119924653" type="video/mp4"/>
+      <itunes:subtitle>Transitioning the proof-of-concept to a library</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[050 Include Namespace]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=122</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Sometimes a utility module is overkill. In this episode, we make a namespace module do double-duty.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=277">050-include-namespace.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=278">050-include-namespace.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=279">050-include-namespace.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-362159e0e87e6ee6f476b67542b359d0c07c1630</guid>
+      <pubDate>Wed, 23 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/277/050-include-namespace.mp4" length="18079600" type="video/mp4"/>
+      <itunes:subtitle>Sometimes a utility module is more than you need</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[049 Utility Function]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=121</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Some functions are useful in many different contexts. In this episode we'll explore some ways to make them available both to library code and to client code of a library.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=274">049-utility-function.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=275">049-utility-function.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=276">049-utility-function.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-108d67ea8bdb834c2ad70884deeb95b0baa32a0d</guid>
+      <pubDate>Mon, 21 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/275/049-utility-function.mp4" length="56932261" type="video/mp4"/>
+      <itunes:subtitle>Some functions are useful in many different contexts. In this episode we'll explore some ways to make them available both to library code and to client code of a library.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[048 Memoize]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=119</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>This episode covers how to write a "macro"-a method that generates or modifies other methods-using the classic example of memoizing method results.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=271">048-memoize.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=272">048-memoize.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=273">RubyTapas048-Memoize.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-b989f1d65dd31b321521d212d7e17fe2587674f1</guid>
+      <pubDate>Fri, 18 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/273/RubyTapas048-Memoize.mp4" length="58431155" type="video/mp4"/>
+      <itunes:subtitle>A macro for caching method results</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[047 FFI Part 2]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=118</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In part 2 of this series, we buy ourselves some peace of mind with a simple smoke test.</p>
+<p>The code for this episode can be found here:&nbsp;<a href="https://github.com/avdi/pulse-ffi/tree/RubyTapas047">https://github.com/avdi/pulse-ffi/tree/RubyTapas047</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=269">047-ffi-2.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=270">RubyTapas047-FFI-2.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-b5f40d344136af810b3ee0c2fbffeb687f827f83</guid>
+      <pubDate>Wed, 16 Jan 2013 15:13:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/270/RubyTapas047-FFI-2.mp4" length="76199625" type="video/mp4"/>
+      <itunes:subtitle>Adding a smoke test</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[046 Gem-Love Part 2]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=117</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In Part 2 of this series chronicling the creation of an app, I establish a test-driven rhythm, starting with a high-level acceptance test.</p>
+<p>The source code for this episode is available here:&nbsp;<a href="https://github.com/avdi/gem-love/tree/rubytapas-episode-046">https://github.com/avdi/gem-love/tree/rubytapas-episode-046</a></p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=267">046-gem-love-2.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=268">RubyTapas046-Gem-Love-2.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-754cda16c11a4fbcbadc050413a525011d5fca37</guid>
+      <pubDate>Mon, 14 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/268/RubyTapas046-Gem-Love-2.mp4" length="74923323" type="video/mp4"/>
+      <itunes:subtitle>Kickstarting the BDD rhythm</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[045 Hash Default Value]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=115</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>This cautionary episode demonstrates and explains a Hash gotcha that often comes as a surprise.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=264">045-hash-default.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=265">045-hash-default.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=266">RubyTapas045-Hash-Default-Values.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-2bf9da2d7d99d17c501de016354d559a3b21e4b2</guid>
+      <pubDate>Fri, 11 Jan 2013 14:07:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/266/RubyTapas045-Hash-Default-Values.mp4" length="13546292" type="video/mp4"/>
+      <itunes:subtitle>A surprising Hash gotcha</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[044 #one?]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=114</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Somtetimes you need to know if exactly one element in a collection has a given property. For that situation, we have the #one? predicate method.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=261">044-one.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=262">044-one.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=263">RubyTapas044-One.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-7685b2efcbb4cfb6e7c312b1653a0811ec2e82c3</guid>
+      <pubDate>Wed, 09 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/263/RubyTapas044-One.mp4" length="7276439" type="video/mp4"/>
+      <itunes:subtitle>Finding if one and only one element matches</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[043 Exclusive Or]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=113</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>This episode looks at Ruby's logical XOR operator, and how it can be useful in checking that a method was called with the correct optional arguments.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=258">043-exclusive-or.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=259">043-exclusive-or.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=260">RubyTapas043-Exclusive-Or.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-d39799f2377eee0af56b5d6a570d414221d5a30d</guid>
+      <pubDate>Mon, 07 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/260/RubyTapas043-Exclusive-Or.mp4" length="22958812" type="video/mp4"/>
+      <itunes:subtitle>Asserting A or B but not both</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[042 Streaming]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=112</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Does code optimized for RAM usage need to be ugly? Find out, in today's episode!</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=255">042-streaming.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=256">042-streaming.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=257">RubyTapas042-Streaming.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-bcab43eb06bfdb1b8465e5933d17e9cf13dcdf3c</guid>
+      <pubDate>Fri, 04 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/257/RubyTapas042-Streaming.mp4" length="41884217" type="video/mp4"/>
+      <itunes:subtitle>Processing big data without maxing out memory</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[041 String#scan]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=110</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today's episode looks at a convenient tool for weeding through text and pulling out parts that match a given pattern.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=252">041-string-scan.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=253">041-string-scan.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=254">RubyTapas041-String-Scan.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-9da4c6910bdc6dca3e86ab619280234f81455281</guid>
+      <pubDate>Wed, 02 Jan 2013 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/254/RubyTapas041-String-Scan.mp4" length="26699199" type="video/mp4"/>
+      <itunes:subtitle>Using String#scan to comb through text</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[040 Gradual Stiffening]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=109</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In today's episode we'll try to come to come to grips with a slippery quality---a quality which is of importance to differentiating code that is easy to evolve, from code that isn't. Along the way, we'll write some Ruby code that looks disturbingly like Perl!</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=248">040-gradual-stiffening.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=249">040-gradual-stiffening.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=250">convert.sh</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=251">RubyTapas040-Gradual-Stiffening.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-88dc7ce35680aa8b3f08e5aa576c8a1b77969546</guid>
+      <pubDate>Mon, 31 Dec 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/251/RubyTapas040-Gradual-Stiffening.mp4" length="45244855" type="video/mp4"/>
+      <itunes:subtitle>From a one-off script to a reusable method in tiny steps</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[039 Gem-Love Part 1]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=108</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this, the first of another ongoing occasional series, I revisit an open-source application I started three years ago and begin to rewrite it. Part 1 focuses on building a proof-of-concept RubyGems plugin.</p>
+<p>The source code for this episode can be found on GitHub:&nbsp;<a href="https://github.com/avdi/gem-love/tree/rubytapas-episode-039">https://github.com/avdi/gem-love/tree/rubytapas-episode-039</a></p>
+<p>Other notes:</p>
+<ul>
+<li><a href="http://tagaholic.me/2009/04/23/how-to-write-a-rubygem-command-plugin.html">How to write a RubyGem command plugin</a></li>
+<li><a href="http://rubygems.rubyforge.org/rubygems-update/index.html">RubyGems API documentation</a></li>
+</ul>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=246">039-gem-love-part-1.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=247">RubyTapas039-Gem-Love-Part-1.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-1d5893a8db9e3d4defae8469c8fa44e0c6f99494</guid>
+      <pubDate>Fri, 21 Dec 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/247/RubyTapas039-Gem-Love-Part-1.mp4" length="45357415" type="video/mp4"/>
+      <itunes:subtitle>First in a series following the creation of an app</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[038 Caller-Specified Fallback]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=107</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Sometimes it's hard to decide how to handle a failure in a method call. Raise an exception? Return a nil? Log an error? The best choice may differ depending on where the method is being called. In this episode, we look at a technique for defering the decision about how to deal with a failure to the point when a method is called.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=243">038-caller-specified-fallback.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=244">038-caller-specified-fallback.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=245">RubyTapas038-Caller-Specified-Fallback.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-f23b997833a15f555998a45f39405c3408f82ca5</guid>
+      <pubDate>Wed, 19 Dec 2012 11:23:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/245/RubyTapas038-Caller-Specified-Fallback.mp4" length="30276905" type="video/mp4"/>
+      <itunes:subtitle>Punting failure-handling to the caller</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[037 Proc and Threequal]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=106</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today's dish combines the great flavor of Ruby's 'case' statement with a little Proc seasoning and a threequals demiglace!</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=240">037-proc-and-threequals.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=241">037-proc-and-threequals.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=242">RubyTapas037-Proc-And-Threequals.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-97374819aa4806e23042ffa33c828d5ae1569862</guid>
+      <pubDate>Mon, 17 Dec 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/242/RubyTapas037-Proc-And-Threequals.mp4" length="10342966" type="video/mp4"/>
+      <itunes:subtitle>A fun way to use Procs as predicates</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[036 Blocks, Procs, and Lambdas]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=105</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>How is a Proc different from a Lambda? When do you use one over the other? And how to blocks fit into all this? Today's episode attemptes to answer these burning questions.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=237">036-blocks-procs-and-lambdas.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=238">036-blocks-procs-and-lambdas.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=239">RubyTapas036-Blocks-Procs-and-Lambdas.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-c178b82e058c0752ae909c36c3d48ccbe4ccf197</guid>
+      <pubDate>Fri, 14 Dec 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/239/RubyTapas036-Blocks-Procs-and-Lambdas.mp4" length="30292360" type="video/mp4"/>
+      <itunes:subtitle>Demystifying blocks, procs, and lambdas. Hopefully.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[035 Callable]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=104</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Many different kinds of Ruby objects respond to #call. Today's dish is a demonstration of how this fact can be harnessed to easily swap out different implementations of a collaborator object.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=234">035-callable.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=235">035-callable.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=236">RubyTapas035-Callable.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-f3d0497ca974b56d19b030694baf98e7a6c66594</guid>
+      <pubDate>Wed, 12 Dec 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/236/RubyTapas035-Callable.mp4" length="39981898" type="video/mp4"/>
+      <itunes:subtitle>A common protocol for callable objects</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[034 Struct from Hash]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=103</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>For such similar and broadly useful data structures, Struct and Hash are surprisingly incompatible. In this episode we look at some ways to smooth over their differences, and answer a viewer question in the process.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=231">034-struct-from-hash.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=232">034-struct-from-hash.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=233">RubyTapas034-Struct-From-Hash.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-56175b4cc446a5928f49147253d4ae33cc7dfc5d</guid>
+      <pubDate>Mon, 10 Dec 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/233/RubyTapas034-Struct-From-Hash.mp4" length="20945157" type="video/mp4"/>
+      <itunes:subtitle>Struct and Hash, sittin' in a tree...</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[033 Classes and Constants]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=102</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>On the menu today is an exploration of what, exactly, happens when we define a class in Ruby.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=214">RubyTapas033-Classes-and-Constants.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=215">033-classes-and-constants.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=216">033-classes-and-constants.html</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-1b98b7922654f0f135aa461e91af7e91ec7c4e36</guid>
+      <pubDate>Fri, 07 Dec 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/214/RubyTapas033-Classes-and-Constants.mp4" length="19911334" type="video/mp4"/>
+      <itunes:subtitle>Exactly what does the "class" keyword do?</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[032 Hash Default Blocks]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=101</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Following on to the episodes about #fetch, today's episode answers the question: what do we do when we want the same defaulting behavior everwhere a Hash is used?</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=211">RubyTapas032-Hash-Default-Blocks.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=212">032-hash-default-blocks.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=213">032-hash-default-blocks.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-b9f164476123506231d352c7e978de64c862d7be</guid>
+      <pubDate>Wed, 05 Dec 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/211/RubyTapas032-Hash-Default-Blocks.mp4" length="23071047" type="video/mp4"/>
+      <itunes:subtitle>Making hash values appear out of nowhere.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[031 Observer Variations]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=100</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Today we revisit episode 21, and try out several different takes on registering observer callbacks inline.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=208">031-observer-variations.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=209">031-observer-variations.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=210">031-observer-variations.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-83dccabcfe70590e62b8738443db32ab325ad3e7</guid>
+      <pubDate>Mon, 03 Dec 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/210/031-observer-variations.mp4" length="106667820" type="video/mp4"/>
+      <itunes:subtitle>Improving the observable API</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[030 Backticks]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=95</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Celebrate Friday with a stupid Ruby trick! In this epsiode we discover one of Ruby's most overlooked operators, and overload it just because we can.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=201">030-backticks.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=202">030-backticks.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=203">RubyTapas030-Backticks.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-ed5128ebba504d2a33f9a61992490ae7a8a12b9b</guid>
+      <pubDate>Fri, 30 Nov 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/203/RubyTapas030-Backticks.mp4" length="19404031" type="video/mp4"/>
+      <itunes:subtitle>Overloading Ruby's backtick operator, just for funsies!</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[029 Redirecting Output]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=88</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>This episode takes a look at two different methods for redirecting standard out and standard error - one simple and quick, one more comprehensive.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=192">029-redirecting-output.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=193">029-redirecting-output.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=194">RubyTapas029-Redirecting-Output.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-16beac88f371fc2c6f943aa04ad71b49bc842b2a</guid>
+      <pubDate>Wed, 28 Nov 2012 13:26:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/194/RubyTapas029-Redirecting-Output.mp4" length="51368883" type="video/mp4"/>
+      <itunes:subtitle>Telling output to take a detour.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[028 Macros and Modules Part 2]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=80</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In episode 27, we switched from adding generated methods directly to a class, to using anonymous modules. In this episode, we consolidate our metaprogramming modules, and make them more self-documenting.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=181">028-macros-and-modules-2.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=182">028-macros-and-modules-2.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=183">RubyTapas028-Macros-and-Modules-Part-2.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-c79e2bf7b9cb3b55ae7078b9a6578385bd3e27dd</guid>
+      <pubDate>Mon, 26 Nov 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/183/RubyTapas028-Macros-and-Modules-Part-2.mp4" length="33633143" type="video/mp4"/>
+      <itunes:subtitle>Cleaning up metaprogrammed methods</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[027 Macros and Modules]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=71</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode, we look at how to use dynamically generated modules to make metaprogrammed methods open for future extension.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=171">027-macros-and-modules.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=172">027-macros-and-modules.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=173">RubyTapas027-Macros-and-Modules.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-361722daab20abefb929e327d092af82449e33b9</guid>
+      <pubDate>Fri, 23 Nov 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/173/RubyTapas027-Macros-and-Modules.mp4" length="43955462" type="video/mp4"/>
+      <itunes:subtitle>How to add methods to classes in an extensible way.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[026 FFI]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=70</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>With the FFI Gem, building wrappers for C libraries is easier than ever. This episode gives a brief overview of building the beginnings of a Ruby interface to the Linux libpulse library.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=166">pa_context_state.h</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=167">pa_source_info.h</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=168">list-sources.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=169">RubyTapas026-FFI.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=170">026-ffi.html</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-eba708ddea7fcb89b82d0829bf95f1d47a73d904</guid>
+      <pubDate>Wed, 21 Nov 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/169/RubyTapas026-FFI.mp4" length="79720166" type="video/mp4"/>
+      <itunes:subtitle>A brief introduction to the FFI Gem</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[025 OpenStruct]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=69</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>This episode focuses on OpenStruct, which makes it easy to create ad-hoc value objects from hashes.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=163">025-openstruct.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=164">025-openstruct.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=165">RubyTapas025-OpenStruct.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-6f130b3f9a594e4eb4270b715d2b9d3748813a39</guid>
+      <pubDate>Mon, 19 Nov 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/165/RubyTapas025-OpenStruct.mp4" length="43564059" type="video/mp4"/>
+      <itunes:subtitle>A look at Struct's freewheeling cousin, OpenStruct</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[024 Incidental Change]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=66</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Have you ever looked at a diff that was cluttered by meaningless "noise" - changes that existed just to satisfy the parser, and were a distraction from the semantic changes to the code? In this episode we look at some idioms and habits to help avoid these kinds of incidental changes.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=129">024-incidental-change.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=130">RubyTapas024-Incidental-Change.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=131">024-incidental-change.html</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-cef25d0a932c75ec347ada984dfe7985a3940ae9</guid>
+      <pubDate>Fri, 16 Nov 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/130/RubyTapas024-Incidental-Change.mp4" length="23558112" type="video/mp4"/>
+      <itunes:subtitle>Keeping diffs free from noise.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[023 Tempfile]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=65</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode we look at the Tempfile standard library, and how it can facilitate communicating with subprocesses.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=123">023-tempfile.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=124">ch1.md</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=125">pandoc.sh</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=126">meta.yaml</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=127">publish.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=128">RubyTapas023-Tempfile.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-43a1646684946fc7dcf34f5fae7fb2a7487eec48</guid>
+      <pubDate>Wed, 14 Nov 2012 11:34:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/128/RubyTapas023-Tempfile.mp4" length="48818807" type="video/mp4"/>
+      <itunes:subtitle>Working with temporary files in Ruby</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[022 Inline Rescue]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=64</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Putting a rescue at the end of a line can get you into unexpected trouble. In this episode we'll look at why, as well as at the one case where an inline rescue makes sense.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=117">022-inline-rescue.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=118">022-inline-rescue.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=119">RubyTapas022-Inline-Rescue.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-ede0638a5c8715c4bbce0fd777995cfe9a788e3f</guid>
+      <pubDate>Mon, 12 Nov 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/119/RubyTapas022-Inline-Rescue.mp4" length="34716400" type="video/mp4"/>
+      <itunes:subtitle>When to put a rescue at the end of a line.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[021 Domain Model Events]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=59</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode we take a look at a common problem in Rails development: slimming down a controller whose functionality can't easily be pushed down into models. We address the problem using the Observer pattern and a tell-don't-ask design.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=106">021-domain-model-events.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=107">021-domain-model-events.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=108">RubyTapas021-Domain-Model-Events.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-bb31cc8d9b6a73a437d7cd2bb96debf661ef215f</guid>
+      <pubDate>Fri, 09 Nov 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/108/RubyTapas021-Domain-Model-Events.mp4" length="179704192" type="video/mp4"/>
+      <itunes:subtitle>Refactoring a Rails controller into a tell-don't-ask style</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[020 Struct]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=58</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In previous episodes we've used the Struct class in passing to quickly construct classes. This time, we put Struct in the spotlight, and put it through its paces. You'll want to watch this one through even if you're familiar with Struct; you may find it has more tricks up its sleeve than you realized.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=103">020-struct.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=104">020-struct.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=105">RubyTapas020-Struct.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-a5f31fbed48fe51bc550940662ff7a433d24ff8b</guid>
+      <pubDate>Wed, 07 Nov 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/105/RubyTapas020-Struct.mp4" length="28372973" type="video/mp4"/>
+      <itunes:subtitle>A short but thorough introduction to the Struct class</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[019 Pluggable Selector]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=57</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In today's episode, we revisit episode 11 (Method and Message), and take a look at a way to make the coupling between objects even looser, by making the name of the message one object sends to another variable.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=100">019-pluggable-selector.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=101">019-pluggable-selector.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=102">RubyTapas019-Pluggable-Selector.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-c4e2cb82c50fa3c4cd188334ba85d5407895ecdc</guid>
+      <pubDate>Mon, 05 Nov 2012 09:00:00 -0500</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/102/RubyTapas019-Pluggable-Selector.mp4" length="25934030" type="video/mp4"/>
+      <itunes:subtitle>Sometimes we need just one more level of indirection.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[018 Subclassing Array]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=53</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Sooner or later you'll want to subclass <tt>Array</tt>. This episode looks at why that's a bad idea, and presents an alternative.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=97">018-subclassing-array.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=98">018-subclassing-array.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=99">RubyTapas018-Subclassing-Array.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-696a9d33f9ba6a4f5c690fa4ee31ec3690962124</guid>
+      <pubDate>Fri, 02 Nov 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/99/RubyTapas018-Subclassing-Array.mp4" length="27798981" type="video/mp4"/>
+      <itunes:subtitle>Why subclassing Array isn't such a good idea.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[017 Pay it Forward]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=52</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this episode, &nbsp;we explore command/query separation by looking at what happens to unit tests when the separation breaks down.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=94">pay-it-forward.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=95">pay-it-forward.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=96">RubyTapas017-Pay-it-Forward.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-d4b06cf0cbcb2f723b870ecc76abeb4ae733d1ea</guid>
+      <pubDate>Wed, 31 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/96/RubyTapas017-Pay-it-Forward.mp4" length="79703035" type="video/mp4"/>
+      <itunes:subtitle>Using tests to understand command/query separation.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[016 super in Modules]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=51</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>How to find out if there is a super method to be called, and other tricks for using <tt>super</tt> within a module.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=91">016-super-in-modules.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=92">016-super-in-modules.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=93">RubyTapas0016-super-in-modules.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-b0889d978cdfa43470f5ac1901daf12e555bdb6c</guid>
+      <pubDate>Mon, 29 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/93/RubyTapas0016-super-in-modules.mp4" length="30938283" type="video/mp4"/>
+      <itunes:subtitle>Special considerations for using the `super` keyword in a module.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[015 Advanced #fetch]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=48</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this final installment on the #fetch method we look at #fetch beyond Hash; #fetch with nested hashes; re-using default blocks; and more.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=84">015-advanced-fetch.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=85">015-advanced-fetch.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=86">RubyTapas015-Advanced-Fetch.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-03e2265057df71658f04e8e4dccef9a36204b4a1</guid>
+      <pubDate>Fri, 26 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/86/RubyTapas015-Advanced-Fetch.mp4" length="23486455" type="video/mp4"/>
+      <itunes:subtitle>In this final installment on the `#fetch` method we look at `#fetch` beyond Hash; `#fetch` with nested hashes; re-using default blocks; and more.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[014 super]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=47</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>A dive into some of the dark corners of the `super` keyword.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=81">014-super.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=82">014-super.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=83">RubyTapas014-super.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-79a8b6297343c5f46332e5d9f9011480f41d51c7</guid>
+      <pubDate>Wed, 24 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/83/RubyTapas014-super.mp4" length="19488400" type="video/mp4"/>
+      <itunes:subtitle>A dive into some of the dark corners of the `super` keyword.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[013 Singleton Objects]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=46</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Sometimes one instance is all you need.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=78">RubyTapas0013-SingletonObjects.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=79">013-singleton-objects.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=80">013-singleton-objects.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-26b1a34a404659ee23bc5204e51f93cca6bda40d</guid>
+      <pubDate>Mon, 22 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/78/RubyTapas0013-SingletonObjects.mp4" length="38627204" type="video/mp4"/>
+      <itunes:subtitle>Sometimes one instance is all you need.</itunes:subtitle>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[012: #fetch for Defaults]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=45</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>How to use Hash#fetch to provide defaults for missing keys, and why you might prefer that to other techniques for defaulting values.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=75">012-fetch-for-defaults.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=76">012-fetch-for-defaults.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=77">RubyTapas012-Fetch-for-Defaults.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-0c2f8c9eadd894907b23a158c3f72d38d2a747f3</guid>
+      <pubDate>Fri, 19 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/77/RubyTapas012-Fetch-for-Defaults.mp4" length="28787653" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[011: Method and Message]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=44</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>A look at the difference between methods and messages, and why passing methods around isn't as common in Ruby as it is in e.g. JavaScript.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=71">011-method-and-message.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=72">message.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=73">method.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=74">RubyTapas011-Method-And-Message.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-526418232c6b44d3e6558186331d465cd6e8b33b</guid>
+      <pubDate>Wed, 17 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/74/RubyTapas011-Method-And-Message.mp4" length="55239422" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[010 Finding $HOME]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=43</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>How to reliably discover a user's home directory.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=68">RubyTapas010-Finding-Home.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=69">010-finding-home.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=70">010-finding-home.html</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-7ddc2d3a5de074bb541b10f8059fa15676de5377</guid>
+      <pubDate>Mon, 15 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/68/RubyTapas010-Finding-Home.mp4" length="10765581" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[009 Symbol Literals]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=39</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Some alternative ways to write symbols in Ruby code.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=65">009-symbol-literals.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=66">009-symbol-literals.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=67">RubyTapas009-Symbol-Literals.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-092696617ace450bc56ecdf3d32676c4ed649737</guid>
+      <pubDate>Fri, 12 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/67/RubyTapas009-Symbol-Literals.mp4" length="11152006" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[008 #fetch as an Assertion]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=38</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Hash#fetch is one of my favorite methods. In this episode, I take a look at using it to assert the existence of hash keys.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=62">008-fetch-as-assertion.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=63">008-fetch-as-assertion.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=64">RubyTapas008-Fetch-as-an-Assertion.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-05db052781ab7577593af2587b04b18df321cab1</guid>
+      <pubDate>Wed, 10 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/64/RubyTapas008-Fetch-as-an-Assertion.mp4" length="27894419" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[007 Constructors]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=32</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>A look into how Ruby's object construction works, and how we can customize constructors for special scenarios.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=49">007-constructors.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=50">007-constructors.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=51">RubyTapas007-Constructors.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-4944ca6e0b9507b6f282f89a7ef898f523e27927</guid>
+      <pubDate>Mon, 08 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/51/RubyTapas007-Constructors.mp4" length="37212720" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[006 Forwardable]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=31</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>A short introduction to using Ruby's Forwardable library for object composition.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=46">RubyTapas006-Forwardable.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=47">006-forwardable.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=48">006-forwardable.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-a0a73da38a46bb08753c9371cff3d5800a453929</guid>
+      <pubDate>Fri, 05 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/46/RubyTapas006-Forwardable.mp4" length="54753001" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[005 Array Literals]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=27</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Composing command lines with fancy array literals.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=38">RubyTapas005.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=39">005-array-literals.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=40">005-array-literals.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-fc854d43484d212cf08a36fd13e5cf8c7fa427d5</guid>
+      <pubDate>Wed, 03 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/38/RubyTapas005.mp4" length="28831935" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[004 Barewords]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=26</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this longer-than-usual episode, some thoughts on how to enable method logic to remain stable and unchanged while evolving and changing the source and scope of the values used by the logic.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=43">barewords.rb</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=44">barewords.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=45">RubyTapas-Barewords.mp4</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-79af0936dda4a452fa19be8b54aecd2cb1885e2f</guid>
+      <pubDate>Mon, 01 Oct 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/45/RubyTapas-Barewords.mp4" length="106907561" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[003 Character Literals]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=21</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>Character literal syntax in Ruby.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=32">RubyTapas003.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=33">003-char-literals.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=34">003-char-literals.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-ed1f01e1872210288982a61742c81df4c7905a4b</guid>
+      <pubDate>Fri, 28 Sep 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/32/RubyTapas003.mp4" length="6910954" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[002 Large Integer Literals]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=20</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>How to format big numbers so that they are readable.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=29">RubyTapas002.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=30">002-large-integer-literals.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=31">002-large-integer-literals.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-8652bee88eb6fad318e874a29a26513083d47bab</guid>
+      <pubDate>Wed, 26 Sep 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/29/RubyTapas002.mp4" length="4258184" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+    <item>
+      <title><![CDATA[001 Binary Literals]]></title>
+      <link>https://rubytapas.dpdcart.com/subscriber/post?id=18</link>
+      <description><![CDATA[<div class="blog-entry">
+          <div class="blog-content"><p>In this inaugural episode, a look at a handy syntax for writing out binary numbers.</p>
+          </div>
+          <h3>Attached Files</h3>
+          <ul>
+          <li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=25">RubyTapas001.mp4</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=26">001-binary-literals.html</a></li>
+<li><a href="https://rubytapas.dpdcart.com/subscriber/download?file_id=27">001-binary-literals.rb</a></li>
+</ul></div>]]></description>
+      <guid isPermaLink="false">dpd-89e8004c8242e7ad548833bef1e18a5b575c92c1</guid>
+      <pubDate>Mon, 24 Sep 2012 09:00:00 -0400</pubDate>
+      <enclosure url="https://rubytapas.dpdcart.com/feed/download/25/RubyTapas001.mp4" length="12502397" type="video/mp4"/>
+      <itunes:image href="https://getdpd.com/uploads/ruby-tapas.png"/>
+    </item>
+  </channel>
+</rss>

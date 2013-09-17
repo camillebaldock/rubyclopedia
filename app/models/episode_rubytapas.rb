@@ -12,14 +12,16 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
-class Episode < ActiveRecord::Base
-  attr_accessible :description, :name, :published_at, :video_link
-  scope :recent, lambda { where("published_at >= :date", :date => 1.year.ago) }
-  scope :old, lambda { where("published_at < :date", :date => 1.year.ago) }
-  scope :watched, where(watched: true)
-  scope :unwatched, where(watched: false)
+class EpisodeRubytapas < Episode
+  validates_uniqueness_of :supplier_id
+  attr_accessible :free, :supplier_id
+
+  def self.model_name
+    Episode.model_name
+  end
 
   def source
-    raise "Subclasses must override this method"
+    "RubyTapas"
   end
+
 end

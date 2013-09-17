@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130906091637) do
+ActiveRecord::Schema.define(:version => 20130916150852) do
 
   create_table "episodes", :force => true do |t|
     t.string   "name"
@@ -20,11 +20,12 @@ ActiveRecord::Schema.define(:version => 20130906091637) do
     t.datetime "published_at"
     t.integer  "position"
     t.integer  "duration_seconds"
-    t.integer  "railscasts_id"
-    t.string   "slug"
+    t.integer  "supplier_id"
+    t.string   "video_link"
     t.boolean  "watched",          :default => false
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
+    t.boolean  "free"
   end
 
 end

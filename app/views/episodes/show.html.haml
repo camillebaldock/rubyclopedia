@@ -1,0 +1,23 @@
+%h1
+ =@episode.name
+%p
+ =@episode.description
+
+- case @episode.source
+ - when "RailsCasts"
+  %p
+   = link_to "ASCII Cast", @episode.video_link+"?view=asciicast", :target => "_blank"
+  %p
+   = link_to "Watch episode", @episode.video_link+"?autoplay=true", :target => "_blank"
+  - if @episode.free
+   %p free
+ - when "RubyTapas"
+  %p
+   = link_to "Watch episode", @episode.video_link, :target => "_blank"
+  - if @episode.free
+   %p free
+ - when "RubyRogues"
+  %p
+   = link_to "Watch episode", @episode.video_link, :target => "_blank"
+
+= link_to 'Back', episodes_path

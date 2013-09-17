@@ -34,3 +34,4 @@ end
 gem 'haml-rails'
 gem 'nokogiri'
 gem 'typhoeus'
+gem 'rails_config'
