@@ -8,8 +8,6 @@
     =episode.source
    %td
     =link_to episode.supplier_id.to_s + " " + episode.name , episode
-   %td
-    =button_to 'Mark as watched', watched_episode_path(episode), :method => :post
 
 %h1 Old episodes
 %table
@@ -19,8 +17,6 @@
     =episode.source
    %td
     =link_to episode.supplier_id.to_s + " " + episode.name , episode
-   %td
-    =button_to 'Mark as watched', watched_episode_path(episode), :method => :post
 
 %h1 Watched episodes
 %table
