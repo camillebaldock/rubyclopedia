@@ -28,7 +28,7 @@ class RubyRoguesImportService
 	episodes = Array.new
 	requests.each do |request|
 		doc = Nokogiri::HTML(request.response.body)
-		e = EpisodeRubyrogues.new(
+		e = Rubyrogues.new(
               :name => doc.css('.entry-title').text,
               :video_link => request.url,
               :published_at => doc.css('.published').text)

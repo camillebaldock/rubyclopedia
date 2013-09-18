@@ -3,16 +3,16 @@
  -Episode::EPISODE_PROVIDERS.each do |episode_type|
   %h2
    -number = Episode.where(:type=>episode_type).count
-   ="#{number} #{episode_type.to_s.sub("Episode","")} episodes"
+   ="#{number} #{episode_type} episodes"
 
 %h1 New episodes
 %table
  -Episode.find(:all, :order => "published_at desc", :limit => 5).each do |new_episode|
   %tr
    %td
-    =new_episode.name
+    =link_to new_episode.name , new_episode
    %td
-    =new_episode.type.sub("Episode","")
+    =new_episode.type
 
 #{ link_to 'Link to Github ', 'https://github.com/camilleldn/ruby-casts-progress-tracker'}
 
