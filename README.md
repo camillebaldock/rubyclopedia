@@ -43,49 +43,6 @@ Stories to be completed
 
 ### Must (minimum deployable subset)
 
-##### Home page
-  * legal blurb to decline any claim of ownership for the content, or any responsibility for erroneous content etc...
-  * link to Github..
-  * number of episodes (total, and per provider)
-  * last 5 episodes added
-  * In Gherkin:
-
->Given I am on the home page
-
->And today is "17/09/2013"
-
->And I have the following episodes 
-
->| Name | Provider | Published date|
-
->| Recent RailsCasts episode | RailsCasts | 16/09/2013 |
-
->| Recent RubyRogues episode | RubyRogues | 15/09/2013 |
-
->| Recent RubyTapas episode | RubyTapas | 14/09/2013 |
-
->| Less recent RailsCasts episode | RailsCasts | 13/09/2013 |
-
->| Less recent RubyRogues episode | RubyRogues | 12/09/2013 |
-
->| Less recent RubyTapas episode | RubyTapas | 11/09/2013 |
-
->Then I should see "6 episodes"
-
->And I should see "2 RailsCasts episodes"
-
->And I should see "2 RubyTapas episodes"
-
->And I should see "2 RubyRogues episodes"
-
->And I should see "Recent RailsCasts episode"
-
->And I should not see "Less recent RubyTapas episode"
-
-##### Find a good name
-  * find a name for the website
-  * register the domain
-
 ##### List page
  * Table of all episodes with name, published date and provider
  * In Gherkin:
@@ -167,8 +124,13 @@ Scenario: RubyRogues episode page
 
 >And I should see "Go to episode page" button that links to "rubyrogueslink"
 
+##### Find a good name
+  * find a name for the website
+  * register the domain
 
 ##### Google Analytics
+
+##### Design, and responsive layout
 
 ##### Deployment (not necessary for the deployment, but a good source of material for training guide on deployment)
   * deploy on Heroku, and document

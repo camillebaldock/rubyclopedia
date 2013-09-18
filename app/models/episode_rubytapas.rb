@@ -13,15 +13,11 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 class EpisodeRubytapas < Episode
-  validates_uniqueness_of :supplier_id
+
   attr_accessible :free, :supplier_id
 
   def self.model_name
     Episode.model_name
-  end
-
-  def source
-    "RubyTapas"
   end
 
 end

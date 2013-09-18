@@ -16,6 +16,18 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'sqlite3'
+gem 'rspec'
+gem 'rspec-rails', :group => [:development, :test, :cucumber]
+
+group :cucumber do
+  gem 'gherkin'
+  gem 'cucumber-rails'
+  gem 'cucumber'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'spork'
+  gem 'launchy'    # So you can do Then show me the page
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -36,3 +48,5 @@ gem 'nokogiri'
 gem 'typhoeus'
 gem 'rails_config'
 gem 'whenever'
+gem 'chronic'
+gem 'timecop'

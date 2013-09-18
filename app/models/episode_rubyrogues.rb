@@ -18,8 +18,4 @@ class EpisodeRubyrogues < Episode
     Episode.model_name
   end
 
-  def source
-    "RubyRogues"
-  end
-
 end

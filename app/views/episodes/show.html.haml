@@ -3,7 +3,7 @@
 %p
  =@episode.description
 
-- case @episode.source
+- case @episode.provider
  - when "RailsCasts"
   %p
    = link_to "ASCII Cast", @episode.video_link+"?view=asciicast", :target => "_blank"
