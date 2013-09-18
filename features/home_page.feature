@@ -1,7 +1,7 @@
 Feature: Home page
-  In order to make a blog
-  As an author
-  I want to create and manage articles
+  In order to attract more people to this website
+  I want to give statistics about the variety and quantity of episodes available
+  And display the latest additions
 
 Background:
 	Given the date is "17/09/2013"
