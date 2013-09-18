@@ -16,10 +16,15 @@ class Episode < ActiveRecord::Base
   attr_accessible :description, :name, :published_at, :video_link
   scope :recent, lambda { where("published_at >= :date", :date => 1.month.ago) }
   scope :old, lambda { where("published_at < :date", :date => 1.month.ago) }
-  scope :watched, where(watched: true)
-  scope :unwatched, where(watched: false)
 
-  def source
-    raise "Subclasses must override this method"
+  EPISODE_PROVIDERS = []
+
+  def self.inherited subclass
+    EPISODE_PROVIDERS << subclass
+    super
+  end
+
+  def self.new_episode_from_provider provider
+    EPISODE_PROVIDERS.detect{|t| (t.to_s.sub('Episode', '') == provider)}.new
   end
 end

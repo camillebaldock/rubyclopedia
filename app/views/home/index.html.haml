@@ -1,0 +1,21 @@
+%h1
+ ="#{Episode.count} episodes"
+ -Episode::EPISODE_PROVIDERS.each do |episode_type|
+  %h2
+   -number = Episode.where(:type=>episode_type).count
+   ="#{number} #{episode_type.to_s.sub("Episode","")} episodes"
+
+%h1 New episodes
+%table
+ -Episode.find(:all, :order => "published_at desc", :limit => 5).each do |new_episode|
+  %tr
+   %td
+    =new_episode.name
+   %td
+    =new_episode.type.sub("Episode","")
+
+#{ link_to 'Link to Github ', 'https://github.com/camilleldn/ruby-casts-progress-tracker'}
+
+%p I do not own any rights to any of the data listed on this site.
+%p This website exists in the hope that it will be useful, but without any warranty, without even the implied warranty of merchantability or fitness for a particular purpose
+

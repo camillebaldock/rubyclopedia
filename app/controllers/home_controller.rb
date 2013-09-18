@@ -12,10 +12,12 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
-class EpisodeKippt < Episode
-
-  def self.model_name
-    Episode.model_name
+class HomeController < ApplicationController
+  def index
+    @episodes = Episode.all
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @episodes }
+    end
   end
- 
 end
