@@ -25,6 +25,6 @@ class Episode < ActiveRecord::Base
   end
 
   def self.new_episode_from_provider provider
-    EPISODE_PROVIDERS.detect{|t| (t.to_s.sub('Episode', '') == provider)}.new
+    EPISODE_PROVIDERS.detect{|t| (t.to_s == provider)}.new
   end
 end

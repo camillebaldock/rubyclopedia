@@ -37,7 +37,7 @@ class RubyTapasImportService
 	  if title.sub!(/^(\d+):?\s+/, '')
 	    title.strip!
 	    episode_id = $1.to_i
-	    e = EpisodeRubytapas.new(
+	    e = Rubytapas.new(
               :name => title.gsub(/\W+/, '-').gsub(/^-|-$/, ''),
               :published_at => item.at_xpath('./pubDate').text,
 			  :description => Nokogiri::HTML(item.at_xpath('./description').text).css('.blog-content p').text,
@@ -55,7 +55,7 @@ class RubyTapasImportService
     free_episodes = doc.css('.free')
 	free_episodes.each do |episode|
 		name = episode.css('a h4').text
-		e = EpisodeRubytapas.new(
+		e = Rubytapas.new(
               :name => name,
               :published_at => Time.now,
 			  :description => episode.css('p').text,

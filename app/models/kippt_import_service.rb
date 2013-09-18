@@ -18,10 +18,10 @@ class KipptImportService
   def parseFeed feedUrl=Settings.kippt.url
     feed=Nokogiri::XML(open(feedUrl))
 	feed.xpath('/rss/channel/item').each do |item|
-	  e = EpisodeKippt.new(
+	  e = Kippt.new(
               :name => item.at_xpath('./title').text,
               :published_at => item.at_xpath('./pubDate').text,
-			  :description => item.at_xpath('./description').text,
+			  :description => Nokogiri::HTML(item.at_xpath('./description').text).css('a').attr('href').text,
 			  :video_link=>item.at_xpath('./link').text
 	    )
 	  e.save
