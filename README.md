@@ -47,8 +47,6 @@ Stories to be completed
   * find a name for the website
   * register the domain
 
-##### Google Analytics
-
 ##### Design, and responsive layout
 
 ##### Deployment (not necessary for the deployment, but a good source of material for training guide on deployment)

@@ -76,6 +76,7 @@ GEM
     fssm (0.2.10)
     gherkin (2.12.1)
       multi_json (~> 1.3)
+    google-analytics-rails (0.0.4)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -190,6 +191,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   gherkin
+  google-analytics-rails
   haml-rails
   jquery-rails
   launchy
