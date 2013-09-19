@@ -61,5 +61,6 @@ module RubyCastsProgressTracker
     config.assets.version = '1.0'
 
     config.compass.require "susy"
+    GA.tracker = "UA-xxxxxx-x"
   end
 end
