@@ -8,6 +8,6 @@ class RubyroguesImportServiceTest < ActionView::TestCase
 
   test "parsewebsite" do
     RubyRoguesImportService.new.parseWebsite "#{Rails.root}/test/testdata/EpisodeGuide.html"
-    assert_equal 2, Episode.count
+    assert_equal 1, Episode.count
   end
 end

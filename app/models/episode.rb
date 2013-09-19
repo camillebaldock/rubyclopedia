@@ -14,6 +14,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 class Episode < ActiveRecord::Base
   attr_accessible :description, :name, :published_at, :video_link
+  validates_uniqueness_of :name, :scope => [:type]
   scope :recent, lambda { where("published_at >= :date", :date => 1.month.ago) }
   scope :old, lambda { where("published_at < :date", :date => 1.month.ago) }
 
