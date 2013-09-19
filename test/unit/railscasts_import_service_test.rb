@@ -24,9 +24,4 @@ class RailscastsImportServiceTest < ActionView::TestCase
     RailsCastsImportService.new.processJsonFile "#{Rails.root}/test/testdata/TwoEpisodes.json"
     assert_equal 2, Episode.count
   end
-
-  test "two episodes with the same RailsCasts id" do
-    RailsCastsImportService.new.processJsonFile "#{Rails.root}/test/testdata/TwoEpisodesSameId.json"
-    assert_equal 1, Episode.count
-  end
 end

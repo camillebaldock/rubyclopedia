@@ -74,55 +74,6 @@ Stories to be completed
      - if paid episode, display text: "If you have a paid subscription, you can log in to QQ and download the episode from {insert link here}"
 * In Gherkin:
 
->Given I am on the episodes page
-
->And today is "17/09/2013"
-
->And I have the following episodes 
-
->| Name | Description | Provider | Published date| Free | Video link |
-
->| RailsCasts episode | RailsCasts description | RailsCasts | 16/09/2013 | true |
-railscastslink |
-
->| RubyTapas episode | RubyTapas description | RubyTapas | 11/09/2013 | false | rubytapaslink |
-
->| Free RubyTapas episode | Free RubyTapas description | RubyTapas | 11/09/2013 | true | rubytapasfreelink |
-
->| RubyRogues episode | RubyRogues description | RubyRogues | 16/08/2013 | true | rubyrogueslink |
-
-Scenario: RailsCasts episode page
->When I follow "RailsCasts episode"
-
->Then I should see "RailsCasts episode", "RailsCasts description" and "1 day ago"
-
->And I should see "Free episode"
-
->And I should not see "Subscription needed"
-
->And I should see "Go to episode page" button that links to "railscastlink"
-
-Scenario: RubyTapas episode page
->When I follow "RubyTapas episode"
-
->Then I should see "RubyTapas episode", "RubyTapas description" and "1 week ago"
-
->And I should not see "Free episode"
-
->And I should see "Subscription needed"
-
->And I should see "If you have a paid subscription QQ"
-
-Scenario: RubyRogues episode page
->When I follow "RubyRogues episode"
-
->Then I should see "RubyRogues episode", "RubyRogues description" and "1 month ago"
-
->And I should not see "Free episode"
-
->And I should not see "Subscription needed"
-
->And I should see "Go to episode page" button that links to "rubyrogueslink"
 
 ##### Find a good name
   * find a name for the website
@@ -142,6 +93,7 @@ Scenario: RubyRogues episode page
 
 ### Should
 
+##### Error handling and deduplication on feed parsing
 ##### As a user, I can sign up for the system, log in, log out
 * If I am not logged in, I only have access to:
      - the API without any Kippt data

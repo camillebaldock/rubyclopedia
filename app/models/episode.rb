@@ -24,7 +24,7 @@ class Episode < ActiveRecord::Base
     super
   end
 
-  def self.new_episode_from_provider provider
+  def self.new_from_provider provider
     EPISODE_PROVIDERS.detect{|t| (t.to_s == provider)}.new
   end
 end
