@@ -43,38 +43,6 @@ Stories to be completed
 
 ### Must (minimum deployable subset)
 
-##### List page
- * Table of all episodes with name, published date and provider
- * In Gherkin:
-
->Given I am on the episodes page
-
->And today is "17/09/2013"
-
->And I have the following episodes 
-
->| Name | Provider | Published date |
-
->| Recent RailsCasts episode | RailsCasts | 16/09/2013 |
-
->| Less recent RubyTapas episode | RubyTapas | 11/09/2013 |
-
->Then I should see a table row containing | Recent RailsCasts episode | RailsCasts | 16/09/2013 |
-
->And I should see a table row containing | Less recent RubyTapas episode | RubyTapas | 11/09/2013 |
-
-##### Episode page
-
-* Published x days ago
-* Name, description
-* For RubyTapas and RailsCasts: display if subscription needed or not
-* For RubyRogues and RailsCasts: go to episode page button
-* For RubyTapas:
-     - if free episode, QQ
-     - if paid episode, display text: "If you have a paid subscription, you can log in to QQ and download the episode from {insert link here}"
-* In Gherkin:
-
-
 ##### Find a good name
   * find a name for the website
   * register the domain
