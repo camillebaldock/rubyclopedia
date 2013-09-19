@@ -4,22 +4,19 @@
  =@episode.type
 %p
  =@episode.description
+%p
+ =@episode.free ? "Free episode" : "Subscription needed"
+%p
+ - if @episode.published_at> (Time.now - 24.hours)
+  today
+ - else
+  ="Published #{distance_of_time_in_words(@episode.published_at, Time.now)} ago"
 
-- case @episode.type
- - when "Railscasts"
-  %p
-   = link_to "ASCII Cast", @episode.video_link+"?view=asciicast", :target => "_blank"
-  %p
-   = link_to "Watch episode", @episode.video_link+"?autoplay=true", :target => "_blank"
-  - if @episode.free
-   %p free
- - when "Rubytapas"
-  %p
-   = link_to "Watch episode", @episode.video_link, :target => "_blank"
-  - if @episode.free
-   %p free
- - when "Rubyrogues"
-  %p
-   = link_to "Watch episode", @episode.video_link, :target => "_blank"
+-if @episode.type == "Rubytapas" && !@episode.free
+ %p 
+  If you have a paid subscription, you can download the episode
+  %a{:href => @episode.video_link}>here
+-else
+ %a{:href => @episode.video_link}>Go to episode
 
 = link_to 'Back', episodes_path

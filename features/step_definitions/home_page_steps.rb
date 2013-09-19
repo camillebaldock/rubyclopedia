@@ -1,7 +1,7 @@
 Given /^the following episodes exist:?$/ do |episodes|
   episode_hashes = episodes.hashes
   episode_hashes.each do |hash|
-  	e = Episode.new_episode_from_provider(hash["provider"])
+  	e = Episode.new_from_provider(hash["provider"])
     e.name = hash["name"]
     e.published_at = hash["published_at"]
     e.save
