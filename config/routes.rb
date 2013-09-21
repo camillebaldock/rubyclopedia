@@ -1,4 +1,4 @@
-RubyCastsProgressTracker::Application.routes.draw do
+Rubyclopedia::Application.routes.draw do
   root :to => "home#index"
   resources :episodes do
   	member do

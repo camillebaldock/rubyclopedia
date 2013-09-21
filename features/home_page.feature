@@ -18,12 +18,6 @@ Background:
 Scenario: Display total number of episodes
 	Then I should see "6 episodes"
 
-Scenario: Display number of episodes for each provider
-	Then I should see the following:
-	| 2 Railscasts episodes |
-	| 2 Rubytapas episodes |
-	| 2 Rubyrogues episodes |
-
 Scenario: Display names of 5 most recent episodes
 	Then I should see the following:
 	| Recent RailsCasts episode |

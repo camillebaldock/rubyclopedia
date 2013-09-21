@@ -1,7 +1,7 @@
-ruby-casts-progress-tracker
+rubyclopedia
 ===========================
 
-Website to track progress on viewing Ruby training content, and getting the latest episodes from:
+Website to get he latest episodes from the following suppliers, and track progress on viewing Ruby training content:
 
 - RailsCasts
 - RubyTapas
@@ -27,27 +27,19 @@ Each user can make their wishlist public
 
 This also provides an "offline" version that can be deployed at home, that handles downloading videos/tracks for all providers that support it
 
-Current status
-------------------------
-
-Importers for RailsCasts, RubyTapas, RubyRogues and Kippt have been implemented.
-
 Development plan
 ------------------------
 
-The "online" version is to be developed and deployed as a priority.
-The "offline" version will follow.
+The "online" version is to be developed and deployed as a priority as a minimal usable subset. 
+User login and functionality to track progress in following release. 
+The "offline" version will follow after that. 
 
 Stories to be completed
 ------------------------
 
 ### Must (minimum deployable subset)
 
-##### Find a good name
-  * find a name for the website
-  * register the domain
-
-##### Design, and responsive layout
+##### Elastic search fulltext search functionality for front page, on name and description fields
 
 ##### Deployment (not necessary for the deployment, but a good source of material for training guide on deployment)
   * deploy on Heroku, and document
@@ -84,6 +76,6 @@ Stories to be completed
 
 ### Would
 
-##### Other Ruby training resources to be included
+##### Other Ruby training resources to be included (http://ruby5.envylabs.com/ for example)
 ##### Gamification aspect
 ##### Subscribe to several Kippt public feeds, give each feed a name
