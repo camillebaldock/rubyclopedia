@@ -1,19 +1,12 @@
 %p
  =notice
-%h1 Recent episodes
-%table
- -@episodes.recent.each do |episode|
-  %tr
-   %td
-    =episode.type
-   %td
-    =link_to episode.name , episode
 
-%h1 Old episodes
-%table
- -@episodes.old.each do |episode|
-  %tr
-   %td
-    =episode.type
-   %td
-    =link_to episode.name , episode
+%div{:id=>"episodes", :style=>"float:none"}
+ %h1 All episodes
+ %ul
+  -@episodes.each do |episode|
+   %li
+    =link_to episode, :class => "episode" do
+     =episode.name
+     %span{:class=>"supplier"}
+      =episode.type

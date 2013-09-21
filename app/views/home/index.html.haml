@@ -1,21 +1,23 @@
-%h1
- ="#{Episode.count} episodes"
- -Episode::EPISODE_PROVIDERS.each do |episode_type|
-  %h2
-   -number = Episode.where(:type=>episode_type).count
-   ="#{number} #{episode_type} episodes"
+%div{:id => "synopsis"}
+ %p Rubyclopedia is a catalogue of Ruby videos, tutorials, blog posts...
+ %p everything you need to learn about Ruby and improve your Ruby skills
 
-%h1 New episodes
-%table
- -Episode.find(:all, :order => "published_at desc", :limit => 5).each do |new_episode|
-  %tr
-   %td
-    =link_to new_episode.name , new_episode
-   %td
-    =new_episode.type
+%div{:id => "episode_stats"}
+ %h1
+  ="#{Episode.count} episodes"
+ %p and counting...
 
-#{ link_to 'Link to Github ', 'https://github.com/camilleldn/ruby-casts-progress-tracker'}
+%div{:id=>"home"}
+ %div{:id=>"episodes"}
+  %h1 Latest articles
+  %ul
+   -Episode.find(:all, :order => "published_at desc", :limit => 5).each do |new_episode|
+    %li
+     =link_to new_episode, :class => "episode" do
+      =new_episode.name
+      %span{:class=>"supplier"}
+       =new_episode.type
 
-%p I do not own any rights to any of the data listed on this site.
-%p This website exists in the hope that it will be useful, but without any warranty, without even the implied warranty of merchantability or fitness for a particular purpose
-
+ %div{:id=>"search"}
+  %h1 Search
+  %input{:type=>"text"}

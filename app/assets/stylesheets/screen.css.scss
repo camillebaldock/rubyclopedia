@@ -10,3 +10,131 @@
   @include container;
   @include susy-grid-background;
 }
+
+ body {
+ 	margin:0;
+ 	padding:0;
+ 	border:0;
+ 	font-family:'ColabMed';
+ }
+
+h1 {
+	font-family:'Ubuntu';
+}
+
+p {
+	font-family:'ColabMed';
+}
+
+ .header {
+ 	background-color: #B0203F;
+ 	color:white;
+ 	border-radius: 15px;
+ 	width:100%;
+ 	display:inline-block;
+ 	margin:5px;
+ }
+
+.ascii {
+  float:left;
+  line-height: 6px;
+  margin-left:10px;
+  width:150px;
+  font-size:5px;
+  font-weight:bolder;
+  background-color: B0203F;
+}
+
+.header h1 {
+  float:left;
+  font-size:50px;
+}
+
+#synopsis {
+  float:left;
+}
+
+#synopsis p {
+  font-family:'Lilly';
+  margin-left:25px;
+}
+
+#episode_stats {
+  text-align:right;
+  margin-right:15px;
+}
+
+.footer {
+	margin: 0;
+	background-color: #B0203F;
+	color:white;
+  font-size:10px;
+  padding: 5px;
+  a {
+    color:white
+  }
+}
+
+#episodes {
+  width:500px;
+  float:left;
+  margin-right:30px;
+  margin-left:25px;
+  ul {
+    list-style: none;
+    li {
+      background-color:#fafafa;
+      margin-bottom:4px;
+      width:400px;
+      padding: 5px 0px 5px 5px;
+      border-radius: 5px;
+      a {
+        text-decoration:none;
+        display:block;
+      }
+      &:hover {
+          background-color: #F7819F;
+          .supplier {
+            color:black;
+          }
+          a {
+            color:white;
+          }
+      }
+    }
+    .supplier {
+      color: #999;
+      font-size: 10px;
+    }
+  }
+}
+
+#search {
+  float:left;
+  width:300px;
+  input[type="text"] {
+    outline: none;
+    padding: 10px;
+    width: 300px;
+    font-family: Helvetica, Arial, "Sans Serif";
+    font-size: 13px;
+    color: #333;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0px 0px 10px 0px #eee;
+    -moz-box-shadow: inset 0px 0px 10px 0px #eee;
+    box-shadow: inset 0px 0px 10px 0px #eee;
+  }
+  input[type="text"]:focus {
+    border-color: #999;
+    -webkit-box-shadow: inset 0px 0px 10px 0px #ddd;
+    -moz-box-shadow: inset 0px 0px 10px 0px #ddd;
+    box-shadow: inset 0px 0px 10px 0px #ddd;
+  }
+}
+
+#home {
+  height:250px;
+}

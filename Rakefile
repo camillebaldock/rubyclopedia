@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RubyCastsProgressTracker::Application.load_tasks
+Rubyclopedia::Application.load_tasks
