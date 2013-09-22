@@ -109,7 +109,7 @@ p {
   }
 }
 
-#search {
+#searchform {
   float:left;
   width:300px;
   input[type="text"] {
@@ -133,6 +133,12 @@ p {
     -moz-box-shadow: inset 0px 0px 10px 0px #ddd;
     box-shadow: inset 0px 0px 10px 0px #ddd;
   }
+}
+
+#searchbox {
+  float:right;
+  margin-right:15px;
+  margin-top:15px;
 }
 
 #home {

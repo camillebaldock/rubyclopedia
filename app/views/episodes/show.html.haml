@@ -6,8 +6,9 @@
    =@episode.description
   -if @episode.type == "Rubytapas" && !@episode.free
    %p 
-    If you have a paid subscription, you can download the episode
-    %a{:href => @episode.video_link}>here
+    If you have a paid subscription, you can
+    =link_to @episode.video_link, :class=>"button" do
+     %span download the episode here
   -else
    =link_to @episode.video_link, :class=>"button right" do
     %span Go to episode

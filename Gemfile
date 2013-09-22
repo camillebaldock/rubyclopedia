@@ -51,3 +51,8 @@ gem 'whenever'
 gem 'chronic'
 gem 'timecop'
 gem 'google-analytics-rails'
+gem 'tire'
+
+gem 'metric_fu'
+gem 'rubocop'
+gem 'brakeman'
