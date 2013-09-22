@@ -4,8 +4,9 @@
 
 %div{:id => "episode_stats"}
  %h1
-  ="#{Episode.count} episodes"
- %p and counting...
+  ="#{Episode.count} articles"
+ %a{:href => episodes_path}
+  See full list of articles
 
 %div{:id=>"home"}
  %div{:id=>"episodes"}
@@ -17,7 +18,3 @@
       =new_episode.name
       %span{:class=>"supplier"}
        =new_episode.type
-
- %div{:id=>"search"}
-  %h1 Search
-  %input{:type=>"text"}

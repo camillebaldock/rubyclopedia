@@ -1,9 +1,10 @@
 Given /^the following episodes exist:?$/ do |episodes|
   episode_hashes = episodes.hashes
   episode_hashes.each do |hash|
+    hash["provider"] = Episode::EPISODE_PROVIDERS.sample.to_s unless hash["provider"]
   	e = Episode.new_from_provider(hash["provider"])
     e.name = hash["name"]
-    e.published_at = hash["published_at"]
+    e.published_at = hash["published_at"] || Time.now
     e.save
   end
 end
