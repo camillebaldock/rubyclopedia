@@ -14,7 +14,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 class Railscasts < Article
 
-  attr_accessible :duration_seconds, :position
+  attr_accessible :duration_seconds
 
   def self.model_name
     Article.model_name
@@ -24,10 +24,9 @@ class Railscasts < Article
     duration_regex_matches = /(\d{1,2}):(\d{2})/.match(json_episode["duration"])
     duration_in_seconds = duration_regex_matches[1].to_i*60 + duration_regex_matches[2].to_i
     episode = self.new(
-        :supplier_id => json_episode["id"],
+        :supplier_id => json_episode["position"],
         :free => !json_episode["pro"],
         :name => json_episode["name"],
-        :position => json_episode["position"],
         :description => json_episode["description"],
         :published_at => json_episode["published_at"],
         :duration_seconds => duration_in_seconds,
