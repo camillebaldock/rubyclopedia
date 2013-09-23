@@ -14,8 +14,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 source 'https://rubygems.org'
 
+ruby "1.9.3"
+
 gem 'rails', '3.2.13'
-gem 'sqlite3'
+gem 'pg'
 gem 'rspec'
 gem 'rspec-rails', :group => [:development, :test, :cucumber]
 
@@ -55,3 +57,4 @@ gem 'google-analytics-rails'
 gem 'tire'
 gem 'metric_fu'
 gem 'brakeman'
+gem 'rails_12factor', group: :production
