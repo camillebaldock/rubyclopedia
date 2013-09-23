@@ -15,7 +15,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: rubyclopedia_production
+  database: ddrv9nuumeq75h
   pool: 5
-  username: myapp
-  password:
+  username: amjmeigwlbdsxz
+  password: dHqOBl7x6YCk6ryiqlC1OK8sE8
