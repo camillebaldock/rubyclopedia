@@ -1,8 +1,8 @@
-Given /^the following episodes exist:?$/ do |episodes|
-  episode_hashes = episodes.hashes
-  episode_hashes.each do |hash|
-    hash["provider"] = Episode::EPISODE_PROVIDERS.sample.to_s unless hash["provider"]
-  	e = Episode.new_from_provider(hash["provider"])
+Given /^the following articles exist:?$/ do |articles|
+  article_hashes = articles.hashes
+  article_hashes.each do |hash|
+    hash["supplier"] = Article::ARTICLE_SUPPLIERS.sample.to_s unless hash["supplier"]
+  	e = Article.new_from_supplier(hash["supplier"])
     e.name = hash["name"]
     e.published_at = hash["published_at"] || Time.now
     e.save

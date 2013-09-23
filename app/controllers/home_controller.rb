@@ -14,10 +14,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 class HomeController < ApplicationController
   def index
-    @episodes = Episode.all
+    @articles = Article.all
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @episodes }
+      format.json { render json: @articles }
     end
   end
 end

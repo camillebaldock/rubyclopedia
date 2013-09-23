@@ -12,20 +12,29 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
-class Episode < ActiveRecord::Base
-  attr_accessible :description, :name, :published_at, :video_link
+class Article < ActiveRecord::Base
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
+
+  def self.search(params)
+    tire.search(load: true) do
+      query { string "*#{params[:search]}*", default_operator: "OR" } if params[:search].present?
+    end
+  end
+
+  attr_accessible :description, :name, :published_at, :video_link, :supplier_id, :free
   validates_uniqueness_of :name, :scope => [:type]
   scope :recent, lambda { where("published_at >= :date", :date => 1.month.ago) }
   scope :old, lambda { where("published_at < :date", :date => 1.month.ago) }
 
-  EPISODE_PROVIDERS = []
+  ARTICLE_SUPPLIERS = []
 
   def self.inherited subclass
-    EPISODE_PROVIDERS << subclass
+    ARTICLE_SUPPLIERS << subclass
     super
   end
 
-  def self.new_from_provider provider
-    EPISODE_PROVIDERS.detect{|t| (t.to_s == provider)}.new
+  def self.new_from_supplier supplier
+    ARTICLE_SUPPLIERS.detect{|subclass| (subclass.to_s == supplier)}.new
   end
 end

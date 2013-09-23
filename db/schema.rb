@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20130917134023) do
 
-  create_table "episodes", :force => true do |t|
+  create_table "articles", :force => true do |t|
     t.string   "name"
     t.string   "type"
     t.text     "description"

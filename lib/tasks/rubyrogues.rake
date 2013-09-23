@@ -1,7 +1,7 @@
 namespace :rubyrogues do
 
-  desc "Fetch rubyrogues episodes"
+  desc "Fetch rubyrogues articles"
   task :fetch => :environment do
-    RubyRoguesImportService.new.parseWebsite
+    RubyRoguesImportService.new.parse_website
   end
 end

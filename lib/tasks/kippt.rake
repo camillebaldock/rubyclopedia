@@ -1,6 +1,6 @@
 namespace :kippt do
-  desc "Fetch rubytapas episodes"
+  desc "Fetch rubytapas articles"
   task :fetch => :environment do
-    KipptImportService.new.parseFeed
+    KipptImportService.new.parse_feed
   end
 end

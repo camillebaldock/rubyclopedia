@@ -26,14 +26,9 @@ p {
 	font-family:'ColabMed';
 }
 
- .header {
- 	background-color: #B0203F;
- 	color:white;
- 	border-radius: 15px;
- 	width:100%;
- 	display:inline-block;
- 	margin:5px;
- }
+.right {
+  float:right;
+}
 
 .ascii {
   float:left;
@@ -45,68 +40,21 @@ p {
   background-color: B0203F;
 }
 
-.header h1 {
+ .title {
+ 	background-color: #B0203F;
+  width:100%;
+ 	border-radius: 15px;
+ 	display:inline-block;
+ 	margin:5px;
+ }
+
+.title h1 {
   float:left;
   font-size:50px;
 }
 
-#synopsis {
-  float:left;
-}
-
-#synopsis p {
-  font-family:'Lilly';
-  margin-left:25px;
-}
-
-#episode_stats {
-  text-align:right;
-  margin-right:15px;
-}
-
-.footer {
-	margin: 0;
-	background-color: #B0203F;
-	color:white;
-  font-size:10px;
-  padding: 5px;
-  a {
-    color:white
-  }
-}
-
-#episodes {
-  width:500px;
-  float:left;
-  margin-right:30px;
-  margin-left:25px;
-  ul {
-    list-style: none;
-    li {
-      background-color:#fafafa;
-      margin-bottom:4px;
-      width:400px;
-      padding: 5px 0px 5px 5px;
-      border-radius: 5px;
-      a {
-        text-decoration:none;
-        display:block;
-      }
-      &:hover {
-          background-color: #F7819F;
-          .supplier {
-            color:black;
-          }
-          a {
-            color:white;
-          }
-      }
-    }
-    .supplier {
-      color: #999;
-      font-size: 10px;
-    }
-  }
+.title a {
+  color:white;
 }
 
 #searchform {
@@ -141,6 +89,66 @@ p {
   margin-top:15px;
 }
 
+#synopsis {
+  float:left;
+}
+
+#synopsis p {
+  font-family:'Lilly';
+  margin-left:25px;
+}
+
+#article_stats {
+  text-align:right;
+  margin-right:15px;
+}
+
+#articles {
+  width:800px;
+  float:left;
+  margin-right:30px;
+  margin-left:25px;
+  ul {
+    list-style: none;
+    li {
+      background-color:#fafafa;
+      margin-bottom:4px;
+      width:700px;
+      height:25px;
+      padding: 5px 0px 5px 5px;
+      border-radius: 5px;
+      a {
+        text-decoration:none;
+        display:block;
+      }
+      &:hover {
+          background-color: #F7819F;
+          .supplier {
+            color:black;
+          }
+          a {
+            color:white;
+          }
+      }
+    }
+    .supplier {
+      color: #999;
+      font-size: 10px;
+    }
+  }
+}
+
 #home {
   height:250px;
+}
+
+.footer {
+  margin: 0;
+  background-color: #B0203F;
+  color:white;
+  font-size:10px;
+  padding: 5px;
+  a {
+    color:white
+  }
 }

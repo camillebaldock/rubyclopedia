@@ -1,6 +1,6 @@
-class CreateEpisodes < ActiveRecord::Migration
+class CreateArticles < ActiveRecord::Migration
   def change
-    create_table :episodes do |t|
+    create_table :articles do |t|
       t.string :name
       t.string :type
       t.text :description

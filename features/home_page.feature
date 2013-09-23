@@ -1,12 +1,12 @@
 Feature: Home page
   In order to attract more people to this website
-  I want to give statistics about the variety and quantity of episodes available
+  I want to give statistics about the variety and quantity of articles available
   And display the latest additions
 
 Background:
 	Given the date is "17/09/2013"
-	And the following episodes exist:
-	| name | provider | published_at |
+	And the following articles exist:
+	| name | supplier | published_at |
 	| Recent RailsCasts episode | Railscasts | 16/09/2013 |
 	| Recent RubyRogues episode | Rubyrogues | 15/09/2013 |
 	| Recent RubyTapas episode | Rubytapas | 14/09/2013 |
@@ -15,10 +15,10 @@ Background:
 	| Less recent RubyTapas episode | Rubytapas | 11/09/2013 |
 	When I go to the home page
 
-Scenario: Display total number of episodes
-	Then I should see "6 episodes"
+Scenario: Display total number of articles
+	Then I should see "6 articles"
 
-Scenario: Display names of 5 most recent episodes
+Scenario: Display names of 5 most recent articles
 	Then I should see the following:
 	| Recent RailsCasts episode |
 	| Recent RubyRogues episode |

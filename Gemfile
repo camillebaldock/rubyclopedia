@@ -27,6 +27,7 @@ group :cucumber do
   gem 'database_cleaner'
   gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
+  gem 'webmock', require: nil
 end
 
 # Gems used only for assets and not required
@@ -52,7 +53,5 @@ gem 'chronic'
 gem 'timecop'
 gem 'google-analytics-rails'
 gem 'tire'
-
 gem 'metric_fu'
-gem 'rubocop'
 gem 'brakeman'

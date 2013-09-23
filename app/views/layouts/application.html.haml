@@ -6,13 +6,13 @@
   =analytics_init
   =csrf_meta_tags
  %body{:style => ""}
-  %a{:href=>"/"}
-   %div{:class => "header"}
+  %div{:class => "title"}
+   %a{:href=>"/"}
     = render :partial => "layouts/logo"
     %h1 Rubyclopedia
-    %div{:id=>"searchbox"}
-     %form{:id=>"searchform", :action => "/search", :method => "post"}
-      %input{:type=>"text", :id=>"search"}
+   %div{:id=>"searchbox"}
+    %form{:id=>"searchform", :action => "/articles"}
+     = text_field_tag :search, params[:search], autocomplete: :off, placeholder: 'Search'
   = yield
 %div{:class => "footer"}
  %div{:style => "width:400px; float:left;margin-right:50px"}

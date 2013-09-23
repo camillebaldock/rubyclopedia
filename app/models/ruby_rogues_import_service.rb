@@ -15,24 +15,31 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 require 'open-uri'
 class RubyRoguesImportService
 
-  def parseWebsite url="http://rubyrogues.com/episode-guide/"
+  def parse_website url="http://rubyrogues.com/episode-guide/"
     doc=Nokogiri::HTML(open(url))
     episode_links = doc.css('.format_text p a')
     hydra = Typhoeus::Hydra.new
-	requests = Array.new
+    requests = Array.new
     episode_links.each do |episode_link|
-		requests.push(Typhoeus::Request.new(episode_link.attr('href')))
-	end
-	requests.map { |request| hydra.queue(request) }
-	hydra.run
-	episodes = Array.new
-	requests.each do |request|
-		doc = Nokogiri::HTML(request.response.body)
-		e = Rubyrogues.new(
-              :name => doc.css('.entry-title').text,
-              :video_link => request.url,
-              :published_at => doc.css('.published').text)
-		e.save
-	end
+      requests.push(Typhoeus::Request.new(episode_link.attr('href')))
+    end
+    requests.map { |request| hydra.queue(request) }
+    hydra.run
+    requests.each do |request|
+      doc = Nokogiri::HTML(request.response.body)
+      title = doc.css('.entry-title').text
+      name_regex_matches = /(\d{3}) RR (.*)/.match(title)
+      name_regex_matches = /RR (\d{2,3}) (.*)/.match(title) unless name_regex_matches
+      name_regex_matches = /(\d{3}) \S (.*)/.match(title) unless name_regex_matches
+      if name_regex_matches
+        episode = Rubyrogues.new(
+          :name => name_regex_matches[2],
+          :supplier_id => name_regex_matches[1].to_i,
+          :video_link => request.url,
+          :published_at => doc.css('.published').text,
+          :free=>true),
+        episode.save
+      end
+    end
   end
 end
