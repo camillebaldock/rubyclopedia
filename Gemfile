@@ -18,6 +18,7 @@ ruby "1.9.3"
 
 gem 'rails', '3.2.13'
 gem 'pg'
+gem 'sqlite3'
 gem 'rspec'
 gem 'rspec-rails', :group => [:development, :test, :cucumber]
 
