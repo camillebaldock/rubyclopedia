@@ -12,10 +12,3 @@ test:
   pool: 5
   username: myapp
   password:
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: ddrv9nuumeq75h
-  pool: 5
-  username: amjmeigwlbdsxz
-  password: dHqOBl7x6YCk6ryiqlC1OK8sE8
