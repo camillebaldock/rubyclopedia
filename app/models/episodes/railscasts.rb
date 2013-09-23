@@ -12,12 +12,27 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
-class Railscasts < Episode
+class Railscasts < Article
 
-  attr_accessible :duration_seconds, :supplier_id, :position, :free
+  attr_accessible :duration_seconds, :position
 
   def self.model_name
-    Episode.model_name
+    Article.model_name
+  end
+
+  def self.new_from_json json_episode
+    duration_regex_matches = /(\d{1,2}):(\d{2})/.match(json_episode["duration"])
+    duration_in_seconds = duration_regex_matches[1].to_i*60 + duration_regex_matches[2].to_i
+    episode = self.new(
+        :supplier_id => json_episode["id"],
+        :free => !json_episode["pro"],
+        :name => json_episode["name"],
+        :position => json_episode["position"],
+        :description => json_episode["description"],
+        :published_at => json_episode["published_at"],
+        :duration_seconds => duration_in_seconds,
+        :video_link => json_episode["url"].chomp('.json'))
+    episode.save
   end
 
 end

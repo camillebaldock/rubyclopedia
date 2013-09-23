@@ -1,8 +1,8 @@
 Rubyclopedia::Application.routes.draw do
   root :to => "home#index"
-  resources :episodes do
-  	member do
-  	  post 'watched'
+  resources :articles do
+    member do
+      post 'watched'
     end
   end
 end

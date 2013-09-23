@@ -1,0 +1,22 @@
+%div{:id=>"article"}
+ %div{:id=>"description"}
+  %h1
+   =@article.name
+  %p
+   =@article.description
+  -if @article.type == "Rubytapas" && !@article.free
+   %p
+    =link_to @article.video_link, :class=>"button right" do
+     %span Download
+  -else
+   =link_to @article.video_link, :class=>"button right" do
+    %span Go to article
+ %div{:id=>"labels"}
+  = render :partial => "shared/cost_label", locals: {article: @article}
+  %p
+   ="#{@article.type} - #{@article.supplier_id}"
+  %p
+   - if @article.published_at> (Time.now - 24.hours)
+    today
+   - else
+    ="Published #{distance_of_time_in_words(@article.published_at, Time.now)} ago"

@@ -1,7 +1,7 @@
 namespace :railscasts do
 
-  desc "Fetch railscasts episodes"
+  desc "Fetch railscasts articles"
   task :fetch => :environment do
-    RailsCastsImportService.new.processJsonFile
+    RailsCastsImportService.new.process_json_file
   end
 end

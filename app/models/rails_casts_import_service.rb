@@ -15,23 +15,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 require 'open-uri'
 class RailsCastsImportService
 
-  def processJsonFile jsonFile = "http://railscasts.com/episodes.json"
-    episodes_json = open(jsonFile)
+  def process_json_file json_file = "http://railscasts.com/episodes.json"
+    episodes_json = open(json_file)
     parsed_json = ActiveSupport::JSON.decode(episodes_json)
-    parsed_json.each do |episode|
-      duration_regex_matches = /(\d{1,2}):(\d{2})/.match(episode["duration"])
-      duration_in_seconds = duration_regex_matches[1].to_i*60 + duration_regex_matches[2].to_i
-      e = Railscasts.new(
-                      :supplier_id => episode["id"],
-                      :free => !episode["pro"],
-                      :name => episode["name"],
-                      :position => episode["position"],
-                      :description => episode["description"],
-                      :published_at => episode["published_at"],
-                      :duration_seconds => duration_in_seconds,
-                      :video_link => episode["url"].chomp('.json'))
-      e.save
+    parsed_json.each do |episode_json|
+      Railscasts.new_from_json(episode_json)
     end
   end
-
 end

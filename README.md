@@ -1,7 +1,7 @@
 rubyclopedia
 ===========================
 
-Website to get he latest episodes from the following suppliers, and track progress on viewing Ruby training content:
+Website to get he latest articles from the following suppliers, and track progress on viewing Ruby training content:
 
 - RailsCasts
 - RubyTapas

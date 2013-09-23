@@ -3,11 +3,11 @@ require 'test_helper'
 class RubyroguesImportServiceTest < ActionView::TestCase
 
   def setup
-    Episode.delete_all
+    Article.delete_all
   end
 
-  test "parsewebsite" do
-    RubyRoguesImportService.new.parseWebsite "#{Rails.root}/test/testdata/EpisodeGuide.html"
-    assert_equal 1, Episode.count
+  test "parse_website" do
+    RubyRoguesImportService.new.parse_website "#{Rails.root}/test/testdata/EpisodeGuide.html"
+    assert_equal 1, Article.count
   end
 end

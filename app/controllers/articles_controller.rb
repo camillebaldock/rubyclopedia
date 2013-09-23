@@ -12,24 +12,25 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
-class EpisodesController < ApplicationController
+class ArticlesController < ApplicationController
   def index
-    @episodes = Episode.order('published_at DESC')
+    if params[:search]
+      @articles = Article.search(params)
+    else
+      @articles = Article.order('published_at DESC')
+    end
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @episodes }
+      format.json { render json: @articles }
     end
   end
 
   def show
-    @episode = Episode.find(params[:id])
+    @article = Article.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @episode }
+      format.json { render json: @article }
     end
   end
 
-  def watched
-    raise 'Not in use for minimal usable subset: sprint 1; planned for future releases'
-  end
 end

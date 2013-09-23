@@ -2,19 +2,23 @@
  %p Rubyclopedia is a catalogue of Ruby videos, tutorials, blog posts...
  %p everything you need to learn about Ruby and improve your Ruby skills
 
-%div{:id => "episode_stats"}
+%div{:id => "article_stats"}
  %h1
-  ="#{Episode.count} articles"
- %a{:href => episodes_path}
+  ="#{Article.count} articles"
+ %a{:href => articles_path}
   See full list of articles
 
 %div{:id=>"home"}
- %div{:id=>"episodes"}
-  %h1 Latest articles
+ %div{:id=>"articles", :style=>"float:none"}
+  %h1 Most recent articles
   %ul
-   -Episode.find(:all, :order => "published_at desc", :limit => 5).each do |new_episode|
+   -Article.find(:all, :order => "published_at desc", :limit => 5).each do |article|
     %li
-     =link_to new_episode, :class => "episode" do
-      =new_episode.name
-      %span{:class=>"supplier"}
-       =new_episode.type
+     =link_to article, :class => "article" do
+      %div{:style=>"clear:both; height:20px;"}
+       %div{:style=>"float:left;margin-top:3px;"}
+        =article.name
+       %div{:style=>"float:right;margin-top:3px; margin-left:10px"}
+        = render :partial => "shared/cost_label", locals: {article: article}
+       %div{:class=>"supplier right"}
+        =article.type
