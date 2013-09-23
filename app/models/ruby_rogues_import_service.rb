@@ -37,7 +37,7 @@ class RubyRoguesImportService
           :supplier_id => name_regex_matches[1].to_i,
           :video_link => request.url,
           :published_at => doc.css('.published').text,
-          :free=>true),
+          :free=>true)
         episode.save
       end
     end
