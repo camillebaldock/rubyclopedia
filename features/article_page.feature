@@ -46,5 +46,5 @@ Scenario Outline: Standard article page
 Scenario: Paid Rubytapas
 	Given I have a paid article from "Rubytapas"
 	When I visit that article's page
-	Then I should see "If you have a paid subscription"
+	Then I should see a "Download" link to that article's supplier page
 	And I should not see a "Go to article" link to that article's supplier page

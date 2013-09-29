@@ -1,8 +1,13 @@
 Rubyclopedia::Application.routes.draw do
+  devise_for :users
+
   root :to => "home#index"
+
   resources :articles do
-    member do
-      post 'watched'
-    end
+    put :favourite, on: :member
+    put :viewed, on: :member
   end
+
+  match '/about' => 'pages#about'
+
 end

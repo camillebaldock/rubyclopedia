@@ -6,19 +6,16 @@
   =analytics_init
   =csrf_meta_tags
  %body{:style => ""}
-  %div{:class => "title"}
-   %a{:href=>"/"}
-    = render :partial => "layouts/logo"
-    %h1 Rubyclopedia
-   %div{:id=>"searchbox"}
-    %form{:id=>"searchform", :action => "/articles"}
-     = text_field_tag :search, params[:search], autocomplete: :off, placeholder: 'Search'
-  = yield
-%div{:class => "footer"}
- %div{:style => "width:400px; float:left;margin-right:50px"}
-  %p I do not own any rights to any of the data listed on this site.
-  %p This website exists in the hope that it will be useful, but without any warranty, without even the implied warranty of merchantability or fitness for a particular purpose
- %div
-  %p The Rubyclopedia is brought to you from London by Camille Baldock.
-  %p If you want to get in touch, you can do so via mail to me at ruby (at) camillebaldock (dot) co (dot) uk
-  %p You can also find me on Twitter as @camille_ldn and on #{ link_to 'Github ', 'https://github.com/camilleldn/rubyclopedia'}
+  %div{:id => "container"}
+   %div{:class => "title"}
+    %a{:href=>"/"}
+     = render :partial => "layouts/logo"
+     %h1 Rubyclopedia
+    %div{:id=>"searchbox"}
+     %ul{:id=>"navlist"}
+      = render 'devise/menu/registration_items'
+      = render 'devise/menu/login_items'
+      = link_to('About', about_path)
+     %form{:id=>"searchform", :action => "/articles"}
+      = text_field_tag :search, params[:search], autocomplete: :off, placeholder: 'Search'
+   = yield
