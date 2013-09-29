@@ -1,6 +1,6 @@
 When /^I search for "([^"]*)"$/ do |query|
   fill_in 'search', with: query
-  page.driver.browser.key_down(:enter).key_up(:enter).perform
+  step "I send enter to \"#search\""
 end
 
 Then /^I should see a message indicating no articles were found$/ do

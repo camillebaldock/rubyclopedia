@@ -12,13 +12,5 @@
  %div{:id=>"articles", :style=>"float:none"}
   %h1 Most recent articles
   %ul
-   -Article.find(:all, :order => "published_at desc", :limit => 5).each do |article|
-    %li
-     =link_to article, :class => "article" do
-      %div{:style=>"clear:both; height:20px;"}
-       %div{:style=>"float:left;margin-top:3px;"}
-        =article.name
-       %div{:style=>"float:right;margin-top:3px; margin-left:10px"}
-        = render :partial => "shared/cost_label", locals: {article: article}
-       %div{:class=>"supplier right"}
-        =article.type
+   -Article.find(:all, :order => "published_at desc", :limit => 10).each do |article|
+    = render :partial => "shared/article_line", locals: {article: article}

@@ -30,6 +30,7 @@ group :cucumber do
   gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
   gem 'webmock', require: nil
+  gem 'selenium-webdriver'
 end
 
 gem 'sass-rails',   '~> 3.2.3'
@@ -58,3 +59,4 @@ gem 'tire'
 gem 'metric_fu'
 gem 'brakeman'
 gem 'rails_12factor', group: :production
+gem 'devise'

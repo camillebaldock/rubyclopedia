@@ -37,25 +37,9 @@ The "offline" version will follow after that.
 Stories to be completed
 ------------------------
 
-### Must (minimum deployable subset)
-
-##### Elastic search fulltext search functionality for front page, on name and description fields
-
-##### Deployment (not necessary for the deployment, but a good source of material for training guide on deployment)
-  * deploy on Heroku, and document
-  * prepare Capistrano recipes for deployment on personal server, deploy successfully, and document
-  * do a full Rubber deployment on AWS, deploy successfully, and document
-  * do something cool with containers (Docker?), deploy and document
-  * publish a gist with the result and concrete tutorial for the four approaches above
-  * whenever --set environment=production
-
-### Should
-
+##### Mark as watched (for logged in users)
+##### Mark as favourite (for logged in users)
 ##### Error handling and deduplication on feed parsing
-##### As a user, I can sign up for the system, log in, log out
-* If I am not logged in, I only have access to:
-     - the API without any Kippt data
-     - the list of episodes (cannot mark as watched...)
 ##### Kippt episodes belong to users
 ##### Mark as watched (for logged in users)
 ##### Mark as favourite (for logged in users)

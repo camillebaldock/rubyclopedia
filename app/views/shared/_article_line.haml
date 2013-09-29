@@ -1,0 +1,16 @@
+%li
+ =link_to article, :class => "article" do
+  %table{:style=>"clear:both; height:20px;"}
+   %tr
+    %td{:style=>"float:left;margin-top:3px;"}
+     =article.name
+    %td{:style=>"float:right;margin-top:3px; margin-left:10px"}
+     = render :partial => "shared/cost_label", locals: {article: article}
+    %td{:class=>"supplier right"}
+     =article.type
+    -if current_user
+     %td
+      =link_to "favourite", favourite_article_path(article, type: "favourite"), method: :put
+      =link_to "unfavourite", favourite_article_path(article, type: "unfavourite"), method: :put
+      =link_to "viewed", viewed_article_path(article, type: "viewed"), method: :put
+      =link_to "unviewed", viewed_article_path(article, type: "unviewed"), method: :put

@@ -26,20 +26,24 @@ class RubyRoguesImportService
     requests.map { |request| hydra.queue(request) }
     hydra.run
     requests.each do |request|
-      doc = Nokogiri::HTML(request.response.body)
-      title = doc.css('.entry-title').text
-      name_regex_matches = /(\d{3}) RR (.*)/.match(title)
-      name_regex_matches = /RR (\d{2,3}) (.*)/.match(title) unless name_regex_matches
-      name_regex_matches = /(\d{3}) \S (.*)/.match(title) unless name_regex_matches
-      if name_regex_matches
-        episode = Rubyrogues.new(
-          :name => name_regex_matches[2],
-          :supplier_id => name_regex_matches[1].to_i,
-          :video_link => request.url,
-          :published_at => doc.css('.published').text,
-          :free=>true)
-        episode.save
-      end
+      process_response request.response.body
+    end
+  end
+
+  def process_response response
+    doc = Nokogiri::HTML(response)
+    title = doc.css('.entry-title').text
+    name_regex_matches = /(\d{3}) RR (.*)/.match(title)
+    name_regex_matches = /RR (\d{2,3}) (.*)/.match(title) unless name_regex_matches
+    name_regex_matches = /(\d{3}) \S (.*)/.match(title) unless name_regex_matches
+    if name_regex_matches
+      episode = Rubyrogues.new(
+        :name => name_regex_matches[2],
+        :supplier_id => name_regex_matches[1].to_i,
+        :video_link => request.url,
+        :published_at => doc.css('.published').text,
+        :free=>true)
+      episode.save
     end
   end
 end
