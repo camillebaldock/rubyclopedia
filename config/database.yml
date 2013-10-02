@@ -4,7 +4,7 @@ development:
   encoding: unicode
   database: rubyclopedia_development
   pool: 5
-  username: camillebaldock
+  username: postgres
   password:
 
 test:
@@ -13,7 +13,7 @@ test:
   encoding: unicode
   database: rubyclopedia_test
   pool: 5
-  username: camillebaldock
+  username: postgres
   password:
 
 production:
@@ -22,5 +22,5 @@ production:
   encoding: unicode
   database: rubyclopedia_production
   pool: 5
-  username: camillebaldock
+  username: postgres
   password:
