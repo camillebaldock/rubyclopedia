@@ -44,7 +44,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'susy'
   gem 'compass-susy-plugin'
-  gem 'jquery-rails'
+  gem 'jquery-rails', '2.0.2'
 end
 
 gem 'haml-rails'
