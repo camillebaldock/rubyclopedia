@@ -3,8 +3,6 @@ require 'spec_helper'
 describe RubyTapasImportService do
 
   it "parses the XML feed, and parses the HTML page to detect which episodes are free" do
-    Settings.rubytapas.user = "testuser"
-    Settings.rubytapas.password = "password"
     RubyTapasImportService.new.parse_website_paid "#{Rails.root}/spec/testdata/rubyTapasFeed", "#{Rails.root}/spec/testdata/rubyTapasPage.html"
     expect(Article.count).to eq(134)
     expect(Article.where(:free => false).count).to eq(118)
