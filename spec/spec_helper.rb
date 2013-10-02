@@ -37,6 +37,17 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
+  config.around :each do |example|
+    if example.metadata[:elasticsearch]
+      Contact.tire.index.delete # delete the index for a clean environment
+      example.run
+    else
+      FakeWeb.register_uri :any, %r(#{Tire::Configuration.url}), body: '{}'
+      example.run
+      FakeWeb.clean_registry
+    end
+  end
+
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)

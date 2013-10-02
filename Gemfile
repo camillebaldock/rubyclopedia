@@ -20,6 +20,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'rspec'
 gem 'rspec-rails', :group => [:development, :test, :cucumber]
+gem 'fakeweb', :group => :test
 
 group :cucumber do
   gem 'gherkin'
