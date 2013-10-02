@@ -12,13 +12,23 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
-class HomeController < ApplicationController
-  def index
-    @articles = Article.notcourse.find(:all, :order => "published_at desc", :limit => 5)
-    @courses = Article.course.find(:all).sample(5)
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @articles }
+require 'open-uri'
+class PluralsightImportService
+
+  def parse_website feed_url="http://pluralsight.com/odata/Courses"
+    feed=Nokogiri::XML(open(feed_url)).remove_namespaces!
+    feed.css("entry").each do |episode|
+      if episode.css("Category").text == "Ruby"
+      	episode = Pluralsight.new(
+          :name => episode.css("Title").text,
+          :free => false,
+          :medium => Article.VIDEO,
+          :published_at => episode.css("updated").text,
+          :description => episode.css("Description").text,
+          :video_link=> "http://pluralsight.com/training/Courses/TableOfContents/"+episode.css("Name").text)
+        episode.save
+      end
     end
   end
+
 end

@@ -8,15 +8,31 @@
    %p
     =link_to @article.video_link, :class=>"button right" do
      %span Download
+  -elsif @article.medium == Article.COURSE
+   %p
+    =link_to @article.video_link, :class=>"button right" do
+     %span Go to course
+  -elsif @article.medium == Article.VIDEO
+   %p
+    =link_to @article.video_link, :class=>"button right" do
+     %span Go to video
+  -elsif @article.medium == Article.AUDIO
+   %p
+    =link_to @article.video_link, :class=>"button right" do
+     %span Go to audio
   -else
    =link_to @article.video_link, :class=>"button right" do
     %span Go to article
  %div{:id=>"labels"}
-  = render :partial => "shared/cost_label", locals: {article: @article}
+  = render :partial => "shared/cost_label", locals: {article: @article}  
   %p
-   ="#{@article.type} - #{@article.supplier_id}"
+   -if @article.supplier_id
+    ="#{@article.type} - #{@article.supplier_id}"
+   -else
+    ="#{@article.type}"
   %p
-   - if @article.published_at> (Time.now - 24.hours)
-    today
-   - else
-    ="Published #{distance_of_time_in_words(@article.published_at, Time.now)} ago"
+   - if @article.published_at
+    - if @article.published_at > (Time.now - 24.hours)
+     today
+    - else
+     ="Published #{distance_of_time_in_words(@article.published_at, Time.now)} ago"

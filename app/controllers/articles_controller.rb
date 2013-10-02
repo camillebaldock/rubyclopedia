@@ -40,12 +40,12 @@ class ArticlesController < ApplicationController
     type = params[:type]
     if type == "favourite"
       current_user.favourites << @article
-      redirect_to :back, notice: 'You favourited #{@article.name}'
+      redirect_to :back, notice: "You favourited #{@article.name}"
     elsif type == "unfavourite"
       current_user.favourites.delete(@article)
-      redirect_to :back, notice: 'Unfavourited #{@article.name}'
+      redirect_to :back, notice: "Unfavourited #{@article.name}"
     else
-      redirect_to :back, notice: 'Nothing happened.'
+      redirect_to :back, notice: "Nothing happened."
     end
   end
 
@@ -56,12 +56,12 @@ class ArticlesController < ApplicationController
     type = params[:type]
     if type == "viewed"
       current_user.viewed << @article
-      redirect_to :back, notice: 'You viewed #{@article.name}'
+      redirect_to :back, notice: "You viewed #{@article.name}"
     elsif type == "unviewed"
       current_user.viewed.delete(@article)
-      redirect_to :back, notice: 'Unviewed #{@article.name}'
+      redirect_to :back, notice: "Unviewed #{@article.name}"
     else
-      redirect_to :back, notice: 'Nothing happened.'
+      redirect_to :back, notice: "Nothing happened."
     end
   end
 

@@ -16,16 +16,27 @@ class Article < ActiveRecord::Base
   include Tire::Model::Search
   include Tire::Model::Callbacks
 
+  @VIDEO = "Video"
+  @AUDIO = "Audio"
+  @TEXT = "Text"
+  @COURSE = "Course"
+
+  class << self
+    attr_reader :VIDEO, :AUDIO, :TEXT, :COURSE
+  end
+
   def self.search(params)
     tire.search(load: true) do
       query { string "*#{params[:search]}*", default_operator: "OR" } if params[:search].present?
     end
   end
 
-  attr_accessible :description, :name, :published_at, :video_link, :supplier_id, :free
+  attr_accessible :description, :name, :published_at, :video_link, :supplier_id, :free, :medium
   validates_uniqueness_of :name, :scope => [:type]
   scope :recent, lambda { where("published_at >= :date", :date => 1.month.ago) }
   scope :old, lambda { where("published_at < :date", :date => 1.month.ago) }
+  scope :notcourse, lambda { where("medium != :course", :course => Article.COURSE) }
+  scope :course, lambda { where("medium = :course", :course => Article.COURSE) }
 
   ARTICLE_SUPPLIERS = []
 

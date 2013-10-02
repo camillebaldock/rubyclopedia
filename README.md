@@ -37,12 +37,8 @@ The "offline" version will follow after that.
 Stories to be completed
 ------------------------
 
-##### Mark as watched (for logged in users)
-##### Mark as favourite (for logged in users)
 ##### Error handling and deduplication on feed parsing
 ##### Kippt episodes belong to users
-##### Mark as watched (for logged in users)
-##### Mark as favourite (for logged in users)
 
 ### Could
 

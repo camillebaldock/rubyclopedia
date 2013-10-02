@@ -12,18 +12,10 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
-require 'open-uri'
-class KipptImportService
+class Pluralsight < Article
 
-  def parse_feed feed_url=Settings.kippt.url
-    feed=Nokogiri::XML(open(feed_url))
-    feed.xpath('/rss/channel/item').each do |item|
-      article = Kippt.new(
-        :name => item.at_xpath('./title').text,
-        :published_at => item.at_xpath('./pubDate').text,
-        :description => Nokogiri::HTML(item.at_xpath('./description').text).css('a').attr('href').text,
-        :video_link=>item.at_xpath('./link').text)
-      article.save
-    end
+  def self.model_name
+    Article.model_name
   end
+
 end

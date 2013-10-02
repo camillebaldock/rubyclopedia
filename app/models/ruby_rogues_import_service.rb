@@ -26,11 +26,11 @@ class RubyRoguesImportService
     requests.map { |request| hydra.queue(request) }
     hydra.run
     requests.each do |request|
-      process_response request.response.body
+      process_response request.response.body, request.url
     end
   end
 
-  def process_response response
+  def process_response response, url
     doc = Nokogiri::HTML(response)
     title = doc.css('.entry-title').text
     name_regex_matches = /(\d{3}) RR (.*)/.match(title)
@@ -39,8 +39,9 @@ class RubyRoguesImportService
     if name_regex_matches
       episode = Rubyrogues.new(
         :name => name_regex_matches[2],
+        :medium => Article.AUDIO,
         :supplier_id => name_regex_matches[1].to_i,
-        :video_link => request.url,
+        :video_link => url,
         :published_at => doc.css('.published').text,
         :free=>true)
       episode.save

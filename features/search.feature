@@ -1,3 +1,4 @@
+@javascript
 Feature: Search
   As a User
   I want to search for content
@@ -12,11 +13,9 @@ Feature: Search
       | Demon in a Bottle |
       | Extremis          |
     When I search for "Demon"
-    Then I should be on the search page
-    And I should see the article called "Demon in a Bottle" in the article list
-    But I should not see the article called "Extremis" in the article list
+    Then I should see "Demon in a Bottle"
+    But I should not see "Extremis"
 
   Scenario: No articles found
     When I search for "Armor Wars"
-    Then I should be on the search page
-    And I should see a message indicating no articles were found
+    Then I should see a message indicating no articles were found
