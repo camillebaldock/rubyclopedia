@@ -44,7 +44,8 @@ class RubyTapasImportService
           :description => Nokogiri::HTML(item.at_xpath('./description').text).css('.blog-content p').text,
           :video_link=>item.at_xpath('./enclosure').attr('url'),
           :free => (free_ids.include? episode_id),
-          :supplier_id=>episode_id
+          :supplier_id=>episode_id,
+          :medium => Article.VIDEO
         )
         episode.save
       end
@@ -62,6 +63,7 @@ class RubyTapasImportService
         :description => episode.css('p').text,
         :video_link=>episode.css('a').attr('href').text,
         :free => true,
+        :medium => Article.VIDEO,
         :supplier_id=>/(\d{1,3})\..*/.match(name)[1].to_i)
       episode.save
     end

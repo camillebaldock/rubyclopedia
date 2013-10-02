@@ -4,13 +4,18 @@
 
 %div{:id => "article_stats"}
  %h1
-  ="#{Article.count} articles"
+  ="#{Article.count} entries"
  %a{:href => articles_path}
-  See full list of articles
+  See full list of entries
 
 %div{:id=>"home"}
- %div{:id=>"articles", :style=>"float:none"}
-  %h1 Most recent articles
+ %div{:class=>"list"}
+  %h1 Most recent entries
   %ul
-   -Article.find(:all, :order => "published_at desc", :limit => 10).each do |article|
-    = render :partial => "shared/article_line", locals: {article: article}
+   -@articles.each do |article|
+    = render :partial => "shared/short_article_line", locals: {article: article}
+ %div{:class=>"list"}
+  %h1 Courses
+  %ul
+   -@courses.each do |article|
+    = render :partial => "shared/short_article_line", locals: {article: article}

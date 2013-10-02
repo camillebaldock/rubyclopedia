@@ -12,13 +12,16 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
-class HomeController < ApplicationController
-  def index
-    @articles = Article.notcourse.find(:all, :order => "published_at desc", :limit => 5)
-    @courses = Article.course.find(:all).sample(5)
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @articles }
+require 'open-uri'
+class CodecademyImportService
+
+  def process_json_file json_file = "http://www.codecademy.com/tracks/ruby.json"
+    episodes_json = open(json_file)
+    parsed_json = ActiveSupport::JSON.decode(episodes_json)
+    parsed_json["units"].each do |units_json|
+      units_json["courses"].each do |episode_json|
+        Codecademy.new_from_json(episode_json)
+      end
     end
   end
 end

@@ -118,6 +118,17 @@ div {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Entypo';
+  src:url('entypo.eot');
+  src:url('entypo.eot?#iefix') format('embedded-opentype'),
+    url('entypo.svg#icomoon') format('svg'),
+    url('entypo.woff') format('woff'),
+    url('entypo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .label {
   display: inline;
   padding: .4em .6em .4em;

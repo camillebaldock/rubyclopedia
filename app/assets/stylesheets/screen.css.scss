@@ -12,17 +12,18 @@ body {
    padding:0;
    height:100%;
 }
+
 #container {
    min-height:100%;
    position:relative;
 }
 
- body {
+body {
  	margin:0;
  	padding:0;
  	border:0;
  	font-family:'ColabMed';
- }
+}
 
 h1 {
 	font-family:'Ubuntu';
@@ -30,6 +31,11 @@ h1 {
 
 p {
 	font-family:'ColabMed';
+}
+
+.icon {
+  font-family:'Entypo';
+  font-size:30px;
 }
 
 .right {
@@ -46,21 +52,19 @@ p {
   background-color: B0203F;
 }
 
- .title {
- 	background-color: #B0203F;
+.title {
+	background-color: #B0203F;
   width:100%;
- 	border-radius: 15px;
- 	display:inline-block;
- 	margin:5px;
- }
-
-.title h1 {
-  float:left;
-  font-size:50px;
-}
-
-.title a {
-  color:white;
+	border-radius: 15px;
+	display:inline-block;
+	margin:5px;
+  h1 {
+    float:left;
+    font-size:50px;
+  }
+  a {
+    color:white;
+  }
 }
 
 #searchform {
@@ -92,16 +96,14 @@ p {
 #searchbox {
   float:right;
   margin-right:15px;
-  margin-top:15px;
 }
 
 #synopsis {
   float:left;
-}
-
-#synopsis p {
-  font-family:'Lilly';
-  margin-left:25px;
+  p {
+    font-family:'Lilly';
+    margin-left:25px;
+  }
 }
 
 #article_stats {
@@ -109,20 +111,26 @@ p {
   margin-right:15px;
 }
 
-#articles {
-  width:800px;
+.list {
+  width:400px;
   float:left;
   margin-right:30px;
   margin-left:25px;
+  &.long{
+    width:700px;
+  }
   ul {
     list-style: none;
     li {
       background-color:#fafafa;
       margin-bottom:4px;
-      width:700px;
+      width:350px;
       height:25px;
       padding: 5px 0px 5px 5px;
       border-radius: 5px;
+      &.long {
+        width:650px;
+      }
       a {
         text-decoration:none;
         display:block;
@@ -137,19 +145,37 @@ p {
           }
       }
     }
-    .supplier {
-      color: #999;
-      font-size: 12px;
-    }
   }
 }
 
+.filter {
+  background: #E5E4E2;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 5px;
+  -moz-box-shadow: 2px 2px 4px #aaa;
+  -webkit-box-shadow: 2px 2px 4px #aaa;
+  box-shadow: 2px 2px 4px #aaa;
+  &.down {
+    background-color: #B0203F;
+    color:white;
+    box-shadow:none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  }   
+}
+
 #home {
-  height:250px;
+  clear:both
 }
 
 #navlist li {
   display: inline;
+  float:right;
   list-style-type: none;
-  padding-right: 20px;
+  padding-right: 10px;
+  margin-bottom:10px;
+  a {
+    text-decoration:none;
+  }
 }

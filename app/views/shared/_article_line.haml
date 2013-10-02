@@ -1,16 +1,29 @@
-%li
+%li{:class=>"#{article.medium} #{article.type} long"}
  =link_to article, :class => "article" do
-  %table{:style=>"clear:both; height:20px;"}
+  %table
    %tr
-    %td{:style=>"float:left;margin-top:3px;"}
+    %td{:style=>"width:350px"}
      =article.name
-    %td{:style=>"float:right;margin-top:3px; margin-left:10px"}
-     = render :partial => "shared/cost_label", locals: {article: article}
-    %td{:class=>"supplier right"}
+    %td{:class=>"icon", :style=>"width:30px"}
+     - case article.medium
+      - when Article.VIDEO
+       &#127916;  
+      - when Article.AUDIO
+       &#9835;  
+      - when Article.COURSE
+       &#127891; 
+    %td{:style=>"color:grey; width:100px"}
      =article.type
+    %td{:style=>"width:100px"}
+     = render :partial => "shared/cost_label", locals: {article: article}
     -if current_user
      %td
-      =link_to "favourite", favourite_article_path(article, type: "favourite"), method: :put
-      =link_to "unfavourite", favourite_article_path(article, type: "unfavourite"), method: :put
-      =link_to "viewed", viewed_article_path(article, type: "viewed"), method: :put
-      =link_to "unviewed", viewed_article_path(article, type: "unviewed"), method: :put
+      -if current_user.favourites.include? article
+       =link_to "unfavourite", favourite_article_path(article, type: "unfavourite"), method: :put
+      - else
+       =link_to "favourite", favourite_article_path(article, type: "favourite"), method: :put
+     %td
+      - if current_user.viewed.include? article
+       =link_to "unviewed", viewed_article_path(article, type: "unviewed"), method: :put
+      - else
+       =link_to "viewed", viewed_article_path(article, type: "viewed"), method: :put

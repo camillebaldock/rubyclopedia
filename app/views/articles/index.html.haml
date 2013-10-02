@@ -1,12 +1,19 @@
 %p
  =notice
-
-%div{:id=>"articles", :style=>"float:none"}
- -if params[:search]
-  %h1
-   ="Articles about \"#{params[:search]}\""
- -else
-  %h1 All articles
- %ul
-  -@articles.each do |article|
-   = render :partial => "shared/article_line", locals: {article: article}
+-if params[:search]
+ %h1
+  ="Entries about \"#{params[:search]}\""
+-else
+ %h1{:style => "margin-left:20px"} All entries
+ %div{:width=>"900px", :style => "margin-left:20px"}
+  %span Type
+  %a{:class => "filter down type"} Video
+  %a{:class => "filter down type"} Audio
+  %a{:class => "filter down type"} Course
+  %span Supplier
+  - Article::ARTICLE_SUPPLIERS.each do |supplier|
+   %a{:class => "filter down supplier"} #{supplier}
+ %div{:class=>"list long", :style=>"float:none"}
+  %ul
+   -@articles.each do |article|
+    = render :partial => "shared/article_line", locals: {article: article}
