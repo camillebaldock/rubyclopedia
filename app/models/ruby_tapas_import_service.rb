@@ -31,8 +31,9 @@ class RubyTapasImportService
       free_ids.push /(\d{1,3})\..*/.match(episode.css('a h4').text)[1].to_i
     end
 
-    settings = Settings.rubytapas
-    feed=Nokogiri::XML(open(feed_url, :http_basic_authentication=>[settings.user, settings.password]))
+    user = Settings.rubytapas.user ? ENV['RUBYTAPAS_USER']
+    password = Settings.rubytapas.user ? ENV['RUBYTAPAS_PASSWORD']
+    feed=Nokogiri::XML(open(feed_url, :http_basic_authentication=>[user, password]))
     feed.xpath('/rss/channel/item').each do |item|
       title = item.at_xpath('./title').text
       if title.sub!(/^(\d+):?\s+/, '')
