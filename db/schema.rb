@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20131003003554855) do
     t.text     "description"
     t.datetime "published_at"
     t.integer  "duration_seconds"
-    t.integer  "supplier_id"
+    t.integer  "supplier_ref"
     t.string   "video_link"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
