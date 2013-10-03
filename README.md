@@ -7,7 +7,7 @@ rubyclopedia
 
 [![Dependency Status](https://gemnasium.com/camilleldn/rubyclopedia.png)](https://gemnasium.com/camilleldn/rubyclopedia)
 
-[![Best Practices](http://rails-bp.com/camilleldn/rubyclopedia.png)](http://rails-bp.com/camilleldn/rubyclopedia)
+[![Best Practices](http://railsbp.com/camilleldn/rubyclopedia.png)](http://rails-bp.com/camilleldn/rubyclopedia)
 
 [![Coderwall Endorse](http://api.coderwall.com/camilleldn/endorsecount.png)](http://coderwall.com/camilleldn)
 
