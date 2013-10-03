@@ -35,10 +35,11 @@ class CodeschoolImportService
     rubycourses = doc.css('div.path-ruby')
     courses = rubycourses.css('article.course')
     courses.each do |course|
-      episode = Codeschool.new(
+      episode = Article.new(
         :name => course.css('div.bucket-content a h3 b').text,
         :free => (course.css('em.label-b').count > 0),
-        :medium => Article.COURSE,
+        :medium => Article::COURSE,
+        :supplier => Article::CODESCHOOL,
         :description => course.css('div.bucket-content a p').text,
         :video_link=> "http://www.codeschool.com" + course.css('div.bucket-content a').attr('href').text)
       episode.save
@@ -47,10 +48,11 @@ class CodeschoolImportService
 
   def process_response response, url
     doc = Nokogiri::HTML(response)
-    episode = Codeschool.new(
+    episode = Article.new(
       :name => doc.css('div.video-info h1').text,
       :free => false,
-      :medium => Article.VIDEO,
+      :supplier => Article::CODESCHOOL,
+      :medium => Article::VIDEO,
       :description => doc.css('div.video-desc p')[1].andand.text,
       :video_link=> url)
     episode.published_at = doc.css('ul.meta li time').attr('datetime').value unless doc.css('ul.meta li time').empty?

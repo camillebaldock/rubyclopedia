@@ -33,13 +33,14 @@ class EnvylabsImportService
 
   def process_xml_file episodes
     episodes.each do |e|
-      episode = Envylabs.new(
+      episode = Article.new(
         :supplier_id => e.css('id').text,
         :published_at => e.css('updated-at').text,
         :description => e.css('summary').text,
         :name => e.css('title').text,
         :free => true,
-        :medium => Article.AUDIO,
+        :supplier => Article::ENVYLABS,
+        :medium => Article::AUDIO,
         :video_link => e.css('media-url').text)
       episode.save
     end

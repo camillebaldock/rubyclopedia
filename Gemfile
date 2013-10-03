@@ -45,7 +45,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'susy'
   gem 'compass-susy-plugin'
-  gem 'jquery-rails', '2.0.2'
+  gem 'jquery-rails'
 end
 
 gem 'haml-rails'
@@ -62,3 +62,4 @@ gem 'brakeman'
 gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'andand'
+gem 'letsrate'

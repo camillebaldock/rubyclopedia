@@ -20,8 +20,19 @@ class CodecademyImportService
     parsed_json = ActiveSupport::JSON.decode(episodes_json)
     parsed_json["units"].each do |units_json|
       units_json["courses"].each do |episode_json|
-        Codecademy.new_from_json(episode_json)
+        create_from_json(episode_json)
       end
     end
+  end
+
+  def create_from_json json_episode
+    episode = Article.new(
+        :free => true,
+        :supplier => Article::CODECADEMY,
+        :name => json_episode["name"],
+        :description => json_episode["entry"],
+        :medium => Article::COURSE,
+        :video_link => json_episode["url"])
+    episode.save
   end
 end

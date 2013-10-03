@@ -19,11 +19,11 @@ class PluralsightImportService
     feed=Nokogiri::XML(open(feed_url)).remove_namespaces!
     feed.css("entry").each do |episode|
       if episode.css("Category").text == "Ruby"
-      	episode = Pluralsight.new(
+      	episode = Article.new(
           :name => episode.css("Title").text,
           :free => false,
-          :medium => Article.VIDEO,
-          :published_at => episode.css("updated").text,
+          :medium => Article::VIDEO,
+          :supplier => Article::PLURALSIGHT,
           :description => episode.css("Description").text,
           :video_link=> "http://pluralsight.com/training/Courses/TableOfContents/"+episode.css("Name").text)
         episode.save

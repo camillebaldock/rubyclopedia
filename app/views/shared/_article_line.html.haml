@@ -1,0 +1,25 @@
+%li{:class=>"#{article.medium} #{article.supplier} long"}
+ =link_to article, :class => "article" do
+  %table
+   %tr
+    %td{:style=>"width:350px"}
+     =article.name
+    -if current_user
+     %td{:class=>"icon", :style=>"width:30px"}
+      -if current_user.favourites.include? article
+       &#9825;
+     %td{:class=>"icon", :style=>"width:30px"}
+      - if current_user.viewed.include? article
+       &#10003;
+    %td{:class=>"icon", :style=>"width:30px"}
+     - case article.medium
+      - when Article::VIDEO
+       &#127916;  
+      - when Article::AUDIO
+       &#9835;  
+      - when Article::COURSE
+       &#127891; 
+    %td{:style=>"color:grey; width:100px"}
+     =article.supplier
+    %td{:style=>"width:40px"}
+     = render :partial => "shared/cost_label", locals: {article: article}

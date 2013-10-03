@@ -13,6 +13,8 @@
      %h1 Rubyclopedia
     %div{:id=>"searchbox"}
      %ul{:id=>"navlist"}
+      = render "devise/menu/login_items"
+      = render "devise/menu/registration_items"
       %li
        = link_to('About', about_path)
      %form{:id=>"searchform", :action => "/articles"}

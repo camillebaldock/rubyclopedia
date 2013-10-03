@@ -1,4 +1,4 @@
-%li{:class=>"#{article.medium} #{article.type}"}
+%li{:class=>"#{article.medium} #{article.supplier}"}
  =link_to article, :class => "article" do
   %table
    %tr
@@ -6,11 +6,11 @@
      =article.name
     %td{:class=>"icon", :style=>"width:30px"}
      - case article.medium
-      - when Article.VIDEO
+      - when Article::VIDEO
        &#127916;  
-      - when Article.AUDIO
+      - when Article::AUDIO
        &#9835;  
-      - when Article.COURSE
+      - when Article::COURSE
        &#127891;  
     %td{:style=>"color:grey"}
-     =article.type
+     =article.supplier

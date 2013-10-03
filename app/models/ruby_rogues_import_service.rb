@@ -37,9 +37,10 @@ class RubyRoguesImportService
     name_regex_matches = /RR (\d{2,3}) (.*)/.match(title) unless name_regex_matches
     name_regex_matches = /(\d{3}) \S (.*)/.match(title) unless name_regex_matches
     if name_regex_matches
-      episode = Rubyrogues.new(
+      episode = Article.new(
         :name => name_regex_matches[2],
-        :medium => Article.AUDIO,
+        :medium => Article::AUDIO,
+        :supplier => Article::RUBYROGUES,
         :supplier_id => name_regex_matches[1].to_i,
         :video_link => url,
         :published_at => doc.css('.published').text,

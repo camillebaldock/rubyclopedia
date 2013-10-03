@@ -5,15 +5,15 @@
   ="Entries about \"#{params[:search]}\""
 -else
  %h1{:style => "margin-left:20px"} All entries
- %div{:width=>"900px", :style => "margin-left:20px"}
+ %div{:width=>"900px", :style => "margin-left:20px;margin-bottom:20px"}
   %span Type
-  %a{:class => "filter down type"} Video
-  %a{:class => "filter down type"} Audio
-  %a{:class => "filter down type"} Course
+  - Article::MEDIA.each do |type|
+   %a{:class => "filter type down"} #{type}
   %span Supplier
-  - Article::ARTICLE_SUPPLIERS.each do |supplier|
-   %a{:class => "filter down supplier"} #{supplier}
- %div{:class=>"list long", :style=>"float:none"}
+  - Article::SUPPLIERS.each do |supplier|
+   %a{:class => "filter supplier down"} #{supplier}
+ %div{:class=>"list long"}
   %ul
    -@articles.each do |article|
     = render :partial => "shared/article_line", locals: {article: article}
+ = render "shared/icons"

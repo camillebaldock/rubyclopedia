@@ -16,36 +16,33 @@ class Article < ActiveRecord::Base
   include Tire::Model::Search
   include Tire::Model::Callbacks
 
-  @VIDEO = "Video"
-  @AUDIO = "Audio"
-  @TEXT = "Text"
-  @COURSE = "Course"
-
-  class << self
-    attr_reader :VIDEO, :AUDIO, :TEXT, :COURSE
-  end
-
   def self.search(params)
     tire.search(load: true) do
       query { string "*#{params[:search]}*", default_operator: "OR" } if params[:search].present?
     end
   end
 
-  attr_accessible :description, :name, :published_at, :video_link, :supplier_id, :free, :medium
-  validates_uniqueness_of :name, :scope => [:type]
+  SUPPLIERS = [CODECADEMY = 'Codecademy', 
+           CODESCHOOL = 'Codeschool', 
+           ENVYLABS = 'Envylabs', 
+           PLURALSIGHT = 'Pluralsight', 
+           RAILSCASTS = 'Railscasts', 
+           RUBYROGUES = 'Rubyrogues',
+           RUBYTAPAS = 'Rubytapas']
+  MEDIA = [AUDIO = 'Audio',
+           COURSE = 'Course',
+           VIDEO = 'Video']
+
+  validates :supplier, inclusion: {in: SUPPLIERS}
+  validates :medium, inclusion: {in: MEDIA}
+
+  letsrate_rateable "quality"
+
+  attr_accessible :description, :name, :published_at, :video_link, :supplier_id, :free, :medium, :supplier, :duration_seconds
+  validates_uniqueness_of :name, :scope => [:supplier]
   scope :recent, lambda { where("published_at >= :date", :date => 1.month.ago) }
   scope :old, lambda { where("published_at < :date", :date => 1.month.ago) }
-  scope :notcourse, lambda { where("medium != :course", :course => Article.COURSE) }
-  scope :course, lambda { where("medium = :course", :course => Article.COURSE) }
+  scope :notcourse, lambda { where("medium != :course", :course => Article::COURSE) }
+  scope :course, lambda { where("medium = :course", :course => Article::COURSE) }
 
-  ARTICLE_SUPPLIERS = []
-
-  def self.inherited subclass
-    ARTICLE_SUPPLIERS << subclass
-    super
-  end
-
-  def self.new_from_supplier supplier
-    ARTICLE_SUPPLIERS.detect{|subclass| (subclass.to_s == supplier)}.new
-  end
 end

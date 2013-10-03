@@ -1,38 +1,60 @@
 %div{:id=>"article"}
+ -if current_user
+  =hidden_field_tag 'user_id', current_user.id
+ =hidden_field_tag 'article_id', @article.id
  %div{:id=>"description"}
   %h1
    =@article.name
-  %p
+  - if current_user
+   %h3
+    = rating_for @article, "quality", :star => 5, :style=>"width:130px"
+  %p{:style=>"margin-top:30px"}
    =@article.description
-  -if @article.type == "Rubytapas" && !@article.free
-   %p
-    =link_to @article.video_link, :class=>"button right" do
-     %span Download
-  -elsif @article.medium == Article.COURSE
-   %p
-    =link_to @article.video_link, :class=>"button right" do
-     %span Go to course
-  -elsif @article.medium == Article.VIDEO
-   %p
-    =link_to @article.video_link, :class=>"button right" do
-     %span Go to video
-  -elsif @article.medium == Article.AUDIO
-   %p
-    =link_to @article.video_link, :class=>"button right" do
-     %span Go to audio
-  -else
-   =link_to @article.video_link, :class=>"button right" do
-    %span Go to article
+  - if current_user
+   %div{:style=>"margin-top:30px"}
+    %h2 Notes
+    %div{:id=>"notes"}
+     =current_user.article_notes.find_by_article_id(@article.id).andand.notes
  %div{:id=>"labels"}
   = render :partial => "shared/cost_label", locals: {article: @article}  
   %p
    -if @article.supplier_id
-    ="#{@article.type} - #{@article.supplier_id}"
+    ="#{@article.supplier} - #{@article.supplier_id}"
    -else
-    ="#{@article.type}"
+    ="#{@article.supplier}"
   %p
    - if @article.published_at
     - if @article.published_at > (Time.now - 24.hours)
      today
     - else
      ="Published #{distance_of_time_in_words(@article.published_at, Time.now)} ago"
+  -if current_user
+   %p{:style=>"margin-bottom:20px"}
+    -if current_user.favourites.include? @article
+     =link_to "Unmark as favourite", favourite_article_path(@article, type: "unfavourite"), method: :put, :class=>"pill"
+    - else
+     =link_to "Mark as favourite", favourite_article_path(@article, type: "favourite"), method: :put, :class=>"pill"
+   %p{:style=>"margin-bottom:20px"}
+    - if current_user.viewed.include? @article
+     =link_to "Unmark as viewed", viewed_article_path(@article, type: "unviewed"), method: :put, :class=>"pill"
+    - else
+     =link_to "Mark as viewed", viewed_article_path(@article, type: "viewed"), method: :put, :class=>"pill"
+  -if @article.supplier == Article::RUBYTAPAS && !@article.free
+   %p
+    =link_to @article.video_link, :class=>"pill" do
+     %span Download
+  -elsif @article.medium == Article::COURSE
+   %p
+    =link_to @article.video_link, :class=>"pill" do
+     %span Go to course
+  -elsif @article.medium == Article::VIDEO
+   %p
+    =link_to @article.video_link, :class=>"pill" do
+     %span Go to video
+  -elsif @article.medium == Article::AUDIO
+   %p
+    =link_to @article.video_link, :class=>"pill" do
+     %span Go to audio
+  -else
+   =link_to @article.video_link, :class=>"pill" do
+    %span Go to article

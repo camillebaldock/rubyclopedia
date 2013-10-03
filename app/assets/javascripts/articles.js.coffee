@@ -7,6 +7,20 @@ $("input").keypress( (event) ->
     $("form").submit();
 );
 
+$(document).ready -> 
+     user_id = $("#user_id").val()
+     article_id = $("#article_id").val()
+     $('#notes').editable('/notes/'+article_id+'/'+user_id, { 
+         type      : 'autogrow',
+         cancel    : 'Cancel',
+         submit    : 'Save',
+         tooltip   : 'Click to edit...',
+         autogrow : {
+          lineHeight : 16,
+          maxHeight  : 512
+         }
+     });
+
 $(document).on('click', '.filter', ( ->
     $(this).toggleClass("down");
     suppliers = $.map($(".down.supplier"), (el) ->
