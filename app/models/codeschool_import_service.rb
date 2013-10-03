@@ -15,7 +15,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 require 'open-uri'
 class CodeschoolImportService
 
-  def process_screencasts url = "http://www.codeschool.com/code_tv?filters%5Bpath%5D=ruby"
+  def process_screencasts url = "https://www.codeschool.com/code_tv?filters%5Bpath%5D=ruby"
   	doc=Nokogiri::HTML(open(url))
     screencasts = doc.css('h4.bucket-header b a')
     hydra = Typhoeus::Hydra.new
@@ -30,7 +30,7 @@ class CodeschoolImportService
     end
   end
 
-  def process_courses url = "http://www.codeschool.com/paths/ruby"
+  def process_courses url = "https://www.codeschool.com/paths/ruby"
     doc=Nokogiri::HTML(open(url))
     rubycourses = doc.css('div.path-ruby')
     courses = rubycourses.css('article.course')
