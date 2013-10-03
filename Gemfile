@@ -21,6 +21,7 @@ gem 'pg'
 gem 'rspec'
 gem 'rspec-rails', :group => [:development, :test, :cucumber]
 gem 'fakeweb', :group => :test
+gem 'coveralls', require: false
 
 group :cucumber do
   gem 'gherkin'
