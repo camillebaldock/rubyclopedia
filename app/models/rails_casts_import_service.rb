@@ -27,7 +27,7 @@ class RailsCastsImportService
     duration_regex_matches = /(\d{1,2}):(\d{2})/.match(json_episode["duration"])
     duration_in_seconds = duration_regex_matches[1].to_i*60 + duration_regex_matches[2].to_i
     episode = Article.new(
-        :supplier_id => json_episode["position"],
+        :supplier_ref => json_episode["position"],
         :free => !json_episode["pro"],
         :name => json_episode["name"],
         :medium => Article::VIDEO,

@@ -38,7 +38,7 @@ class Article < ActiveRecord::Base
 
   letsrate_rateable "quality"
 
-  attr_accessible :description, :name, :published_at, :video_link, :supplier_id, :free, :medium, :supplier, :duration_seconds
+  attr_accessible :description, :name, :published_at, :video_link, :supplier_ref, :free, :medium, :supplier, :duration_seconds
   validates_uniqueness_of :name, :scope => [:supplier]
   scope :recent, lambda { where("published_at >= :date", :date => 1.month.ago) }
   scope :old, lambda { where("published_at < :date", :date => 1.month.ago) }

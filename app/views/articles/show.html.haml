@@ -18,8 +18,8 @@
  %div{:id=>"labels"}
   = render :partial => "shared/cost_label", locals: {article: @article}  
   %p
-   -if @article.supplier_id
-    ="#{@article.supplier} - #{@article.supplier_id}"
+   -if @article.supplier_ref
+    ="#{@article.supplier} - #{@article.supplier_ref}"
    -else
     ="#{@article.supplier}"
   %p

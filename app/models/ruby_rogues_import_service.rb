@@ -41,7 +41,7 @@ class RubyRoguesImportService
         :name => name_regex_matches[2],
         :medium => Article::AUDIO,
         :supplier => Article::RUBYROGUES,
-        :supplier_id => name_regex_matches[1].to_i,
+        :supplier_ref => name_regex_matches[1].to_i,
         :video_link => url,
         :published_at => doc.css('.published').text,
         :free=>true)

@@ -34,7 +34,7 @@ class EnvylabsImportService
   def process_xml_file episodes
     episodes.each do |e|
       episode = Article.new(
-        :supplier_id => e.css('id').text,
+        :supplier_ref => e.css('id').text,
         :published_at => e.css('updated-at').text,
         :description => e.css('summary').text,
         :name => e.css('title').text,
