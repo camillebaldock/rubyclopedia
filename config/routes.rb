@@ -6,8 +6,7 @@ Rubyclopedia::Application.routes.draw do
   root :to => "home#index"
 
   resources :articles do
-    put :favourite, on: :member
-    put :viewed, on: :member
+    put :updateStatus, on: :member
   end
 
   post '/notes/:article_id/:user_id', to: 'notes#update'

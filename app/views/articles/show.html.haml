@@ -31,14 +31,14 @@
   -if current_user
    %p{:style=>"margin-bottom:20px"}
     -if current_user.favourites.include? @article
-     =link_to "Unmark as favourite", favourite_article_path(@article, type: "unfavourite"), method: :put, :class=>"pill"
+     =link_to "Unmark as favourite", updateStatus_article_path(@article, type: "unfavourite"), method: :put, :class=>"pill"
     - else
-     =link_to "Mark as favourite", favourite_article_path(@article, type: "favourite"), method: :put, :class=>"pill"
+     =link_to "Mark as favourite", updateStatus_article_path(@article, type: "favourite"), method: :put, :class=>"pill"
    %p{:style=>"margin-bottom:20px"}
     - if current_user.viewed.include? @article
-     =link_to "Unmark as viewed", viewed_article_path(@article, type: "unviewed"), method: :put, :class=>"pill"
+     =link_to "Unmark as viewed", updateStatus_article_path(@article, type: "unviewed"), method: :put, :class=>"pill"
     - else
-     =link_to "Mark as viewed", viewed_article_path(@article, type: "viewed"), method: :put, :class=>"pill"
+     =link_to "Mark as viewed", updateStatus_article_path(@article, type: "viewed"), method: :put, :class=>"pill"
   -if @article.supplier == Article::RUBYTAPAS && !@article.free
    %p
     =link_to @article.video_link, :class=>"pill" do

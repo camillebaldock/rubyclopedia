@@ -9,7 +9,7 @@ rubyclopedia
 
 [![Coverage Status](https://coveralls.io/repos/camilleldn/rubyclopedia/badge.png)](https://coveralls.io/r/camilleldn/rubyclopedia)
 
-[![Best Practices](http://railsbp.com/camilleldn/rubyclopedia.png)](http://railsbp.com/camilleldn/rubyclopedia)
+[![Code Climate](https://codeclimate.com/github/camilleldn/rubyclopedia.png)](https://codeclimate.com/github/camilleldn/rubyclopedia)
 
 [![Coderwall Endorse](http://api.coderwall.com/camilleldn/endorsecount.png)](http://coderwall.com/camilleldn)
 
