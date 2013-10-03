@@ -39,7 +39,13 @@ entypo.ttf: entypo-27ac74d486fd4d7507057f3720231b39.ttf
 entypo/index.ttf: entypo-27ac74d486fd4d7507057f3720231b39.ttf
 entypo.woff: entypo-b742812e9193b21bde39655380539f96.woff
 entypo/index.woff: entypo-b742812e9193b21bde39655380539f96.woff
-application.js: application-4892977a61f6322ebfeb274e0dc45c4c.js
-application/index.js: application-4892977a61f6322ebfeb274e0dc45c4c.js
-application.css: application-63f60ea1a546c0d17712ba6be2af24dd.css
-application/index.css: application-63f60ea1a546c0d17712ba6be2af24dd.css
+star-half.png: star-half-f9dac1a52861f6219d44fed292c7088e.png
+star-half/index.png: star-half-f9dac1a52861f6219d44fed292c7088e.png
+star-off.png: star-off-dfebca9e767f3d82d64f73a650882a74.png
+star-off/index.png: star-off-dfebca9e767f3d82d64f73a650882a74.png
+star-on.png: star-on-5f1bbca2093b22e1d0a6f907600c106b.png
+star-on/index.png: star-on-5f1bbca2093b22e1d0a6f907600c106b.png
+application.js: application-37fb7a22c17f5374a2016da62a52765e.js
+application/index.js: application-37fb7a22c17f5374a2016da62a52765e.js
+application.css: application-46a0017fdf4410ff82c60a6525894ab1.css
+application/index.css: application-46a0017fdf4410ff82c60a6525894ab1.css
