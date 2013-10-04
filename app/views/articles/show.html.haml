@@ -5,9 +5,6 @@
  %div{:id=>"description"}
   %h1
    =@article.name
-  - if current_user
-   %h3
-    = rating_for @article, "quality", :star => 5, :style=>"width:130px"
   %p{:style=>"margin-top:30px"}
    =@article.description
   - if current_user
