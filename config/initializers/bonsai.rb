@@ -7,5 +7,5 @@ if ENV['BONSAI_INDEX_URL']
   end
   BONSAI_INDEX_NAME = bonsai_uri.path[1..-1]
 else
-  BONSAI_INDEX_NAME = "my_index"
+  BONSAI_INDEX_NAME = "rubyclopedia"
 end
