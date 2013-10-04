@@ -41,20 +41,20 @@
      =link_to "Mark as viewed", updateStatus_article_path(@article, type: "viewed"), method: :put, :class=>"pill"
   -if @article.supplier == Article::RUBYTAPAS && !@article.free
    %p
-    =link_to @article.video_link, :class=>"pill" do
+    =link_to @article.video_link, :class=>"pill", :target => "_blank" do
      %span Download
   -elsif @article.medium == Article::COURSE
    %p
-    =link_to @article.video_link, :class=>"pill" do
+    =link_to @article.video_link, :class=>"pill", :target => "_blank" do
      %span Go to course
   -elsif @article.medium == Article::VIDEO
    %p
-    =link_to @article.video_link, :class=>"pill" do
+    =link_to @article.video_link, :class=>"pill", :target => "_blank" do
      %span Go to video
   -elsif @article.medium == Article::AUDIO
    %p
-    =link_to @article.video_link, :class=>"pill" do
+    =link_to @article.video_link, :class=>"pill", :target => "_blank" do
      %span Go to audio
   -else
-   =link_to @article.video_link, :class=>"pill" do
+   =link_to @article.video_link, :class=>"pill", :target => "_blank" do
     %span Go to article
