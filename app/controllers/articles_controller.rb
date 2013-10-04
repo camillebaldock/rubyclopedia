@@ -15,9 +15,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 class ArticlesController < ApplicationController
   def index
     if params[:search]
-      p params[:search]
       @articles = Article.search(params)
-      p @articles
     else
       @articles = Article.order('published_at DESC')
     end
