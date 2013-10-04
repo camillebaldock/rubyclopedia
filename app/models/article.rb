@@ -36,8 +36,6 @@ class Article < ActiveRecord::Base
   validates :supplier, inclusion: {in: SUPPLIERS}
   validates :medium, inclusion: {in: MEDIA}
 
-  letsrate_rateable "quality"
-
   attr_accessible :description, :name, :published_at, :video_link, :supplier_ref, :free, :medium, :supplier, :duration_seconds
   validates_uniqueness_of :name, :scope => [:supplier]
   validates :name, presence: true, allow_blank: false
