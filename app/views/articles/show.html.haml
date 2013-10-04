@@ -11,7 +11,7 @@
    %div{:style=>"margin-top:30px"}
     %h2 Notes
     %div{:id=>"notes"}
-     =h(current_user.article_notes.find_by_article_id(@article.id).andand.notes).gsub("\n", "<br>").html_safe %>
+     =h(current_user.article_notes.find_by_article_id(@article.id).andand.notes).gsub('\n', '<br>').html_safe
  %div{:id=>"labels"}
   = render :partial => "shared/cost_label", locals: {article: @article}  
   %p
