@@ -40,6 +40,7 @@ class Article < ActiveRecord::Base
 
   attr_accessible :description, :name, :published_at, :video_link, :supplier_ref, :free, :medium, :supplier, :duration_seconds
   validates_uniqueness_of :name, :scope => [:supplier]
+  validates :name, presence: true, allow_blank: false
   scope :recent, lambda { where("published_at >= :date", :date => 1.month.ago) }
   scope :old, lambda { where("published_at < :date", :date => 1.month.ago) }
   scope :notcourse, lambda { where("medium != :course", :course => Article::COURSE) }
