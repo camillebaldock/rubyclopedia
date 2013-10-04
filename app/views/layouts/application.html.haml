@@ -13,10 +13,10 @@
      %h1 Rubyclopedia
     %div{:id=>"searchbox"}
      %ul{:id=>"navlist"}
-      = render "devise/menu/login_items"
-      = render "devise/menu/registration_items"
       %li
        = link_to('About', about_path)
+      = render "devise/menu/login_items"
+      = render "devise/menu/registration_items"
      %form{:id=>"searchform", :action => "/articles"}
       = text_field_tag :search, params[:search], autocomplete: :off, placeholder: 'Search'
    = yield
