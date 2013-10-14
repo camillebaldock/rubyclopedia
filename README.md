@@ -24,3 +24,5 @@ Website to get the latest Ruby courses, articles, videos and podcasts from the f
 - RailsCasts
 - RubyTapas
 - RubyRogues
+
+Work in progress: add crowd-source quality ratings and difficuly ratings to entries
