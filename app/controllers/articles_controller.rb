@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
     if params[:search]
       @articles = Article.search(params)
     else
-      @articles = Article.where("published_at is not null").order('published_at DESC')
+      @articles = Article.order('published_at DESC')
     end
     respond_to do |format|
       format.html # index.html.erb
