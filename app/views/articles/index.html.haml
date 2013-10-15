@@ -13,6 +13,9 @@
  %span Supplier
  - Article::SUPPLIERS.each do |supplier|
   %a{:class => "filter supplier down"} #{supplier}
+ %span Cost
+ %a{:class => "filter cost down"} Free
+ %a{:class => "filter cost down"} Paid
 %div{:class=>"list long"}
  %ul
   -@articles.each do |article|

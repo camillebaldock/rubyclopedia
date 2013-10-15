@@ -29,8 +29,12 @@ $(document).on('click', '.filter', ( ->
     types = $.map($(".down.type"), (el) ->
       el.text
     )
+    costs = $.map($(".down.cost"), (el) ->
+      el.text
+    )
     $("li.long").hide();
     $.each suppliers, (supplierIndex) ->
       $.each types, (typeIndex) ->
-        $("." + suppliers[supplierIndex] + "." + types[typeIndex]).show()
+        $.each costs, (costIndex) ->
+          $("." + suppliers[supplierIndex] + "." + types[typeIndex] + "." + costs[costIndex]).show()
 ));

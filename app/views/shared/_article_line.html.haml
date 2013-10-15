@@ -1,4 +1,5 @@
-%li{:class=>"#{article.medium} #{article.supplier} long"}
+- cost_class = article.free ? "Free" : "Paid"
+%li{:class=>"#{article.medium} #{article.supplier} #{cost_class} long"}
  =link_to article, :class => "article" do
   %table
    %tr
