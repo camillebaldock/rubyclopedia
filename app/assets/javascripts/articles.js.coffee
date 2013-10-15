@@ -33,8 +33,14 @@ $(document).on('click', '.filter', ( ->
       el.text
     )
     $("li.long").hide();
-    $.each suppliers, (supplierIndex) ->
-      $.each types, (typeIndex) ->
-        $.each costs, (costIndex) ->
-          $("." + suppliers[supplierIndex] + "." + types[typeIndex] + "." + costs[costIndex]).show()
+    s = 0
+    while s < suppliers.length
+      t = 0
+      while t < types.length
+        c = 0
+        while c < costs.length
+          $("." + suppliers[s] + "." + types[t] + "." + costs[c]).show();
+          c++
+        t++
+      s++
 ));
