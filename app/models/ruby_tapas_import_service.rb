@@ -32,7 +32,7 @@ class RubyTapasImportService
     end
 
     user = Settings.rubytapas.andand.user || ENV['RUBYTAPAS_USER']
-    password = Settings.rubytapas.andand.user || ENV['RUBYTAPAS_PASSWORD']
+    password = Settings.rubytapas.andand.password || ENV['RUBYTAPAS_PASSWORD']
     feed=Nokogiri::XML(open(feed_url, :http_basic_authentication=>[user, password]))
     feed.xpath('/rss/channel/item').each do |item|
       title = item.at_xpath('./title').text
