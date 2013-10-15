@@ -13,6 +13,9 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 class HomeController < ApplicationController
+  
+  caches_action :index
+
   def index
     @articles = Article.notcourse.find(:all, :conditions => ['published_at is not null'], :order => "published_at desc", :limit => 5)
     @courses = Article.course.find(:all).sample(5)
