@@ -14,9 +14,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 class ArticlesController < ApplicationController
 
-  caches_action :index
-  caches_action :show
-
   def index
     if params[:search]
       @articles = Article.search(params)

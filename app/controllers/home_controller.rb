@@ -14,14 +14,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 class HomeController < ApplicationController
   
-  caches_action :index
-
   def index
-    @articles = Article.notcourse.find(:all, :conditions => ['published_at is not null'], :order => "published_at desc", :limit => 5)
-    @courses = Article.course.find(:all).sample(5)
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @articles }
-    end
   end
 end

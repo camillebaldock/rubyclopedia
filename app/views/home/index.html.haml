@@ -6,20 +6,20 @@
  %p{:style => "margin-left:50px"} - mark entries as viewed
  %p{:style => "margin-left:50px"} - keep notes on the different Ruby resources listed in the Rubyclopedia
 
-%div{:id => "article_stats"}
- %h1
-  ="#{Article.count} entries"
- %a{:href => articles_path}
-  See full list of entries
-
-%div{:id=>"home"}
- %div{:class=>"list"}
-  %h1 Most recent entries
-  %ul
-   -@articles.each do |article|
-    = render :partial => "shared/short_article_line", locals: {article: article}
- %div{:class=>"list"}
-  %h1 Courses
-  %ul
-   -@courses.each do |article|
-    = render :partial => "shared/short_article_line", locals: {article: article}
+-cache do
+ %div{:id => "article_stats"}
+  %h1
+   ="#{Article.count} entries"
+  %a{:href => articles_path}
+   See full list of entries 
+ %div{:id=>"home"}
+  %div{:class=>"list"}
+   %h1 Most recent entries
+   %ul
+    -Article.notcourse.find(:all, :conditions => ['published_at is not null'], :order => "published_at desc", :limit => 5).each do |article|
+     = render :partial => "shared/short_article_line", locals: {article: article}
+  %div{:class=>"list"}
+   %h1 Courses
+   %ul
+    -Article.course.find(:all).sample(5).each do |article|
+     = render :partial => "shared/short_article_line", locals: {article: article}

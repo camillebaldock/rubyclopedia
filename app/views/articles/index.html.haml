@@ -16,8 +16,9 @@
  %span Cost
  %a{:class => "filter cost down"} Free
  %a{:class => "filter cost down"} Paid
-%div{:class=>"list long"}
- %ul
-  -@articles.each do |article|
-   = render :partial => "shared/article_line", locals: {article: article}
-= render "shared/icons"
+-cache do
+ %div{:class=>"list long"}
+  %ul
+   -@articles.each do |article|
+    = render :partial => "shared/article_line", locals: {article: article}
+ = render "shared/icons"
