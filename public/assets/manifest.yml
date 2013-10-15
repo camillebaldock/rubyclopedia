@@ -45,8 +45,8 @@ star-off.png: star-off-dfebca9e767f3d82d64f73a650882a74.png
 star-off/index.png: star-off-dfebca9e767f3d82d64f73a650882a74.png
 star-on.png: star-on-5f1bbca2093b22e1d0a6f907600c106b.png
 star-on/index.png: star-on-5f1bbca2093b22e1d0a6f907600c106b.png
-application.js: application-3c2f81e871993a9b51a3ee5d4e5ebf51.js
-application/index.js: application-3c2f81e871993a9b51a3ee5d4e5ebf51.js
+application.js: application-6c544da2a485d8e88ef7275702e0db1b.js
+application/index.js: application-6c544da2a485d8e88ef7275702e0db1b.js
 application.css: application-daa947301221ca46d2a5a5c917cf7f0e.css
 application/index.css: application-daa947301221ca46d2a5a5c917cf7f0e.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
