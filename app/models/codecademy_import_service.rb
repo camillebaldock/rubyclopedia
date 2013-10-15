@@ -14,25 +14,19 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 require 'open-uri'
 class CodecademyImportService
-
-  def process_json_file json_file = "http://www.codecademy.com/tracks/ruby.json"
-    episodes_json = open(json_file)
-    parsed_json = ActiveSupport::JSON.decode(episodes_json)
-    parsed_json["units"].each do |units_json|
-      units_json["courses"].each do |episode_json|
-        create_from_json(episode_json)
-      end
-    end
-  end
-
-  def create_from_json json_episode
-    episode = Article.new(
+  def process_courses url = "http://www.codecademy.com/tracks/ruby"
+    doc=Nokogiri::HTML(open(url))
+    courses = doc.css('a.course-item')
+    courses.each do |course|
+      episode = Article.new(
         :free => true,
         :supplier => Article::CODECADEMY,
-        :name => json_episode["name"],
-        :description => json_episode["entry"],
+        :name => course.css('h4.course-item__title').text.strip,
+        :description => course.css('p.course-item__entry').text.strip,
         :medium => Article::COURSE,
-        :video_link => json_episode["url"])
-    episode.save
+        :video_link => course.attr('href'))
+      p episode
+      episode.save
+    end
   end
 end

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://www.codecademy.com/tracks/ruby -->
+<html class=" cc-js cc-history cc-borderimage cc-cssanimations cc-localstorage cc-cssscrollbar" dir="ltr" lang="en" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./codecademy_files/cb=gapi.loaded_0" async=""></script><script id="facebook-jssdk" async="" src="./codecademy_files/all.js"></script><script type="text/javascript" async="" src="./codecademy_files/plusone.js" gapi_processed="true"></script><script type="text/javascript" src="./codecademy_files/userfox-1.2.3.js" async=""></script><script type="text/javascript" async="" src="./codecademy_files/ga.js"></script><script>
+  // Google Analytics
+  var _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-25136408-1']);
+  _gaq.push(['_trackPageview']);
+
+  // the flag is set in registration_controller to track signup event in GA
+    _gaq.push(['_setCustomVar', 1, 'Registered', 'Yes', 1 ]);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  // chartbeat
+  var _sf_startpt=(new Date()).getTime();
+
+  // Generic
+  var root_url = "http://www.codecademy.com/";
+
+  // CCDATA
+  window.CCDATA = {};
+  CCDATA.env = 'production'
+  CCDATA.asset_host = ''
+
+    CCDATA.current_user = {"_id":"4f148084529eda000100706b","url":"http%3A%2F%2Fwww.codecademy.com%2Fusers%2Fmademoisellegeek","username":"mademoisellegeek","handle":"Camille%20Baldock","email":"mademoisellegeek42%40gmail.com","name":"Camille%20Baldock","profile_image_url":"http%3A%2F%2Fs3.amazonaws.com%2Fcodecademy-production%2Fprofile_thumbnail%2F51ba62bd52f863b5830004e9_173439343.jpg","points":1221,"total_points":1221,"roles":[],"enabled_experiments":["groups-first-batch","composer-release"],"deleted":false};
+    CCDATA.current_user.authentication_token = "KxVztQrQFThVjtYnEYmr"
+    CCDATA.API_HOST = '/api';
+
+
+    // userfox
+
+    var _ufq = _ufq || [];
+    _ufq.push(['init', {
+      email: "mademoisellegeek42@gmail.com",
+      clientId: "3v4qjhmd8399e6gq18h3diks2",
+      signature: "d55a55f3401dcedb29ba6e96b66e28b1736d0759d78fb7c375f2425ce30c39f2"
+    }]);
+
+    // passing data to userfox:
+    // _ufq.push([cmd, data, callback (optional)], [cmd, data])
+    _ufq.push(['track', {
+      course: {"_id":"50cf3d56531d6973ce0000f1","api_key_placeholder":null,"api_provider":null,"avg_user_rating":4.307104752667313,"classification":"lesson","created_at":"2012-12-17T10:42:14-05:00","domain":"freestyle","down_votes":235,"entry":"HTTP is the foundation of all communication on the Internet. In this course, we'll cover how it works and how to use it to request information from a server. Let's get started!","feedback_total":72,"is_project":false,"language_id":"4f214e5f216ecf195c44c194","level":"Beginner","locale":"en","mode_override":null,"name":"How to use APIs with JavaScript","num_exercises":19,"num_published_exercises":19,"num_published_sections":4,"num_readiness_feedbacks":101,"num_sections":4,"num_user_ratings":4124,"published":true,"published_at":null,"rating":730.644028785012,"read_feedback_total":25,"readiness":74.80851063829788,"recommended":false,"requested_unit_id":null,"review_status":"approved","roles":{"manager":[],"editor":[],"collaborator":[]},"slug":"javascript-beginner-en-EID4t","source_id":null,"submitted_at":"2013-01-04T21:11:50-05:00","total_user_rating":17762.5,"up_votes":967,"updated_at":"2013-04-04T13:44:22-04:00","user_id":"4f04f1847057120003006c12"},
+      course_progress: {"_id":"5137a59cb7233737237f6c55","c":false,"c_id":"50cf3d56531d6973ce0000f1","created_at":"2013-03-06T15:22:52-05:00","current_curriculum_id":"5122e3cbb5827b93e2000865","e":["50cf3d57990f6e049b0000d3"],"owner_id":"4f148084529eda000100706b","owner_type":"User","s":[],"se":[],"ss":[],"st":false,"updated_at":"2013-03-06T15:22:52-05:00"},
+      name: "Camille Baldock",
+      locale: "en",
+      auth_token: "KxVztQrQFThVjtYnEYmr",
+      signup_date: "2012-01-16 14:54:44 -0500"
+    }]);
+
+    (function() {
+      var ufs = document.createElement("script");
+      ufs.type='text/javascript'
+      // expires-at +1.year
+      // stable version: /userfox-stable.js
+      ufs.src=document.location.protocol+'//d2y71mjhnajxcg.cloudfront.net/js/userfox-1.2.3.js'
+      ufs.async=true;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ufs, s);
+    })();
+
+</script>
+
+
+<title>Ruby | Codecademy</title>
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http="{:equiv=&gt;&quot;X-UA-Compatible&quot;}">
+<meta content="Ruby is a powerful yet beginner-friendly language used for professional web apps all over the world." name="description">
+<link href="http://www.codecademy.com/favicon.ico" rel="shortcut icon">
+<link href="http://www.codecademy.com/blog.rss" rel="alternate" title="Codecademy Blog" type="application/rss+xml">
+<meta content="width=985, initial-scale=0.75, maximum-scale=1.0" name="viewport">
+<link href="./codecademy_files/codecademy.html" rel="canonical">
+
+<meta property="fb:app_id" content="212500508799908">
+<meta property="og:url" content="http://www.codecademy.com/tracks/ruby">
+<meta property="og:site_name" content="Codecademy">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Ruby">
+  <meta property="og:description" content="Ruby is a powerful yet beginner-friendly language used for professional web apps all over the world.">
+
+
+<meta content="authenticity_token" name="csrf-param">
+<meta content="kGm2oalIkI4LPk8W4uXrqY7imrpiTReZxK32LPfqVUM=" name="csrf-token">
+  <link href="./codecademy_files/application-ltr-e4ab2dcbfa25ae85e7a2e9950425a9ee.css" media="screen" rel="stylesheet" type="text/css">
+
+<link href="./codecademy_files/css" media="screen" rel="stylesheet" type="text/css">
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {filter: none;}
+  </style>
+<![endif]-->
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+.fbpluginrecommendationsbarleft{left:10px}
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body class="curricula show signed_in curricula curricula-show" style="zoom: 1;">
+<div id="wrapper">
+<div id="overlay">
+</div>
+
+
+<noscript>
+  &lt;h4 style="background: #fffacd; margin: 0; padding: 15px; text-align: center;"&gt;
+    For a better experience on Codecademy, &lt;a target="_blank" href="http://enable-javascript.com/"&gt;enable JavaScript in your browser&lt;/a&gt;.
+  &lt;/h4&gt;
+</noscript>
+
+<header id="header">
+  <div class="container">
+    <h1 class="logo">
+      <a href="http://www.codecademy.com/">
+        <div class="ui-header__logo">Codecademy</div>
+</a>    </h1>
+
+
+      <nav class="left">
+        <ul class="cf">
+          <li>
+            <a href="http://www.codecademy.com/learn" class="">Learn</a>
+          </li>
+
+
+            <li>
+              <a href="http://www.codecademy.com/create" class="">Teach</a>
+            </li>
+        </ul>
+      </nav>
+
+      <nav class="right">
+        <ul class="cf">
+            <li id="notifications" class="btn-group">
+              <a href="http://www.codecademy.com/tracks/ruby#" class="dropdown-trigger dropdown-toggle" data-toggle="dropdown">
+  <span class="arrow"></span>
+  <span class="icon-notification"></span>
+  <span class="unread-notification-count" style="display: none;">0</span>
+</a>
+<div class="dropdown-container dropdown-menu">
+  <h4>Notifications</h4>
+  <ul class="feed-list"></ul>
+  <div class="ajax-loader-large"></div>
+</div>
+
+            </li>
+            <li>
+              <a href="http://www.codecademy.com/users/mademoisellegeek" class="user-stats">
+                <p>
+                    <strong>0</strong> points today
+                </p>
+                <p><strong>0</strong> day streak</p>
+</a>            </li>
+
+            <li class="cc-button-group btn-group">
+  <a href="http://www.codecademy.com/tracks/ruby#" class="dropdown-toggle" data-toggle="dropdown">
+    <span class="arrow"></span>
+    <img alt="Camille Baldock" class="avatar" src="./codecademy_files/51ba62bd52f863b5830004e9_173439343.jpg">
+    Me
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="http://www.codecademy.com/users/mademoisellegeek">View my profile</a>
+    </li>
+    <li>
+      <a href="http://www.codecademy.com/users/4f148084529eda000100706b/edit">Edit account settings</a>
+    </li>
+    <li><a href="http://www.codecademy.com/help" id="help-nav">Help</a></li>
+    <li><a href="http://www.codecademy.com/sign_out">Sign Out</a></li>
+  </ul>
+</li>
+
+
+        </ul>
+      </nav>
+
+
+  </div>
+
+  <div id="notices"></div>
+</header>
+
+<div class="full-width-container">
+
+<div class="container scoped-changes" id="curriculum-overview">
+
+  <div class="cf" id="current-curriculum" style="position: fixed; top: 100px;">
+
+    <div class="curricula__item ui-card ui-card--solo">
+
+<div class="curricula__item__section-logo">
+  <div class="curricula__item__logo">
+      <div class="curricula__item__logo-image curricula__item__logo--generic curricula__item__logo--ruby"></div>
+  </div>
+</div>
+
+<div class="curricula__item__section-main curricula__item__panel">
+    <a href="./codecademy_files/codecademy.html" class="curricula__item__title ui-card__title">
+      Ruby
+</a>
+
+  <div class="curricula__item__description">
+    Ruby is a powerful yet beginner-friendly language used for professional web apps all over the world.
+  </div>
+</div>
+
+<div class="curricula__item__section-start curricula__item__panel">
+  <div class="curricula__item__start-now">
+      <a href="http://www.codecademy.com/tracks/ruby/resume">
+          <div class="ui-button ui-button--medium ui-button--gray--on-light ui-button__forward-arrow--white">
+    Finished
+  </div>
+
+</a>  </div>
+</div>
+
+</div>
+
+
+      <a href="http://www.codecademy.com/glossary/ruby" class="curriculum__glossary-button">
+  Ruby Glossary
+</a>
+  </div>
+
+  <div id="curriculum-units" class="ui-counter">
+      <div class="unit-item">
+  <h3 class="unit-item__title">
+    Introduction to Ruby
+  </h3>
+  <content>
+    <a href="http://www.codecademy.com/courses/5059d7644188390002000d9a/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="5059d7644188390002000d9a">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Introduction to Ruby
+    </h4>
+    <p class="course-item__entry">
+      This tutorial will introduce you to Ruby, an object-oriented scripting language you can use on its own or as part of the Ruby on Rails web framework.
+    </p>
+  </div>
+</a>
+    <a href="http://www.codecademy.com/courses/5059e69c418839000200f653/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="5059e69c418839000200f653">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Putting the Form in Formatter
+    </h4>
+    <p class="course-item__entry">
+      Now that you know a little bit of Ruby, let's put together your first project! In this one, we'll write a small program that will format a user's input.
+    </p>
+  </div>
+</a>
+  </content>
+</div>
+
+      <div class="unit-item">
+  <h3 class="unit-item__title">
+    Control Flow in Ruby
+  </h3>
+  <content>
+    <a href="http://www.codecademy.com/courses/5059eb0b02ef46000201391d/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="5059eb0b02ef46000201391d">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Control Flow in Ruby
+    </h4>
+    <p class="course-item__entry">
+      Now that we know how to write simple programs, let's learn how to write more complex programs that can respond to user input.
+    </p>
+  </div>
+</a>
+    <a href="http://www.codecademy.com/courses/505a1a519189a50002040605/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="505a1a519189a50002040605">
+  <div class="course-item__progress-indicator"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Thith Meanth War!
+    </h4>
+    <p class="course-item__entry">
+      Using control flow, we can modify a user's input and return it to them. In this project, we'll make them sound like Daffy Duck!
+    </p>
+  </div>
+</a>
+  </content>
+</div>
+
+      <div class="unit-item">
+  <h3 class="unit-item__title">
+    Looping with Ruby
+  </h3>
+  <content>
+    <a href="http://www.codecademy.com/courses/505a2d545a9b1c000200097b/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="505a2d545a9b1c000200097b">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Loops &amp; Iterators
+    </h4>
+    <p class="course-item__entry">
+      Using loops and iterators, Ruby can automate repetitive tasks for you quickly and easily.
+    </p>
+  </div>
+</a>
+    <a href="http://www.codecademy.com/courses/505a610a8ff9c90002006c9d/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="505a610a8ff9c90002006c9d">
+  <div class="course-item__progress-indicator"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Redacted!
+    </h4>
+    <p class="course-item__entry">
+      In this project we'll make a program that searches a string of text for your name and, if it finds it, replaces it with the word "redacted." Just like that, you're a spy!
+    </p>
+  </div>
+</a>
+  </content>
+</div>
+
+      <div class="unit-item">
+  <h3 class="unit-item__title">
+    Arrays and Hashes
+  </h3>
+  <content>
+    <a href="http://www.codecademy.com/courses/505a6049f61e6e0002006a33/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="505a6049f61e6e0002006a33">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Data Structures
+    </h4>
+    <p class="course-item__entry">
+      You already know a little bit about arrays. This lesson will teach you more about arrays, about a new data structure called a hash, and how Ruby can iterate over both to help you build better programs.
+    </p>
+  </div>
+</a>
+    <a href="http://www.codecademy.com/courses/505a59b28ff9c90002002e98/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="505a59b28ff9c90002002e98">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Create a Histogram
+    </h4>
+    <p class="course-item__entry">
+      In this project, we'll write a program that reads a block of text and tells us how many times each word appears.
+    </p>
+  </div>
+</a>
+  </content>
+</div>
+
+      <div class="unit-item">
+  <h3 class="unit-item__title">
+    Blocks and Sorting
+  </h3>
+  <content>
+    <a href="http://www.codecademy.com/courses/5060ec19567efa0002007ab1/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="5060ec19567efa0002007ab1">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Methods, Blocks, &amp; Sorting
+    </h4>
+    <p class="course-item__entry">
+      In this lesson, we'll cover how to define our own methods in Ruby, as well as how to use blocks to develop powerful sorting algorithms.
+    </p>
+  </div>
+</a>
+    <a href="http://www.codecademy.com/courses/5065d5adab231f00020c6386/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="5065d5adab231f00020c6386">
+  <div class="course-item__progress-indicator"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Ordering Your Library
+    </h4>
+    <p class="course-item__entry">
+      In this project, we'll design a single Ruby method to sort large quantities of data in either ascending or descending order.
+    </p>
+  </div>
+</a>
+  </content>
+</div>
+
+      <div class="unit-item">
+  <h3 class="unit-item__title">
+    Hashes and Symbols
+  </h3>
+  <content>
+    <a href="http://www.codecademy.com/courses/50c244c94cfc4bea7500725e/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="50c244c94cfc4bea7500725e">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Hashes and Symbols
+    </h4>
+    <p class="course-item__entry">
+      As we've seen, hashes are an important Ruby data structure. Here, we'll learn about the (chunky) bacon to hashes' eggs: symbols!
+    </p>
+  </div>
+</a>
+    <a href="http://www.codecademy.com/courses/50d110306dfac6428d0020a8/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="50d110306dfac6428d0020a8">
+  <div class="course-item__progress-indicator"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      A Night at the Movies
+    </h4>
+    <p class="course-item__entry">
+      In this project, we'll use our knowledge of Ruby hashes and symbols to construct a program that displays, adds, updates, and removes movie ratings!
+    </p>
+  </div>
+</a>
+  </content>
+</div>
+
+      <div class="unit-item">
+  <h3 class="unit-item__title">
+    Refactoring
+  </h3>
+  <content>
+    <a href="http://www.codecademy.com/courses/50bcfe55ebc672ba4600046a/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="50bcfe55ebc672ba4600046a">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      The Zen of Ruby
+    </h4>
+    <p class="course-item__entry">
+      In this course, we'll look at the best practices and conventions that make Ruby unique.
+    </p>
+  </div>
+</a>
+    <a href="http://www.codecademy.com/courses/50ca2acc3f0389c437000203/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="50ca2acc3f0389c437000203">
+  <div class="course-item__progress-indicator"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      The Refactor Factory
+    </h4>
+    <p class="course-item__entry">
+      In this project, we'll use step-by-step refactoring to vastly improve the readability and structure of a program.
+    </p>
+  </div>
+</a>
+  </content>
+</div>
+
+      <div class="unit-item">
+  <h3 class="unit-item__title">
+    Blocks, Procs, and Lambdas
+  </h3>
+  <content>
+    <a href="http://www.codecademy.com/courses/50c2451c55df51ff2700732f/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="50c2451c55df51ff2700732f">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Blocks, Procs, and Lambdas
+    </h4>
+    <p class="course-item__entry">
+      In this course, we'll cover three of the most powerful aspects of the Ruby programming language: blocks, procs, and lambdas.
+    </p>
+  </div>
+</a>
+  </content>
+</div>
+
+      <div class="unit-item">
+  <h3 class="unit-item__title">
+    Object-Oriented Programming, Part I
+  </h3>
+  <content>
+    <a href="http://www.codecademy.com/courses/50c2457cd1a23fe8060072ed/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="50c2457cd1a23fe8060072ed">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Object-Oriented Programming I
+    </h4>
+    <p class="course-item__entry">
+      Ruby is an object-oriented language. In this lesson, we'll cover objects, classes, and how they're used to organize information and behavior in our programs.
+    </p>
+  </div>
+</a>
+    <a href="http://www.codecademy.com/courses/50d4b0d808e9ec9a280015d6/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="50d4b0d808e9ec9a280015d6">
+  <div class="course-item__progress-indicator"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Virtual Computer
+    </h4>
+    <p class="course-item__entry">
+      Often programmers use virtual machines to simulate real computers. While we won't be building a real VM, in this project, we'll use Ruby classes to create our own imaginary computer that stores data!
+    </p>
+  </div>
+</a>
+  </content>
+</div>
+
+      <div class="unit-item">
+  <h3 class="unit-item__title">
+    Object-Oriented Programming, Part II
+  </h3>
+  <content>
+    <a href="http://www.codecademy.com/courses/50c246481de2b06e3e0072a1/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="50c246481de2b06e3e0072a1">
+  <div class="course-item__progress-indicator course-item__progress-indicator--complete"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Object-Oriented Programming II
+    </h4>
+    <p class="course-item__entry">
+      In this lesson, we'll cover more advanced aspects of OOP in Ruby, including information hiding, modules, and mixins.
+    </p>
+  </div>
+</a>
+    <a href="http://www.codecademy.com/courses/50d4bb7f625cae3813001b8b/resume?curriculum_id=5059f8619189a5000201fbcb" class="course-item ui-card ui-card--grouped" id="50d4bb7f625cae3813001b8b">
+  <div class="course-item__progress-indicator"></div>
+  <div class="course-item__info">
+    <h4 class="course-item__title ui-counter__item ui-card__title">
+      Banking on Ruby
+    </h4>
+    <p class="course-item__entry">
+      Now that we know all about hiding information in Ruby, let's apply our new skills to write a program that can store, update, and display a bank account balance.
+    </p>
+  </div>
+</a>
+  </content>
+</div>
+
+  </div>
+
+</div>
+
+
+</div>
+</div>
+<footer id="footer">
+<div class="wrapper">
+  <div class="container">
+    <div class="about">
+      <h1>
+        <span class="logo">Codecademy</span>
+        <span class="comma">,</span>
+        teaching the world to code
+      </h1>
+      <ul>
+        <li><a href="http://www.codecademy.com/about">About Us</a></li>
+        <li><a href="http://www.codecademy.com/about/jobs">We're hiring</a></li>
+        <li><a href="http://www.codecademy.com/blog">Our Blog</a></li>
+      </ul>
+    </div>
+    <ul class="links">
+      <li>
+        <h4>Learn to Code</h4>
+        <ul>
+          <li><a href="http://www.codecademy.com/tracks/javascript"><span class="arraow">→</span> JavaScript</a></li>
+          <li><a href="http://www.codecademy.com/tracks/web"><span class="arraow">→</span> HTML/CSS</a></li>
+          <li><a href="http://www.codecademy.com/tracks/php"><span class="arraow">→</span> PHP</a></li>
+          <li><a href="http://www.codecademy.com/tracks/python"><span class="arraow">→</span> Python</a></li>
+          <li><a href="./codecademy_files/codecademy.html"><span class="arraow">→</span> Ruby</a></li>
+          <li><a href="http://www.codecademy.com/tracks/apis"><span class="arraow">→</span> APIs</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <h4>Other Programs</h4>
+        <ul>
+          <li><a href="http://www.codecademy.com/afterschool"><span class="arraow">→</span>Afterschool Programming</a></li>
+          <li><a href="http://www.codecademy.com/stories"><span class="arraow">→</span>Success Stories</a></li>
+          <li><a href="http://labs.codecademy.com/"><span class="arraow">→</span>Codecademy Labs</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <h4>Codecademy Online</h4>
+        <ul class="external">
+          <li class="twitter"><span class="icon-twitter"></span><a href="http://www.twitter.com/codecademy">Follow us on Twitter</a></li>
+          <li class="facebook"><span class="icon-facebook"></span><a href="http://www.facebook.com/codecademy">Find us on Facebook</a></li>
+          <li class="blog"><span class="icon-blog"></span><a href="http://www.codecademy.com/blog">Read our Blog</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="container secondary">
+    <ul>
+      <li><a href="http://www.codecademy.com/help">Help</a></li>
+      <li><a href="http://www.codecademy.com/policy">Privacy Policy</a></li>
+      <li><a href="http://www.codecademy.com/terms">Terms</a></li>
+      <li>Made in NYC</li>
+      <li>© 2013 Codecademy</li>
+    </ul>
+
+
+  </div>
+</div>
+
+
+</footer>
+<div class="ajax-loader offscreen"></div>
+<div class="ajax-loader-large offscreen"></div>
+<script src="./codecademy_files/common-en-68243c945b1a416a3f8e52c810ce1a4e.js" type="text/javascript"></script>
+
+  <script src="./codecademy_files/common-9d1b9fd6b8c3a29392d1cdd48e0ec53b.js" type="text/javascript"></script>
+  <script src="./codecademy_files/curriculum_show_controller-9f86330c031bb74d1fe5851b7a5cd8f8.js" type="text/javascript"></script>
+  <script src="./codecademy_files/registrations_controller-9bff036e80582caba797391654bbb8bd.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  require(['common', 'controllers/curriculum_show_controller'], function (common, controller) {
+    if (common) common.init();
+    if (controller) controller['init']();
+    
+  });
+  var registration_partial = registration_partial || false;
+  if (registration_partial) {
+    require(["controllers/registrations_controller"], function (controller) {
+      controller.init();
+    });
+  }
+  CCDATA.authenticity_token = 'kGm2oalIkI4LPk8W4uXrqY7imrpiTReZxK32LPfqVUM=';
+</script>
+
+  <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./codecademy_files/xd_arbiter.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./codecademy_files/xd_arbiter(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+  <script>
+    // Facebook
+    var FB_APP_ID = '212500508799908';
+    window.fbAsyncInit = function() {
+      var FB = (window.FB || undefined);
+      if (FB) {
+        FB.init({
+          appId      : FB_APP_ID
+        , channelUrl : window.root_url+'/channel.html'
+        , status     : true
+        , cookie     : true
+        , xfbml      : true
+        });
+      }
+    };
+
+    (function(d){
+      var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement('script'); js.id = id; js.async = true;
+      js.src = "//connect.facebook.net/en_US/all.js";
+      ref.parentNode.insertBefore(js, ref);
+    }(document));
+  </script>
+
+  <script>
+    // Overlay loader
+    var overlay = document.getElementById('overlay');
+    if (overlay && overlay.children.length > 0) {
+      overlay.style.cssText = "display: block;";
+    }
+  </script>
+
+  <!-- Qualaroo survey -->
+  <script type="text/javascript">
+    var _kiq = _kiq || [];
+    _kiq.push(['identify', '4f148084529eda000100706b']);
+    _kiq.push(['set', {
+      'client_ip':'5.69.57.151'
+    }]);
+  </script>
+  <script type="text/javascript" src="./codecademy_files/a3w.js" async="true"></script>
+
+  <script>
+    // Chartbeat
+    var _sf_async_config={uid:27714,domain:"codecademy.com"};
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src',
+        (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+        "js/chartbeat.js");
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+      loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+  </script>
+
+
+<script id="tmpl-versions-label" type="text/x-underscore-template">
+<label>Versions</label>
+</script>
+<script id="tmpl-versions-item" type="text/x-underscore-template">
+<option value="<%= index %>"><%= label %></option>
+</script>
+<script id="tmpl-wrong-answer" type="text/x-underscore-template">
+<span style="color: crimson">Oops, try again. <%
+  if (qa) {
+    %>If you're stuck learn more from fellow users at our <a href="<%= qa %>" target="_blank">Q&A section!</a><%
+  } %><%
+  if (hint) {
+    %><br><span style="color: #F80"><%= hint %></span><%
+  }
+%></span>
+
+</script>
+<script id="tmpl-correct-answer" type="text/x-underscore-template">
+<span style="color: green">That's correct!<%
+  if (showNextExerciseLink) {
+    %><a href="javascript:void(0)" data-index=<%= index %> class="nextExerciseLink"> Next Exercise: <%= nextExerciseName %></a><%
+   }
+%></span>
+
+</script>
+<script id="tmpl-finish" type="text/x-underscore-template">
+<%
+  if (nextSectionPath) {
+  %>Good work completing this section! <a class='next_lesson_in_console' href='<%= nextSectionPath %>'>Start the next section</a>.<%
+} else if (languageCoursesPath && currentCurriculumPath !== "") {
+%>Nice! You've completed this course! Continue on <a href='<%= currentCurriculumPath %>'>this track</a>, browse <a class='next_lesson_in_console' href='<%= curriculaPath %>'>other tracks</a>, or experiment with <a class='next_lesson_in_console' href='http://labs.codecademy.com'>Codecademy Labs</a>.<%
+} else if (languageCoursesPath) {
+  %>You've completed this course! Start <a href='<%= curriculaPath %>'>a track</a>, tackle a <a href='<%= coursesPath %>'>non-track course</a>, or experiment with <a class='next_lesson_in_console' href='http://labs.codecademy.com'>Codecademy Labs</a>.<%
+}%>
+
+</script>
+<script id="tmpl-keyboard-shortcuts" type="text/x-underscore-template">
+<div id='keyboard-shortcuts'>
+  <!-- Frequently Used Shortcuts -->
+  <div class="frequently-used">
+    <div class="shortcut-item span3">
+      <b>Run Exercise</b>
+      <div class='shortcut'>
+        <kbd>&#8984; + <kbd>Enter</kbd>
+      </div>
+    </div>
+
+    <div class="shortcut-item span3">
+      <b>Save Progress</b>
+      <div class='shortcut'>
+        <kbd>&#8984; + <kbd>S</kbd>
+      </div>
+    </div>
+    <div class="shortcut-item span3">
+      <b>Reset Exercise</b>
+      <div class='shortcut'>
+        <kbd>&#8997 + <kbd>R</kbd>
+      </div>
+    </div>
+  </div>
+
+  <!-- Extra Shortcuts -->
+  <div class="extra-shortcuts">
+    <div class="shortcut-item span3">
+      <b>Next Exercise</b>
+      <div class='shortcut'>
+        <kbd>&#8997 + <kbd>T</kbd>
+      </div>
+    </div>
+    <div class="shortcut-item span3">
+      <b>Previous Exercise</b>
+      <div class='shortcut'>
+        <kbd>&#8997 + <kbd>P</kbd>
+      </div>
+    </div>
+  </div>
+  <div class="keyboard">
+    <div class="keyboard-toggle">
+      <a href="javascript:void(0);">
+        <b class="show-more">Show More</b>
+        <b class="show-less">Show Fewer</b>
+        <span class="caret"></span>
+      </a>
+    </div>
+  </div>
+</div><!-- keyboard-shortcuts-learner -->
+
+</script>
+<script id="tmpl-keyboard-shortcuts-creator" type="text/x-underscore-template">
+<div id='keyboard-shortcuts'>
+  <!-- Frequently Used Shortcuts -->
+  <div class="frequently-used">
+    <div class="shortcut-item span5">
+      <b>Preview Exercise</b>
+      <div class='shortcut'>
+        <kbd>&#8984; + <kbd>P</kbd>
+      </div>
+    </div>
+    <div class="shortcut-item span5">
+      <b>Save Progress</b>
+      <div class='shortcut'>
+        <kbd>&#8984; + <kbd>S</kbd>
+      </div>
+    </div>
+    <div class="shortcut-item span5">
+      <b>Show Feedback</b>
+      <div class='shortcut'>
+        <kbd>&#8997 + <kbd>F</kbd>
+      </div>
+    </div>
+  </div>
+  <!-- Extra Shortcuts -->
+  <div class="extra-shortcuts">
+    <div class="items">
+      <div class="shortcut-item span4">
+        <b>Add Exercise</b>
+        <div class='shortcut'>
+          <kbd>&#8997 + <kbd>A</kbd>
+        </div>
+      </div>
+      <div class="shortcut-item span4">
+        <b>Delete Exercise</b>
+        <div class='shortcut'>
+          <kbd>&#8997 + <kbd>D</kbd>
+        </div>
+      </div>
+      <div class="shortcut-item span4">
+        <b>Edit Next</b>
+        <div class='shortcut'>
+          <kbd>&#8997 + <kbd>T</kbd>
+        </div>
+      </div>
+      <div class="shortcut-item span4">
+        <b>Edit Previous</b>
+        <div class='shortcut'>
+          <kbd>&#8997 + <kbd>P</kbd>
+        </div>
+      </div>
+      <div class="shortcut-item span4">
+        <b>Edit Default Code</b>
+        <div class='shortcut'>
+          <kbd>&#8997 + <kbd>1</kbd>
+        </div>
+      </div>
+      <div class="shortcut-item span4">
+        <b>Edit SCT</b>
+        <div class='shortcut'>
+          <kbd>&#8997 + <kbd>2</kbd>
+        </div>
+      </div>
+    </div>
+  </div><!-- end extra-shortcuts -->
+  <div class="keyboard">
+    <div class="keyboard-toggle">
+      <a href="javascript:void(0);">
+        <b class="show-more">Show More</b>
+        <b class="show-less">Show Fewer</b>
+        <span class="caret"></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+</script>
+<script id="tmpl-share-course-project" type="text/x-underscore-template">
+<div class='aside share-course-project'>
+  <p>
+    Share this link with friends and others to show off your project:
+    <br>
+    <input type='text' id='url' readonly='readonly' name='url' value='<%= project_url %>'/> or
+    <a target='_blank' class='button light-green' href='<%= project_url %>'>View Project</a>
+  </p>
+</div>
+</script>
+
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-5.newrelic.com","8502746af5","2210607","c1hZF0tfVQkEExoFF0JFXgBMXFhKEglaEQ==",6,284,new Date().getTime(),"","","","",""]);</script>
+
+<script type="text/javascript" src="./codecademy_files/nr-100.js"></script><script language="javascript" type="text/javascript" src="./codecademy_files/chartbeat.js"></script><script type="text/javascript" src="./codecademy_files/8502746af5"></script></body></html>

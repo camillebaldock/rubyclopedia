@@ -23,7 +23,7 @@ class RubyTapasImportService
     end
   end
 
-  def parse_website feed_url="https://rubytapas.dpdcart.com/feed", web_url = "http://www.rubytapas.com/episodes"
+  def parse_website_paid feed_url="https://rubytapas.dpdcart.com/feed", web_url = "http://www.rubytapas.com/episodes"
     doc=Nokogiri::HTML(open(web_url))
     free_episodes = doc.css('.free')
     free_ids = Array.new
