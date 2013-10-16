@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me
-
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username
+  validates_uniqueness_of :username, :case_sensitive => false
   has_many :favourite_articles
   has_many :favourites, through: :favourite_articles, source: :article
 

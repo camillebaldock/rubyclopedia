@@ -1,0 +1,15 @@
+%div{:id => "article_stats"}
+ %h1
+  =@user.username
+
+%div{:id=>"home"}
+ %div{:class=>"list"}
+  %h1 Favourites
+  %ul
+   -Article.notcourse.find(:all, :conditions => ['published_at is not null'], :order => "published_at desc", :limit=> 5).each do |article|
+   = render :partial => "shared/short_article_line", locals: {article: article}
+%div{:class=>"list"}
+ %h1 Watched
+ %ul
+  -Article.course.find(:all).sample(5).each do |article|
+   = render :partial => "shared/short_article_line", locals: {article: article}

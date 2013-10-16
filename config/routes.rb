@@ -9,6 +9,7 @@ Rubyclopedia::Application.routes.draw do
     put :updateStatus, on: :member
   end
 
+  get '/users/:username', to: 'users#show'
   post '/notes/:article_id/:user_id', to: 'notes#update'
 
   match '/about' => 'pages#about'
