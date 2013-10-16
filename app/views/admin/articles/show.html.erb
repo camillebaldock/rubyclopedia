@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @article.name %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @article.supplier %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @article.description %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @article.published_at %>
+</p>
+
+<p>
+  <strong>Supplier ref:</strong>
+  <%= @article.supplier_ref %>
+</p>
+
+<p>
+  <strong>Video link:</strong>
+  <%= @article.video_link %>
+</p>
+
+<p>
+  <strong>Free:</strong>
+  <%= @article.free %>
+</p>
+
+<p>
+  <strong>Medium:</strong>
+  <%= @article.medium %>
+</p>
+
+<%= link_to 'Edit', edit_admin_article_path(@article) %> |
+<%= link_to 'Back', admin_articles_path %>

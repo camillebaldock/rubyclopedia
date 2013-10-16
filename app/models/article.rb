@@ -28,10 +28,12 @@ class Article < ActiveRecord::Base
            PLURALSIGHT = 'Pluralsight', 
            RAILSCASTS = 'Railscasts', 
            RUBYROGUES = 'Rubyrogues',
-           RUBYTAPAS = 'Rubytapas']
+           RUBYTAPAS = 'Rubytapas',
+           OTHER = 'Other']
   MEDIA = [AUDIO = 'Audio',
            COURSE = 'Course',
-           VIDEO = 'Video']
+           VIDEO = 'Video',
+           TEXT = 'Text']
 
   validates :supplier, inclusion: {in: SUPPLIERS}
   validates :medium, inclusion: {in: MEDIA}

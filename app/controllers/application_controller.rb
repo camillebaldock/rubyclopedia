@@ -14,4 +14,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  protected
+  def superuser_required
+    unless current_user && current_user.superuser
+      redirect_to root_path
+    end
+  end
 end
