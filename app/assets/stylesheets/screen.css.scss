@@ -54,7 +54,7 @@ p {
 
 .title {
 	background-color: #B0203F;
-  width:100%;
+  width:98%;
 	border-radius: 15px;
 	display:inline-block;
 	margin:5px;
@@ -68,8 +68,9 @@ p {
 }
 
 #searchform {
-  float:left;
+  float:right;
   width:300px;
+  margin-right:10px;
   input[type="text"] {
     outline: none;
     padding: 10px;
