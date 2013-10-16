@@ -1,15 +1,19 @@
+- favourites = current_user.favourites
+- viewed = current_user.viewed
 %div{:id => "article_stats"}
  %h1
   =@user.username
 
 %div{:id=>"home"}
  %div{:class=>"list"}
-  %h1 Favourites
+  %h1 
+   ="#{favourites.count} Favourites"
   %ul
-   -Article.notcourse.find(:all, :conditions => ['published_at is not null'], :order => "published_at desc", :limit=> 5).each do |article|
-   = render :partial => "shared/short_article_line", locals: {article: article}
-%div{:class=>"list"}
- %h1 Watched
- %ul
-  -Article.course.find(:all).sample(5).each do |article|
-   = render :partial => "shared/short_article_line", locals: {article: article}
+   -favourites.each do |article|
+    = render :partial => "shared/short_article_line", locals: {article: article}
+ %div{:class=>"list"}
+  %h1
+   ="#{viewed.count} Watched"
+  %ul
+   -viewed.each do |article|
+    = render :partial => "shared/short_article_line", locals: {article: article}
