@@ -1,4 +1,6 @@
 -if user_signed_in?
+ %li{:style=>"color:white"}
+  =link_to('Submit an article', new_submission_path)
  %li
   = link_to('Logout', destroy_user_session_path, method: :delete)
  %li{:style=>"color:white"}

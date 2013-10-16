@@ -1,6 +1,8 @@
 - favourites = current_user.favourites
 - viewed = current_user.viewed
-%div{:id => "article_stats"}
+%div{:style => "margin-left:25px"}
+ %p{:id=>"notice"}
+  =notice
  %h1
   =@user.username
 
