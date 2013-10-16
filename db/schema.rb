@@ -26,11 +26,10 @@ ActiveRecord::Schema.define(:version => 20131003003554855) do
     t.string   "supplier"
     t.text     "description"
     t.datetime "published_at"
-    t.integer  "duration_seconds"
     t.integer  "supplier_ref"
     t.string   "video_link"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.boolean  "free"
     t.string   "medium"
   end
@@ -42,43 +41,12 @@ ActiveRecord::Schema.define(:version => 20131003003554855) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "rates", :force => true do |t|
-    t.integer  "rater_id"
-    t.integer  "rateable_id"
-    t.string   "rateable_type"
-    t.float    "stars",         :null => false
-    t.string   "dimension"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  add_index "rates", ["rateable_id", "rateable_type"], :name => "index_rates_on_rateable_id_and_rateable_type"
-  add_index "rates", ["rater_id"], :name => "index_rates_on_rater_id"
-
-  create_table "rating_caches", :force => true do |t|
-    t.integer  "cacheable_id"
-    t.string   "cacheable_type"
-    t.float    "avg",            :null => false
-    t.integer  "qty",            :null => false
-    t.string   "dimension"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-  end
-
-  add_index "rating_caches", ["cacheable_id", "cacheable_type"], :name => "index_rating_caches_on_cacheable_id_and_cacheable_type"
-
   create_table "submissions", :force => true do |t|
     t.string   "url"
     t.text     "description"
     t.integer  "user_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "tags", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -100,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20131003003554855) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["username"], :name => "index_users_on_username"
 
   create_table "viewed_articles", :force => true do |t|
     t.integer  "article_id"

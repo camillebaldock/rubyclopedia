@@ -28,23 +28,23 @@ Scenario Outline: Core data displayed on article page
 
  	Examples:
 	 	| paid | text |
-	 	| free | Available for free |
-	 	| paid | Subscription needed |
+	 	| free | Free |
+	 	| paid | Paid |
 
-Scenario Outline: Standard article page
-	Given I have a <type> article from "<supplier>"
+Scenario Outline: Link on article page
+	Given I have a <type> article from "<supplier>" of type "<medium>"
 	When I visit that article's page
-	Then I should see a "Go to article" link to that article's supplier page
+	Then I should see a "<link>" link to that article's supplier page
 
 	Examples:
-		| type | supplier |
-		| free | Rubytapas |
-		| free | Railscasts |
-		| paid | Railscasts |
-		| free | Rubyrogues |
-
-Scenario: Paid Rubytapas
-	Given I have a paid article from "Rubytapas"
-	When I visit that article's page
-	Then I should see a "Download" link to that article's supplier page
-	And I should not see a "Go to article" link to that article's supplier page
+		| type | supplier    | link | medium |
+		| free | Rubytapas   | Go to video | Video |
+		| paid | Rubytapas   | Download | Video |
+		| free | Railscasts  | Go to video | Video |
+		| paid | Railscasts  | Go to video | Video |
+		| free | Rubyrogues  | Go to audio | Audio |
+		| free | Codecademy  | Go to course | Course |
+		| free | Codeschool  | Go to course | Course |
+		| paid | Codeschool  | Go to course | Course |
+		| free | Envylabs    | Go to audio | Audio |
+		| paid | Pluralsight | Go to course | Course |

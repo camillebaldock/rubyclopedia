@@ -16,7 +16,7 @@ Background:
 	When I go to the home page
 
 Scenario: Display total number of articles
-	Then I should see "6 articles"
+	Then I should see "6 entries"
 
 Scenario: Display names of 5 most recent articles
 	Then I should see the following:

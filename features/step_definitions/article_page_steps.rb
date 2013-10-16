@@ -1,10 +1,14 @@
-Given(/^I have a (free|paid) article(?: from "([^\"]*)")?(?: published on "([^\"]*)")?$/) do |free, supplier, date|
-  supplier = Article::ARTICLE_SUPPLIERS.sample.to_s unless supplier
-  @article = Article.new_from_supplier(supplier)
+Given(/^I have a (free|paid) article(?: from "([^\"]*)")?(?: published on "([^\"]*)")??(?: of type "([^\"]*)")?$/) do |free, supplier, date, medium|
+  supplier ||= Article::SUPPLIERS.sample
+  medium ||= Article::MEDIA.sample
+  date ||= Time.at(rand * Time.now.to_i) #Generate random date if no date specified
+  @article = Article.new
+  @article.name = rand(36**5).to_s(36)
+  @article.supplier = supplier
+  @article.medium = medium
   @article.free = free == "free"
-  date = Time.at(rand * Time.now.to_i) unless date #Generate random date
   @article.published_at = date
-  @article.save
+  @article.save!
 end
 
 When(/^I visit that article's page$/) do

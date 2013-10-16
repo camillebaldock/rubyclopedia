@@ -15,7 +15,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 class Admin::ArticlesController < ApplicationController
   before_filter :superuser_required
 
-    # GET /articles
+  # GET /articles
   # GET /articles.json
   def index
     @articles = Article.all

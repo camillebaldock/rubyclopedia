@@ -1,11 +1,14 @@
 Given /^the following articles exist:?$/ do |articles|
   article_hashes = articles.hashes
   article_hashes.each do |hash|
-    hash["supplier"] = Article::ARTICLE_SUPPLIERS.sample.to_s unless hash["supplier"]
-  	e = Article.new_from_supplier(hash["supplier"])
-    e.name = hash["name"]
-    e.published_at = hash["published_at"] || Time.now
-    e.save
+    hash["supplier"] ||= Article::SUPPLIERS.sample
+    hash["medium"] ||= Article::MEDIA.sample
+  	a = Article.new
+    a.supplier = hash["supplier"]
+    a.medium = hash["medium"]
+    a.name = hash["name"]
+    a.published_at = hash["published_at"] || Time.now
+    a.save!
   end
 end
 
