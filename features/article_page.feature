@@ -13,7 +13,6 @@ Scenario Outline: Publication date displayed on article page
 	Examples:
 		| published_date | text |
 		| 16/09/2013 | 1 day ago |
-		| 12/09/2013 | 5 days ago |
 		| 17/08/2013 | 1 month ago|
 		| 17/09/2012 | 1 year ago |
 		| 17/09/2013 | today |
