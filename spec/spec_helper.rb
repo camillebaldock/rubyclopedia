@@ -41,7 +41,7 @@ RSpec.configure do |config|
 
   config.around :each do |example|
     if example.metadata[:elasticsearch]
-      Contact.tire.index.delete # delete the index for a clean environment
+      Article.tire.index.delete # delete the index for a clean environment
       example.run
     else
       FakeWeb.register_uri :any, %r(#{Tire::Configuration.url}), body: '{}'

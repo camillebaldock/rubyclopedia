@@ -29,6 +29,14 @@ Coveralls.wear!
 #
 ActionController::Base.allow_rescue = false
 
+Before do
+  FakeWeb.register_uri :any, %r(#{Tire::Configuration.url}), body: '{}'
+end
+
+After do
+  FakeWeb.clean_registry
+end
+
 # Remove/comment out the lines below if your app doesn't have a database.
 # For some databases (like MongoDB and CouchDB) you may need to use :truncation instead.
 begin
