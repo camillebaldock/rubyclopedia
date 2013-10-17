@@ -1,4 +1,4 @@
-Given(/^I have a (free|paid) article(?: from "([^\"]*)")?(?: published on "([^\"]*)")??(?: of type "([^\"]*)")?$/) do |free, supplier, date, medium|
+Given(/^I have a(?:( free| paid))? article(?: from "([^\"]*)")?(?: published on "([^\"]*)")??(?: of type "([^\"]*)")?$/) do |free, supplier, date, medium|
   supplier ||= Article::SUPPLIERS.sample
   medium ||= Article::MEDIA.sample
   date ||= Time.at(rand * Time.now.to_i) #Generate random date if no date specified
@@ -6,9 +6,17 @@ Given(/^I have a (free|paid) article(?: from "([^\"]*)")?(?: published on "([^\"
   @article.name = rand(36**5).to_s(36)
   @article.supplier = supplier
   @article.medium = medium
-  @article.free = free == "free"
+  @article.free = free == " free"
   @article.published_at = date
   @article.save!
+end
+
+Given(/^I have marked this article as viewed$/) do
+  @user.viewed << @article
+end
+
+Given(/^I have marked this article as favourite$/) do
+  @user.favourites << @article
 end
 
 When(/^I visit that article's page$/) do

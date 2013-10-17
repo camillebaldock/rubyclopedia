@@ -36,18 +36,23 @@ class ArticlesController < ApplicationController
 
   def updateStatus
     @article = Article.find(params[:id])
+    kind_id = Kind.find_by_name('Learner').id
     type = params[:type]
     if type == "favourite"
       current_user.favourites << @article
+      current_user.change_points({ points: 1, kind: kind_id })
       redirect_to :back, notice: "You favourited #{@article.name}"
     elsif type == "unfavourite"
       current_user.favourites.delete(@article)
+      current_user.change_points({ points: -1, kind: kind_id })
       redirect_to :back, notice: "Unfavourited #{@article.name}"
     elsif type == "viewed"
       current_user.viewed << @article
+      current_user.change_points({ points: 1, kind: kind_id })
       redirect_to :back, notice: "You viewed #{@article.name}"
     elsif type == "unviewed"
       current_user.viewed.delete(@article)
+      current_user.change_points({ points: -1, kind: kind_id })
       redirect_to :back, notice: "Unviewed #{@article.name}"
     else
       redirect_to :back, notice: "Nothing happened."

@@ -23,6 +23,18 @@ When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+When /^(?:|I )click "([^\"]*)"$/ do |link|
+  click_on(link)
+end\
+
+When /^(?:|I )fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
+  fill_in(field, :with => value)
+end
+
+When /^(?:|I )press "([^\"]*)"$/ do |button|
+  click_button(button)
+end
+
 Then /^(?:|I )should see "([^\"]*)"(?: within "([^\"]*)")?$/ do |text, selector|
   with_scope(selector) do
     if page.respond_to? :should
@@ -36,7 +48,7 @@ end
 Then /^(?:|I )should not see "([^\"]*)"(?: within "([^\"]*)")?$/ do |text, selector|
   with_scope(selector) do
     if page.respond_to? :should
-      !page.should have_content(text)
+      page.should_not (have_content(text))
     else
       assert page.has_no_content?(text)
     end

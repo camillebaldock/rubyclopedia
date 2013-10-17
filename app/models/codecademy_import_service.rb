@@ -25,7 +25,6 @@ class CodecademyImportService
         :description => course.css('p.course-item__entry').text.strip,
         :medium => Article::COURSE,
         :video_link => course.attr('href'))
-      p episode
       episode.save
     end
   end

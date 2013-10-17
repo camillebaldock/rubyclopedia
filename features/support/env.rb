@@ -5,8 +5,7 @@
 # files.
 require 'cucumber/rails'
 require 'coveralls'
-Coveralls.wear!
-
+Coveralls.wear! 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
 # selectors in your step definitions to use the XPath syntax.
@@ -31,16 +30,16 @@ ActionController::Base.allow_rescue = false
 
 Before do
   FakeWeb.register_uri :any, %r(#{Tire::Configuration.url}), body: '{}'
+  Kind.find_or_create_by_name('Learner')
+  Kind.find_or_create_by_name('Teacher')
 end
 
 After do
   FakeWeb.clean_registry
 end
 
-# Remove/comment out the lines below if your app doesn't have a database.
-# For some databases (like MongoDB and CouchDB) you may need to use :truncation instead.
 begin
-  DatabaseCleaner.strategy = :transaction
+  DatabaseCleaner.strategy = :truncation, {:except => %w[:kinds]}
 rescue NameError
   raise "You need to add database_cleaner to your Gemfile (in the :test group) if you wish to use it."
 end
@@ -64,4 +63,5 @@ end
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
+
 

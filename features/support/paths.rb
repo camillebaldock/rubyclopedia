@@ -10,6 +10,10 @@ module NavigationHelpers
 
     when /the home\s?page/
     '/'
+    when /the new submissions page/
+    '/submissions/new'
+    when /the login page/
+    '/users/sign_in' 
     else
       begin
         page_name =~ /the (.*) page/

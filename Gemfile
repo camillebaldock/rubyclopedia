@@ -64,3 +64,4 @@ gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'andand'
 gem 'newrelic_rpm'
+gem 'gioco'

@@ -133,6 +133,7 @@ GEM
     fssm (0.2.10)
     gherkin (2.12.1)
       multi_json (~> 1.3)
+    gioco (1.1.1)
     google-analytics-rails (0.0.4)
     haml (4.0.3)
       tilt
@@ -347,6 +348,7 @@ DEPENDENCIES
   devise
   fakeweb
   gherkin
+  gioco
   google-analytics-rails
   haml-rails
   jquery-rails
