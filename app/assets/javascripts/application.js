@@ -27,4 +27,5 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //= require jquery
 //= require jquery_ujs
 //= require jquery.jeditable.mini
+//= require jquery.raty.min.js
 //= require_tree .

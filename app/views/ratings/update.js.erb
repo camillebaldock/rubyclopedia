@@ -1,0 +1,35 @@
+$('#quality_score').raty({
+  readOnly: true,
+  score: <%= @article.average_quality_rating %>,
+  path: '/assets'
+});
+
+$('#difficulty_score').raty({
+  readOnly: true,
+  score: <%= @article.average_difficulty_rating %>,
+  path: '/assets'
+});
+
+$('#user_quality_score').raty({
+  score: <%= @quality.stars %>,
+  path: '/assets',
+  click: function(score, evt) {
+    $.ajax({
+      url: '/ratings/' + <%= @quality.id %>,
+      type: 'POST',
+      data: { stars: score }
+    }).done(function (data){});
+  }
+});
+
+$('#user_difficulty_score').raty({
+  score: <%= @difficulty.stars %>,
+  path: '/assets',
+  click: function(score, evt) {
+    $.ajax({
+      url: '/ratings/' + <%= @difficulty.id %>,
+      type: 'POST',
+      data: { stars: score }
+    }).done(function (data){});
+  }
+});

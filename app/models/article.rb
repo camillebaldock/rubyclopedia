@@ -37,6 +37,7 @@ class Article < ActiveRecord::Base
 
   validates :supplier, inclusion: {in: SUPPLIERS}
   validates :medium, inclusion: {in: MEDIA}
+  has_many :ratings
 
   attr_accessible :description, :name, :published_at, :video_link, :supplier_ref, :free, :medium, :supplier
   validates_uniqueness_of :name, :scope => [:supplier]
@@ -45,5 +46,23 @@ class Article < ActiveRecord::Base
   scope :old, lambda { where("published_at < :date", :date => 1.month.ago) }
   scope :notcourse, lambda { where("medium != :course", :course => Article::COURSE) }
   scope :course, lambda { where("medium = :course", :course => Article::COURSE) }
+
+  def average_difficulty_rating
+    difficulty_ratings = ratings.where(kind: 'Difficulty', stars: (1..5))
+    if difficulty_ratings.size > 0
+      difficulty_ratings.sum(:stars) / difficulty_ratings.size
+    else
+      0
+    end
+  end
+
+  def average_quality_rating
+    quality_ratings = ratings.where(kind: 'Quality', stars: (1..5))
+    if quality_ratings.size > 0
+      quality_ratings.sum(:stars) / quality_ratings.size
+    else
+      0
+    end
+  end
 
 end

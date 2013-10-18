@@ -24,6 +24,12 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    if current_user
+      @quality = Rating.where(article_id: @article.id, user_id: current_user.id, kind: 'Quality').first 
+      @difficulty = Rating.where(article_id: @article.id, user_id: current_user.id, kind: 'Difficulty').first 
+      @quality ||= Rating.create(article_id: @article.id, user_id: current_user.id, stars: 0, kind: 'Quality')
+      @difficulty ||= Rating.create(article_id: @article.id, user_id: current_user.id, stars: 0, kind: 'Difficulty')
+    end
   end
 
   def updateStatus

@@ -1,6 +1,4 @@
 Rubyclopedia::Application.routes.draw do
-  match '/rate' => 'rater#create', :as => 'rate'
-
   devise_for :users
   root :to => "home#index"
   resources :articles do
@@ -14,7 +12,7 @@ Rubyclopedia::Application.routes.draw do
 
   get '/users/:username', to: 'users#show'
   post '/notes/:article_id/:user_id', to: 'notes#save'
-
+  post '/ratings/:id', to: 'ratings#update'
   match '/about' => 'pages#about'
 
 end

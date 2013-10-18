@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :points  
   has_many :badges , :through => :levels 
-  has_many :levels  
+  has_many :levels
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
   has_many :viewed, through: :viewed_articles, source: :article
 
   has_many :article_notes
+
+  has_many :ratings
 
   def score
     self.points.sum(:value)
