@@ -1,0 +1,28 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @article.name
+%p
+  %strong Supplier:
+  = @article.supplier
+%p
+  %strong Description:
+  = @article.description
+%p
+  %strong Published at:
+  = @article.published_at
+%p
+  %strong Supplier ref:
+  = @article.supplier_ref
+%p
+  %strong Video link:
+  = @article.video_link
+%p
+  %strong Free:
+  = @article.free
+%p
+  %strong Medium:
+  = @article.medium
+= link_to 'Edit', edit_admin_article_path(@article)
+|
+\#{link_to 'Back', admin_articles_path}

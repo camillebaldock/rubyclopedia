@@ -1,0 +1,26 @@
+%h1 Listing articles
+= link_to 'New Article', new_admin_article_path
+%table
+  %thead
+    %tr
+      %th Name
+      %th Supplier
+      %th Published at
+      %th Supplier ref
+      %th Free
+      %th Medium
+      %th
+      %th
+  %tbody
+    - @articles.each do |article|
+      %tr
+        %td= link_to article.name, admin_article_path(article)
+        %td= article.supplier
+        %td
+          - if article.published_at
+            = distance_of_time_in_words(article.published_at, Time.now) +" ago"
+    %td= article.supplier_ref
+    %td= article.free
+    %td= article.medium
+    %td= link_to 'Edit', edit_admin_article_path(article)
+    %td= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
