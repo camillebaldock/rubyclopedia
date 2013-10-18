@@ -8,6 +8,8 @@
  - if current_user.superuser
   %li{:style=>"color:white"}
    = link_to('Articles', admin_articles_path)
+  %li{:style=>"color:white"}
+   = link_to('Submissions', admin_submissions_path)
  - else
   %li{:style=>"color:white"}
    = link_to('My profile', :controller => :users, :action => :show, :username => current_user.username)

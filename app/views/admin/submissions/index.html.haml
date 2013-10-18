@@ -1,0 +1,17 @@
+%h1 Listing submissions
+%table
+  %thead
+    %tr
+      %th URL
+      %th Description
+      %th Username
+      %th
+      %th
+  %tbody
+    - @submissions.each do |submission|
+      %tr
+        %td= submission.url
+        %td= submission.description
+        %td= submission.user.username
+        %td= link_to 'Accept', draft_article_admin_submission_path(submission)
+        %td= link_to 'Refuse', refuse_admin_submission_path(submission), :method => :post

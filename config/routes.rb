@@ -8,6 +8,11 @@ Rubyclopedia::Application.routes.draw do
 
   namespace :admin do
     resources :articles
+    resources :submissions do
+      get :draft_article, on: :member
+      post :accept, on: :member
+      post :refuse, on: :member
+    end
   end
 
   get '/users/:username', to: 'users#show'

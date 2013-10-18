@@ -1,0 +1,13 @@
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1 Rubyclopedia submissions
+    %p
+      Hi, #{@submission.user.username}
+    %p
+      Your submission to the Rubyclopedia has been accepted.
+    %p
+      Thank you for your contribution !
+    %p       
+      To go to the article you have created, go to #{ link_to 'this link', article_path(@article)}
