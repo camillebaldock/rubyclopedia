@@ -11,14 +11,10 @@ $(document).ready ->
      user_id = $("#user_id").val()
      article_id = $("#article_id").val()
      $('#notes').editable('/notes/'+article_id+'/'+user_id, { 
-         type      : 'autogrow',
+         type      : 'textarea',
          cancel    : 'Cancel',
          submit    : 'Save',
-         tooltip   : 'Click to edit...',
-         autogrow : {
-          lineHeight : 16,
-          maxHeight  : 512
-         }
+         tooltip   : 'Click to edit your notes on this episode...'
      });
 
 $(document).on('click', '.filter', ( ->

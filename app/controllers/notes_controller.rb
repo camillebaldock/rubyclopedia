@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  def update
+  def save
   	note = ArticleNote.where(:article_id => params[:article_id], :user_id => params["user_id"]).first_or_create
     note.notes = params[:value]
     note.save

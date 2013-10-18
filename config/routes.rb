@@ -13,7 +13,7 @@ Rubyclopedia::Application.routes.draw do
   end
 
   get '/users/:username', to: 'users#show'
-  post '/notes/:article_id/:user_id', to: 'notes#update'
+  post '/notes/:article_id/:user_id', to: 'notes#save'
 
   match '/about' => 'pages#about'
 

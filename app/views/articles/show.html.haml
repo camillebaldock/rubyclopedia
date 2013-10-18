@@ -3,7 +3,7 @@
 %div{:id=>"article"}
  -if current_user
   =hidden_field_tag 'user_id', current_user.id
- =hidden_field_tag 'article_id', @article.id
+  =hidden_field_tag 'article_id', @article.id
  %div{:id=>"description"}
   %h1
    =@article.name
@@ -12,8 +12,8 @@
   - if current_user
    %div{:style=>"margin-top:30px"}
     %h2 Notes
-    %div{:id=>"notes"}
-     =h(current_user.article_notes.find_by_article_id(@article.id).andand.notes).gsub('\n', '<br>').html_safe
+    %div{:id=>"notes", :style=>"white-space:pre; height:200px;"}
+     =current_user.article_notes.find_by_article_id(@article.id).andand.notes.andand.html_safe
  %div{:id=>"labels"}
   = render :partial => "shared/cost_label", locals: {article: @article}  
   %p
