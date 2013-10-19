@@ -3,8 +3,10 @@
 # newer version of cucumber-rails. Consider adding your own code to a new file
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
+
 require 'coveralls'
-Coveralls.wear!
+require 'simplecov_rubyclopedia_profile'
+Coveralls.wear_merged!('rubyclopedia')
 require 'cucumber/rails'
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any

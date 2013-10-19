@@ -22,6 +22,7 @@ gem 'rspec'
 gem 'rspec-rails', :group => [:development, :test, :cucumber]
 gem 'fakeweb', :group => :test
 gem 'coveralls', require: false
+gem 'simplecov', ">= 0.8.pre"
 
 group :cucumber do
   gem 'gherkin'

@@ -7,7 +7,11 @@ env:
 
 script:
   - RAILS_ENV=test bundle exec rake --trace db:migrate
-  - RAILS_ENV=test bundle exec rake test_with_coveralls
+  - RAILS_ENV=test bundle exec rspec
+  - RAILS_ENV=test bundle exec cucumber
 
 before_script:
   - psql -c 'create database rubyclopedia_test' -U postgres
+
+after_success:
+  - RAILS_ENV=production bundle exec rake coveralls:push
