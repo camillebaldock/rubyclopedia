@@ -19,10 +19,10 @@
   %a{:class => "filter cost down"} Paid
  - if params[:search]
   %div{:class=>"list long"}
-    %ul
-     -@articles.each do |article|
-      = render :partial => "shared/article_line", locals: {article: article}
-   = render "shared/icons"
+   %ul
+    -@articles.each do |article|
+     = render :partial => "shared/article_line", locals: {article: article}
+  = render "shared/icons"
  - else
   -cache do
    %div{:class=>"list long"}
