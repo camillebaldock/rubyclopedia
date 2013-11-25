@@ -39,7 +39,7 @@ class Admin::SubmissionsController < ApplicationController
       SubmissionMailer.submission_accepted(@submission, @article).deliver
       redirect_to admin_submissions_url, notice: 'Article was successfully created.'
     else
-      render action: "draft_article"
+      render "draft_article"
     end
   end
 
