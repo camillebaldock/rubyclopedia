@@ -67,6 +67,5 @@ module Rubyclopedia
     config.assets.precompile += %w( .svg .eot .woff .ttf )
 
     config.compass.require "susy"
-    GA.tracker = "UA-44532514-1"
   end
 end
