@@ -14,7 +14,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =end
 source 'https://rubygems.org'
 
-ruby "1.9.3"
+ruby "2.1.0"
 
 gem 'rails', '3.2.13'
 gem 'pg'
@@ -57,7 +57,6 @@ gem 'rails_config'
 gem 'whenever'
 gem 'chronic'
 gem 'timecop'
-gem 'google-analytics-rails'
 gem 'tire'
 gem 'metric_fu'
 gem 'brakeman'
