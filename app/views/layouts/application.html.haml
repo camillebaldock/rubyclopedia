@@ -19,4 +19,3 @@
      %form{:id=>"searchform", :action => "/articles"}
       = text_field_tag :search, params[:search], autocomplete: :off, placeholder: 'Search'
    = yield
-    =javascript_include_tag "gauges"
