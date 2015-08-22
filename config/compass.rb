@@ -1,1 +1,0 @@
-project_type = :rails

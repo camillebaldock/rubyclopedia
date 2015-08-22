@@ -1,0 +1,22 @@
+body {
+  background-color: #B0203F;
+  color: white;
+  font-family: 'Ubuntu';
+}
+
+a {
+  color: white;
+}
+
+.ascii {
+  font-weight: bolder;
+}
+
+.center-text {
+  width:100%;
+  text-align: center;
+}
+
+.bottom {
+  margin-top: 2em;
+}
