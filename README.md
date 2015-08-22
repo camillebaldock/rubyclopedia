@@ -1,13 +1,12 @@
 rubyclopedia
 ===========================
 
-[![Build Status](https://secure.travis-ci.org/camilleldn/rubyclopedia.png?branch=master)](http://travis-ci.org/camilleldn/rubyclopedia)
+Rubyclopedia was shut down in August 2015.
+It was an automatically populated catalogue of Ruby videos, tutorials and blog posts.
 
-[![Dependency Status](https://gemnasium.com/camilleldn/rubyclopedia.png)](https://gemnasium.com/camilleldn/rubyclopedia)
+It was shut down because most of the sources were either no longer publishing content, or now have better ways of subscribing to their content.
 
-Website to get the latest Ruby courses, articles, videos and podcasts from the following suppliers, and tracking progress and personal notes on your Ruby training content:
-
-
+Some of the sources of articles and videos included:
 - Codecademy
 - Codeschool
 - Envylabs
@@ -15,5 +14,3 @@ Website to get the latest Ruby courses, articles, videos and podcasts from the f
 - RailsCasts
 - RubyTapas
 - RubyRogues
-
-Work in progress: add crowd-source quality ratings and difficuly ratings to entries
